@@ -1,28 +1,28 @@
 import React, { useEffect, useState } from "react"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import apiService from "../Service/apiService"
 
 const IndexPage = () => {
-
   const [pageContent, setPageContent] = useState({})
 
-
   useEffect(() => {
-    apiService.findAllData().then((response) => 
-      setPageContent(response.items[0].fields)
-    )
+    apiService.getEntryByContentType('staffMember')
+      .then(response => setPageContent(response))
   }, [])
 
-  console.log(pageContent.heading1)
- 
+  console.log("this is pagecontent", pageContent)
+
   return (
     <Layout>
       <SEO title="Home" />
-      <h1>{pageContent.heading1}</h1>
-      <h3>{pageContent.subheading1}</h3>
-      <p>{pageContent.paragraph1.content[0].content[0].value}</p>
+      <h1>testing</h1>
+      {pageContent.map((content) => (
+        <div>
+          <h2>{content.fields.name}</h2>
+          <p>{content.fields.title}</p>
+        </div>)
+      )}
     </Layout>
   )
 }
