@@ -4,7 +4,7 @@ import SEO from "../components/seo"
 import apiService from "../Service/apiService"
 
 const IndexPage = () => {
-  const [pageContent, setPageContent] = useState({})
+  const [pageContent, setPageContent] = useState([])
 
   useEffect(() => {
     apiService.getEntryByContentType('staffMember')
@@ -18,7 +18,7 @@ const IndexPage = () => {
       <SEO title="Home" />
       <h1>testing</h1>
       {pageContent.map((content) => (
-        <div>
+        <div key={content.sys.id}>
           <h2>{content.fields.name}</h2>
           <p>{content.fields.title}</p>
         </div>)
