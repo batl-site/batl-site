@@ -8,13 +8,15 @@
   Gatsby's default starter
 </h1>
 
-**** To run locally
+**To run locally**
 
-clone repo
-cd to batl-site
-in terminal: gatsby develop
+1. clone repo
+2. cd to batl-site
+3. in terminal: gatsby develop
 
-troubleshooting: if that doesn't work, npm install gatsby and npm install gatsby-cli
+**troubleshooting**: if that doesn't work, npm install gatsby and npm install gatsby-cli
+
+***********************************************************
 
 Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
 
