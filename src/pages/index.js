@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { HOMEPAGE_ID } from "../constants/constants";
-import apiService from "../Service/apiService";
+import apiService from "../service/apiService";
 
 const HomePage = () => {
   const [pageContent, setPageContent] = useState([]);

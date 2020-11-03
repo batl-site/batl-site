@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { WHOWEARE_ID } from "../constants/constants"
-import apiService from "../Service/apiService"
+import apiService from "../service/apiService"
 
 const WhoWeAre = () => {
   const [pageContent, setPageContent] = useState([])

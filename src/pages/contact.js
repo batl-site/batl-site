@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { CONTACT_ID } from "../constants/constants"
-import apiService from "../Service/apiService"
+import apiService from "../service/apiService"
 
 const Contact = () => {
   const [pageContent, setPageContent] = useState([])
@@ -11,8 +11,6 @@ const Contact = () => {
     apiService.getEntryByContentType(CONTACT_ID)
       .then(response => setPageContent(response[0].fields));
   }, [])
-
-  console.log(pageContent)
 
   const headingContent = pageContent.contactOpener ? pageContent.contactOpener.fields : null
 
