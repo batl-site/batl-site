@@ -1,9 +1,9 @@
 const contentful = require("contentful")
 
 export const client = contentful.createClient({
-  space: "cs11esrpx5q6",
+  space: process.env.CONTENTFUL_SPACE_ID,
   environment: "master", // defaults to 'master' if not set
-  accessToken: "lAv8ot12M6WtQG-QVwrdhysli61lCCmhKRGwd6tbBss",
+  accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
 })
 
 export const getAllEntries = () => {
