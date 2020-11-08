@@ -5,6 +5,10 @@ import SEO from "../components/seo";
 import { HOMEPAGE_ID } from "../constants/constants";
 import apiService from "../service/apiService";
 
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`
+});
+
 const HomePage = () => {
   const [pageContent, setPageContent] = useState([]);
 

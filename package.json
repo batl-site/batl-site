@@ -3,9 +3,14 @@
   "private": true,
   "description": "A simple starter to get up and developing quickly with Gatsby",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "contributors": [
+    "MacKenzie Kerwin <mackenziekerwin@gmail.com",
+    "Chris Sedayao <csedayao@gmail.com>",
+    "Mckenna Poulos <mckennapoulos@gmail.com>"
+  ],
   "dependencies": {
     "contentful": "^7.14.8",
+    "dotenv": "^8.2.0",
     "gatsby": "^2.24.79",
     "gatsby-image": "^2.4.21",
     "gatsby-plugin-manifest": "^2.4.34",
