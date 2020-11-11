@@ -1,6 +1,6 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p  align="center">
-  <img src="/src/images/gatsby-icon.png" alt="BATL Logo" />
+  <img src="/src/images/batl-flask.svg" alt="BATL Logo" width="60" />
 </p>
 <h1 align="center">
   BATL
