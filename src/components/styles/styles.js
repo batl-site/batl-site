@@ -48,6 +48,7 @@ export const P2 = styled.p`
   font-family: "IBM Plex Sans", sans-serif;
   font-size: 14px;
   font-weight: 600;
+  margin: 0;
 
   @media (min-width: 576px) {
     font-size: 16px;
