@@ -6,6 +6,11 @@ export const client = contentful.createClient({
   accessToken: process.env.GATSBY_CONTENTFUL_ACCESS_TOKEN,
 })
 
+client.getEntries({
+  include: 2
+}).then((response) => console.log(response.items))
+.catch(console.error)
+
 export const getAllEntries = () => {
   return client
     .getEntries()
@@ -31,6 +36,7 @@ export const getEntryByContentType = contentName => {
   return client
     .getEntries({
       content_type: contentName,
+      include: 2, 
     })
     .then(response => response.items)
     .catch(console.error)
