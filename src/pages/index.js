@@ -5,6 +5,8 @@ import MissionStatement from "../components/mission/missionStatement";
 import SEO from "../components/seo";
 import { PRIMARY_YELLOW } from "../components/styles/styles";
 import ColorBlock from "../components/colorblock/colorblock";
+import { H1, H2, P1, P2 } from "../components/styles/styles";
+import Testimonial from "../components/testimonial/testimonial";
 import { HOMEPAGE_ID } from "../constants/constants";
 import apiService from "../service/apiService";
 
@@ -28,12 +30,17 @@ const HomePage = () => {
   } : null
   const heroContent = pageContent.homepageHero ? pageContent.homepageHero.fields : null
   const ColorBlockContent = pageContent.more ? pageContent.more.fields : null
+  const testimonialContent = pageContent.testimonial ? pageContent.testimonial.fields : null
+
+  console.log(pageContent)
 
   return (
     <Layout>
       <SEO title="Home" />
       {missionContent && (<MissionStatement content={missionContent} />)}
       {ColorBlockContent && <ColorBlock content={ColorBlockContent} color={PRIMARY_YELLOW}/>}
+      {testimonialContent && <Testimonial content={testimonialContent} />}
+
 
 
     </Layout>
