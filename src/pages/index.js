@@ -22,7 +22,7 @@ const HomePage = () => {
   const missionContent = pageContent.missionStatementImage ? {
     statement: pageContent.missionStatement,
     description: pageContent.missionStatementDescription,
-    imageSrc: pageContent.missionStatementImage.fields.file.url
+    imageSrc: pageContent.missionStatementImage.fields.file
   } : null
 
   return (

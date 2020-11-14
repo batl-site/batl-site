@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-export const MissionImage = styled.img``;
-
-export const ImageContainer = styled.div`
+export const ImageWrapper = styled.div`
+  float: right;
+  padding: 0 !important;
   width: 80vw;
 
   @media (min-width: 768px) {
@@ -14,7 +14,9 @@ export const ImageContainer = styled.div`
   }
 `;
 
-export const DescriptionContainer = styled.div`
+export const Description = styled.div`
+  padding: 0 !important;
+
   @media (min-width: 768px) {
     padding-left: 11.5vw !important;
   }
@@ -25,7 +27,7 @@ export const DescriptionContainer = styled.div`
 
 `;
 
-export const Container = styled.div`
+export const BleedBreakPoint = styled.div`
   @media (min-width: 1550px) {
     max-width: 1140px;
     width: 100%;
@@ -34,8 +36,6 @@ export const Container = styled.div`
     margin-right: auto;
     margin-left: auto;
   }
-
-
 `;
 
 // @media (min-width: 1200px){
@@ -72,7 +72,9 @@ export const Container = styled.div`
 //     margin-left: auto;
 //   }
 
-export const ContentContainer = styled.div`
+export const Content = styled.div`
+  justify-content: space-between;
+
   @media (min-width: 1550px) {
     max-width: 1140px;
     width: 100%;

@@ -1,37 +1,36 @@
 import React from "react";
 import { H1, H2, P1 } from "../styles/styles";
 import {
-  Container,
-  ContentContainer,
-  DescriptionContainer,
-  ImageContainer,
-  MissionImage,
+  BleedBreakPoint,
+  Content,
+  Description,
+  ImageWrapper
 } from "./styled";
 
 const MissionStatement = ({ content }) => {
   return (
-    <div>
-      <div className="container mb-5 mb-md-auto">
+    <>
+      <div className="container">
         <H2>Our Vision</H2>
-        <H1 className="header-spacing">{content.statement}</H1>
-        <DescriptionContainer className="col-12 col-md-6 col-lg-4 d-block d-md-none p-0">
+        <H1>{content.statement}</H1>
+        <Description className="d-block d-md-none col-12 col-md-6 col-lg-4">
           <P1>{content.description}</P1>
-        </DescriptionContainer>
+        </Description>
       </div>
-      <Container>
-        <ContentContainer className="d-none d-md-inline-flex justify-content-between">
-          <DescriptionContainer className="col-12 col-md-6 col-lg-4 col-xl-5 mr-4">
+      <BleedBreakPoint>
+        <Content className="d-none d-md-inline-flex">
+          <Description className="col-12 col-md-6 col-lg-4 col-xl-5 mr-4">
             <P1>{content.description}</P1>
-          </DescriptionContainer>
-          <ImageContainer className="col-xl-7 p-0">
-            <MissionImage src={content.imageSrc} />
-          </ImageContainer>
-        </ContentContainer>
-      </Container>
-      <ImageContainer className="float-right d-block d-md-none">
-        <MissionImage src={content.imageSrc} />
-      </ImageContainer>
-    </div>
+          </Description>
+          <ImageWrapper className="col-xl-7">
+            <img alt={content.imageSrc.fileName} src={content.imageSrc.url} />
+          </ImageWrapper>
+        </Content>
+      </BleedBreakPoint>
+      <ImageWrapper className="d-block d-md-none">
+        <img alt={content.imageSrc.fileName} src={content.imageSrc.url} />
+      </ImageWrapper>
+    </>
   );
 };
 

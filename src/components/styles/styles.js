@@ -14,9 +14,11 @@ export const BG_WHITE = "#F8F8F8";
 export const H1 = styled.h1`
 font-family: 'Work Sans', sans-serif;
   font-size: 36px;
+  margin-bottom: 35px;
 
   @media (min-width:  576px) {
     font-size: 55px;
+    margin-bottom: 55px;
   }
 `
 
@@ -35,7 +37,8 @@ export const H2 = styled.h2`
 export const P1 = styled.p`
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
-  font-weight: normal;
+  font-weight: normal;5
+
 
   @media (min-width:  576px) {
     font-size: 16px;
