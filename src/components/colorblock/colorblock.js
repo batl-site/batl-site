@@ -1,4 +1,5 @@
 import React from "react";
+import { navigate } from "gatsby";
 import { Button, H1, P1, P2 } from "../styles/styles";
 import {
   ColorSection,
@@ -11,6 +12,7 @@ import {
 } from "./styled";
 
 const ColorBlock = ({ content, color }) => {
+  const buttonContent = content.callToAction.fields;
   return (
     <ColorSection color={color}>
       <RelativeContainer>
@@ -21,17 +23,23 @@ const ColorBlock = ({ content, color }) => {
       <Content>
         <OneColumn className="d-block d-sm-none d-col-12">
           <P1>{content.description}</P1>
-          <Button className="mt-4">
+          <Button
+            className="mt-4"
+            onClick={() => navigate(`${buttonContent.buttonLink}`)}
+          >
             <ButtonText>
-              <P2>Get to know us more</P2>
+              <P2>{buttonContent.label}</P2>
             </ButtonText>
           </Button>
         </OneColumn>
         <TwoColumn className="d-none d-sm-block col-11 col-md-10 col-lg-8 col-xl-8 ">
           <P1>{content.description}</P1>
-          <Button className="mt-4">
+          <Button
+            className="mt-4"
+            onClick={() => navigate(`${buttonContent.buttonLink}`)}
+          >
             <ButtonText>
-              <P2>Get to know us more</P2>
+              <P2>{buttonContent.label}</P2>
             </ButtonText>
           </Button>
         </TwoColumn>

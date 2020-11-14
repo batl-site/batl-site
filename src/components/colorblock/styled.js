@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { PRIMARY_YELLOW } from "../styles/styles";
 
 export const ColorSection = styled.div.attrs({className: 'container-fluid'})`
     background-color: ${props => props.color};

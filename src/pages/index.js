@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Layout from "../components/layout";
 import MissionStatement from "../components/mission/missionStatement";
 import SEO from "../components/seo";
-import { H1, H2, P1, P2, PRIMARY_YELLOW } from "../components/styles/styles";
+import { PRIMARY_YELLOW } from "../components/styles/styles";
 import ColorBlock from "../components/colorblock/colorblock";
 import { HOMEPAGE_ID } from "../constants/constants";
 import apiService from "../service/apiService";
@@ -28,8 +28,6 @@ const HomePage = () => {
   } : null
   const heroContent = pageContent.homepageHero ? pageContent.homepageHero.fields : null
   const YCBContent = pageContent.more ? pageContent.more.fields : null
-
-  console.log(pageContent)
 
   return (
     <Layout>
