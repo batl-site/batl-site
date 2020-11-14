@@ -14,6 +14,7 @@ export const BG_WHITE = "#F8F8F8";
 export const H1 = styled.h1`
 font-family: 'Work Sans', sans-serif;
   font-size: 55px;
+  margin-bottom: .5em;
 `
 
 export const H2 = styled.h2`
@@ -21,6 +22,8 @@ export const H2 = styled.h2`
   font-size: 22px;
   font-style: italic;
   font-weight: 300;
+
+  margin-bottom: 1em;
 `
 
 export const P1 = styled.p`
