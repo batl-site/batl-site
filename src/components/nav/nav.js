@@ -1,36 +1,27 @@
-import { Link } from "gatsby";
+import { Link, navigate } from "gatsby";
 import React from "react";
-import { LogoContainer, NavContainer, NavItem, NavPages } from "./styled";
+import { LogoContainer, NavContainer, NavItem, NavPages, Logo, NavButton } from "./styled";
+import * as logo from "../../images/batl-logo.svg";
+import { P1 } from "../styles/styles";
 
 const Nav = () => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <NavContainer
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
+  <header>
+    <NavContainer>
       <LogoContainer>
         <Link to="/">
-          <NavItem>Logo</NavItem>
+          <Logo src={logo} />
         </Link>
       </LogoContainer>
-      <NavPages>
-        <Link to="/whoWeAre">
-          <NavItem>Who We Are</NavItem>
+      <NavPages className="col-8 col-lg-6">
+        <Link to="/whoWeAre" className="text-decoration-none">
+          <NavItem><P1>Who We Are</P1></NavItem>
         </Link>
-        <Link to="/whatWeDo">
-          <NavItem>What We Do</NavItem>
+        <Link to="/whatWeDo" className="text-decoration-none">
+          <NavItem><P1>What We Do</P1></NavItem>
         </Link>
-        <Link to="/contact">
-          <NavItem>Contact</NavItem>
-        </Link>
+        <NavButton onClick={() => navigate("/contact")}>
+          <P1>Contact</P1>
+        </NavButton>
       </NavPages>
     </NavContainer>
   </header>

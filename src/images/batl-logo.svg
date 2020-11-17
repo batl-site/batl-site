@@ -1,0 +1,11 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 327.16 97.68">
+    <defs>
+        <style>.cls-1{font-size:120px;fill:#231f20;font-family:BioSans-SemiBold, Bio Sans;font-weight:600;}.cls-2{letter-spacing:-0.01em;}.cls-3{letter-spacing:0.01em;}.cls-4{fill:#ffd43e;}</style>
+    </defs>
+    <text class="cls-1" transform="translate(110.97 92.64)">
+        <tspan class="cls-2">ba</tspan>
+        <tspan class="cls-3" x="133.2" y="0">t</tspan>
+        <tspan x="176.16" y="0">l</tspan>
+    </text>
+    <path class="cls-4" d="M56,14.49A39.12,39.12,0,0,0,25.19,77.71L34,46.32V33.15h0c-1.32,0-2.39-.64-2.39-1.44s1.07-1.43,2.39-1.43H44.1V48L33.58,85.68A39,39,0,0,0,56,92.75a40,40,0,0,0,6-.46L49.67,48V30.28H59.81c1.32,0,2.39.64,2.39,1.43s-1.07,1.44-2.39,1.44h0V46.32L71.86,89.4A39.13,39.13,0,0,0,56,14.49Z" />
+</svg>
