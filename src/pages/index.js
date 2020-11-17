@@ -27,13 +27,13 @@ const HomePage = () => {
     imageSrc: pageContent.missionStatementImage.fields.file
   } : null
   const heroContent = pageContent.homepageHero ? pageContent.homepageHero.fields : null
-  const YCBContent = pageContent.more ? pageContent.more.fields : null
+  const ColorBlockContent = pageContent.more ? pageContent.more.fields : null
 
   return (
     <Layout>
       <SEO title="Home" />
       {missionContent && (<MissionStatement content={missionContent} />)}
-      {YCBContent && <ColorBlock content={YCBContent} color={PRIMARY_YELLOW}/>}
+      {ColorBlockContent && <ColorBlock content={ColorBlockContent} color={PRIMARY_YELLOW}/>}
 
 
     </Layout>
