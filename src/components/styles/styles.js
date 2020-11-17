@@ -27,6 +27,7 @@ export const H2 = styled.h2`
   font-size: 16px;
   font-style: italic;
   font-weight: 300;
+  line-height: 31px;
 
   @media (min-width:  576px) {
     font-size: 22px;
@@ -37,7 +38,7 @@ export const H2 = styled.h2`
 export const P1 = styled.p`
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
-  font-weight: normal;5
+  font-weight: normal;
 
 
   @media (min-width:  576px) {
@@ -53,4 +54,9 @@ export const P2 = styled.p`
   @media (min-width:  576px) {
     font-size: 16px;
   }
+`
+
+// Images
+export const RoundImage = styled.img`
+  border-radius: 50%;
 `

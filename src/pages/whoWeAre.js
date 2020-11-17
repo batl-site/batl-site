@@ -3,9 +3,10 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { WHOWEARE_ID } from "../constants/constants"
 import apiService from "../service/apiService"
+import ImageInfoSection from "../components/image_info_section/imageInfoSection"
 
 const WhoWeAre = () => {
-  const [pageContent, setPageContent] = useState([])
+  const [pageContent, setPageContent] = useState(null)
 
   useEffect(() => {
     apiService
@@ -13,14 +14,14 @@ const WhoWeAre = () => {
       .then((response) => setPageContent(response[0].fields));
   }, []);
 
-  const heroContent = pageContent.hero ? pageContent.hero.fields : null
+  if (!pageContent) return null;
+
+  const { mission } = pageContent;
 
   return (
     <Layout>
-      <SEO title="WhoWeAre" />
-      <h1>This is the who we are page</h1>
-      <h2>{heroContent && heroContent.heading}</h2>
-      <p>{heroContent && heroContent.description}</p>
+      <SEO title="Who We Are" />
+      <ImageInfoSection section="Our Mission" content={mission.fields} />
     </Layout>
   )
 }
