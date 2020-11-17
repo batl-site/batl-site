@@ -10,14 +10,14 @@ export const TwoColumn = styled.div.attrs({className: 'd-none d-sm-block col-11 
     column-gap: 50px;
 `
 
-export const OneColumn = styled.div.attrs({className="d-block d-sm-none d-col-12"})`
+export const OneColumn = styled.div.attrs({className: "d-block d-sm-none d-col-12"})`
 `
 
 export const RelativeContainer = styled.div.attrs({className: 'container'})`
     position: relative;
 `
 
-export const Header = styled.div.attrs({className="col-10 col-md-8 col-lg-6 col-xl-4"})`
+export const Header = styled.div.attrs({className: "col-10 col-md-8 col-lg-6 col-xl-4"})`
     position: absolute;
     top: -108px;
     padding: 0;
