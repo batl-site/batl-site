@@ -9,6 +9,7 @@
     "Mckenna Poulos <mckennapoulos@gmail.com>"
   ],
   "dependencies": {
+    "bootstrap": "^3.4.1",
     "contentful": "^7.14.8",
     "dotenv": "^8.2.0",
     "gatsby": "^2.24.79",
