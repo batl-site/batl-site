@@ -13,27 +13,44 @@ export const BG_WHITE = "#F8F8F8";
 // Fonts
 export const H1 = styled.h1`
 font-family: 'Work Sans', sans-serif;
-  font-size: 55px;
-  margin-bottom: .5em;
+  font-size: 36px;
+  margin-bottom: 35px;
+
+  @media (min-width:  576px) {
+    font-size: 55px;
+    margin-bottom: 55px;
+  }
 `
 
 export const H2 = styled.h2`
   font-family: 'Open Sans', sans-serif;
-  font-size: 22px;
+  font-size: 16px;
   font-style: italic;
   font-weight: 300;
 
-  margin-bottom: 1em;
+  @media (min-width:  576px) {
+    font-size: 22px;
+
+  }
 `
 
 export const P1 = styled.p`
   font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
-  font-weight: normal;
+  font-size: 14px;
+  font-weight: normal;5
+
+
+  @media (min-width:  576px) {
+    font-size: 16px;
+  }
 `
 
 export const P2 = styled.p`
   font-family: 'IBM Plex Sans', sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
+
+  @media (min-width:  576px) {
+    font-size: 16px;
+  }
 `

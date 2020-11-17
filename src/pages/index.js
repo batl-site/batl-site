@@ -1,14 +1,14 @@
-
 import React, { useEffect, useState } from "react";
 import Layout from "../components/layout";
+import MissionStatement from "../components/mission/missionStatement";
 import SEO from "../components/seo";
 import { H1, H2, P1, P2 } from "../components/styles/styles";
 import Testimonial from "../components/testimonial/testimonial";
 import { HOMEPAGE_ID } from "../constants/constants";
 import apiService from "../service/apiService";
 
-require('dotenv').config({
-  path: `.env.${process.env.NODE_ENV}`
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
 });
 
 const HomePage = () => {
@@ -20,18 +20,29 @@ const HomePage = () => {
       .then((response) => setPageContent(response[0].fields));
   }, []);
 
-  const heroContent = pageContent.homepageHero ? pageContent.homepageHero.fields : null
-  const testimonialContent = pageContent.testimonial ? pageContent.testimonial.fields : null
+  const heroContent = pageContent.homepageHero
+    ? pageContent.homepageHero.fields
+    : null;
+  const testimonialContent = pageContent.testimonial
+    ? pageContent.testimonial.fields
+    : null;
 
-  console.log(pageContent)
+  console.log(pageContent);
+  const missionContent = pageContent.missionStatementImage
+    ? {
+        statement: pageContent.missionStatement,
+        description: pageContent.missionStatementDescription,
+        imageSrc: pageContent.missionStatementImage.fields.file,
+      }
+    : null;
 
   return (
     <Layout>
       <SEO title="Home" />
-      {testimonialContent && <Testimonial content={testimonialContent} />}
 
+        {missionContent && <MissionStatement content={missionContent} />}
 
-
+        {testimonialContent && <Testimonial content={testimonialContent} />}
     </Layout>
   );
 };
