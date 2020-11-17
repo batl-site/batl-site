@@ -54,3 +54,8 @@ export const P2 = styled.p`
     font-size: 16px;
   }
 `
+
+// Images
+export const RoundImage = styled.img`
+  border-radius: 50%;
+`
