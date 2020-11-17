@@ -10,7 +10,7 @@ export const SmallImage = styled(RoundImage).attrs((props) => ({
 }))``
 
 export const MediumImage = styled(RoundImage).attrs((props) => ({
-  className: "col-8"
+  className: "col-9"
 }))``
 
 export const DoubleImageContainer = styled.div.attrs((props) => ({
@@ -18,7 +18,7 @@ export const DoubleImageContainer = styled.div.attrs((props) => ({
 }))``
 
 export const RowOne = styled.div.attrs((props) => ({
-  className: `row ${!props.variant && 'justify-content-end'}`
+  className: `row ${!props.variant && 'justify-content-start'}`
 }))``
 
 export const RowTwo = styled.div.attrs((props) => ({
