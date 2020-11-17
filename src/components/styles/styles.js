@@ -42,10 +42,11 @@ export const P1 = styled.p`
   line-height: 32px;
   margin-bottom: 0;
 
-  @media (min-width: 576px) {
+  @media (min-width:  576px) {
     font-size: 16px;
     line-height: 30px;
   }
+  
 `
 
 export const P2 = styled.p`
