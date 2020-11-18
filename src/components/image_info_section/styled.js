@@ -20,3 +20,8 @@ export const ImagesContainer = styled.div.attrs((props) => ({
 export const ContentContainer = styled.div.attrs((props) => ({
   className: "col-12 col-lg-7"
 }))``
+
+export const ButtonText = styled.div`
+    margin: 0;
+    padding: 15px 25px;
+`

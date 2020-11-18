@@ -36,6 +36,17 @@ export const P2 = styled.p`
   font-size: 16px;
   font-weight: 600;
 `
+export const Button = styled.button`
+text-transform: uppercase;
+border: 2px solid ${TEXT_BLACK};
+background-color: Transparent;
+background-repeat:no-repeat;
+
+:hover {
+  background-color: ${TEXT_BLACK};
+  color: ${BG_WHITE};
+}
+`
 
 // Images
 export const RoundImage = styled.img`

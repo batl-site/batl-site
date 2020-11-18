@@ -16,6 +16,7 @@ const WhatWeDo = () => {
 
   if (!pageContent) return null;
 
+  console.log(pageContent)
   const { research } = pageContent;
 
   return (
