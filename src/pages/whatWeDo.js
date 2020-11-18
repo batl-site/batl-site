@@ -14,10 +14,14 @@ const WhatWeDo = () => {
       .then((response) => setPageContent(response[0].fields));
   }, []);
 
-  if (!pageContent) return null;
+  if (!pageContent) return (
+    <Layout>
+      <SEO title="Who We Are" />
+    </Layout>
+  ) ;
 
-  console.log(pageContent)
   const { research } = pageContent;
+ 
 
   return (
     <Layout>
