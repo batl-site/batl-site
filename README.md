@@ -34,7 +34,7 @@ cp .env.sample .env.development
 
 ```sh
 # In .env.development
-CONTENTFUL_ACCESS_TOKEN=XXXXXXX
+GATSBY_CONTENTFUL_ACCESS_TOKEN=XXXXXXX
 ```
 
 4. Install the npm modules:
