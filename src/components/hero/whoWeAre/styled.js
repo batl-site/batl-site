@@ -28,16 +28,38 @@ export const ContentContainer = styled.div.attrs((props) => ({
   className: "col-md-6 col-lg-5",
 }))``
 
-export const SideImage = styled.img.attrs((props) => ({
-  className: 'd-none d-md-block'
-}))`
+export const SideImage = styled.img`
+  display: none;
+
+  @media (min-width: 768px) {
+    display: block;
+  }
+
   margin-bottom: 0;
   width: 50%;
-  height: 600px;
+  height: 100%;
   object-fit: cover;
   position: absolute;
   right: 0;
   bottom: -75px;
+
+  @media (min-width: 1550px) {
+    display: none;
+  }
+`
+
+export const XLImage = styled.img`
+  display: none;
+  @media (min-width: 1550px) {
+    display: block;
+    margin-bottom: 0;
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    right: 0;
+    bottom: -75px;
+  }
 `
 
 export const FullBleedImage = styled.img.attrs((props) => ({
