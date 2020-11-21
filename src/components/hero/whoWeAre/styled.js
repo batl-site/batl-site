@@ -24,9 +24,7 @@ export const Container = styled.div`
   }
 `
 
-export const ContentContainer = styled.div.attrs((props) => ({
-  className: "col-md-6 col-lg-5",
-}))``
+export const ContentContainer = styled.div.attrs({ className: "col-md-6 col-lg-5", })``
 
 export const SideImage = styled.img`
   display: none;
@@ -62,7 +60,5 @@ export const XLImage = styled.img`
   }
 `
 
-export const FullBleedImage = styled.img.attrs((props) => ({
-  className: 'd-md-none'
-}))`
+export const FullBleedImage = styled.img.attrs({ className: 'd-md-none' })`
   margin-bottom: 0;`

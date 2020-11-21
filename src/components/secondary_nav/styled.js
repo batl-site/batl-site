@@ -13,9 +13,7 @@ export const Container = styled.div`
   }
 `
 
-export const Tabs = styled.div.attrs((props) => ({
-  className: 'col-md-6 col-lg-5'
-}))`
+export const Tabs = styled.div.attrs({ className: 'col-md-6 col-lg-5' })`
   height: 75px;
   display: flex;
   justify-content: space-between;
