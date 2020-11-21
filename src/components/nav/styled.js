@@ -1,6 +1,7 @@
+import { Link } from "gatsby";
 import styled from "styled-components";
 
-import { TEXT_BLACK, PRIMARY_YELLOW } from "../styles/styles"
+import { TEXT_BLACK, PRIMARY_YELLOW, BG_WHITE } from "../styles/styles";
 
 export const NavButton = styled.button`
   background-color: transparent;
@@ -11,17 +12,17 @@ export const NavButton = styled.button`
     color: white;
     background-color: ${TEXT_BLACK};
   }
-`
+`;
 
 export const Logo = styled.img`
   width: 125px;
   margin-bottom: 0;
-`
+`;
 
-export const NavContainer = styled.div.attrs({className: 'container'})`
+export const NavContainer = styled.div.attrs({ className: "container" })`
   display: flex;
   justify-content: space-between;
-  padding: 25px 0 15px 0;
+  padding: 15px 0 0 0;
   color: ${TEXT_BLACK};
   align-items: end;
 `;
@@ -33,11 +34,20 @@ export const NavPages = styled.div`
   align-items: baseline;
 `;
 
+// border-bottom: ${props => props.button ? 'none' : "4px solid rgba(56, 206, 194, 0)"};
+
 export const NavItem = styled.div`
   color: black;
   text-decoration: none;
-  padding-bottom: 15px;
-  border-bottom: ${props => props.button ? 'none' : "4px solid rgba(56, 206, 194, 0)"};
+  padding-bottom: 15px;d
+`;
+
+export const LogoContainer = styled.div``;
+
+export const NavLink = styled(Link).attrs({ className: "pb-2 m-0" })`
+  border-bottom: 4px solid rgba(56, 206, 194, 0);
+  width: 95px;
+  text-align: center;
 
   :hover {
     text-decoration: none;
@@ -45,4 +55,14 @@ export const NavItem = styled.div`
   }
 `;
 
-export const LogoContainer = styled.div``;
+export const FixedContainer = styled.div.attrs({
+  className: "container-fluid",
+})`
+  position: fixed;
+  z-index: 1000000000000;
+  background-color: ${BG_WHITE};
+`;
+
+export const OffsetBody = styled.div`
+  height: 100px;
+`;

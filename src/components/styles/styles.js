@@ -89,4 +89,7 @@ export const Button = styled.button`
   }
 `;
 
-
+// background-color
+export const BackgroundColor = styled.div`
+  background-color: ${BG_WHITE}
+`

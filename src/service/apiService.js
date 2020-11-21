@@ -8,7 +8,7 @@ export const client = contentful.createClient({
 
 client.getEntries({
   include: 2
-}).then((response) => console.log(response.items))
+}).then(response => console.log('thsi is response', response.items))
 .catch(console.error)
 
 export const getAllEntries = () => {
