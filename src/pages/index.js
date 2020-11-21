@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import Layout from "../components/layout";
 import MissionStatement from "../components/mission/missionStatement";
 import SEO from "../components/seo";
+import { PRIMARY_YELLOW } from "../components/styles/styles";
+import ColorBlock from "../components/colorblock/colorblock";
 import { HOMEPAGE_ID } from "../constants/constants";
 import apiService from "../service/apiService";
 
@@ -24,12 +26,14 @@ const HomePage = () => {
     description: pageContent.missionStatementDescription,
     imageSrc: pageContent.missionStatementImage.fields.file
   } : null
+  const heroContent = pageContent.homepageHero ? pageContent.homepageHero.fields : null
+  const ColorBlockContent = pageContent.more ? pageContent.more.fields : null
 
   return (
     <Layout>
       <SEO title="Home" />
       {missionContent && (<MissionStatement content={missionContent} />)}
-
+      {ColorBlockContent && <ColorBlock content={ColorBlockContent} color={PRIMARY_YELLOW}/>}
 
 
     </Layout>
