@@ -39,10 +39,12 @@ export const P1 = styled.p`
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   font-weight: normal;
+  line-height: 32px;
 
 
   @media (min-width:  576px) {
     font-size: 16px;
+    line-height: 30px;
   }
 `
 
