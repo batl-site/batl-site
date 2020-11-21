@@ -1,6 +1,6 @@
 import React from "react";
 import { navigate } from "gatsby";
-import { Button, H1, P1, P2 } from "../styles/styles";
+import { Button, H1, P1, P2, PRIMARY_YELLOW } from "../styles/styles";
 import {
   ColorSection,
   TwoColumn,
@@ -26,6 +26,7 @@ const ColorBlock = ({ content, color }) => {
           <Button
             className="mt-4"
             onClick={() => navigate(`${buttonContent.buttonLink}`)}
+            color={PRIMARY_YELLOW}
           >
             <ButtonText>
               <P2>{buttonContent.label}</P2>
@@ -37,6 +38,7 @@ const ColorBlock = ({ content, color }) => {
           <Button
             className="mt-4"
             onClick={() => navigate(`${buttonContent.buttonLink}`)}
+            color={color}
           >
             <ButtonText>
               <P2>{buttonContent.label}</P2>

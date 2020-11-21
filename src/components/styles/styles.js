@@ -63,11 +63,14 @@ export const RoundImage = styled.img`
 export const Button = styled.button`
   text-transform: uppercase;
   border: 2px solid ${TEXT_BLACK};
-  background-color: Transparent;
+  background-color: transparent;
   background-repeat: no-repeat;
+  color: ${props => console.log('this is color', props.color)};
 
-  :hover {
+  &:hover {
     background-color: ${TEXT_BLACK};
-    color: ${BG_WHITE};
+    color: ${props => props.color ? PRIMARY_YELLOW : BG_WHITE};
   }
 `;
+
+
