@@ -3,8 +3,9 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { WHOWEARE_ID } from "../constants/constants"
 import apiService from "../service/apiService"
-import ImageInfoSection from "../components/image_info_section/imageInfoSection"
 import WhoWeAreHero from "../components/hero/whoWeAre/WhoWeAreHero"
+import SecondaryNav from "../components/secondary_nav/SecondaryNav"
+import ImageInfoSection from "../components/image_info_section/imageInfoSection"
 
 const WhoWeAre = () => {
   const [pageContent, setPageContent] = useState(null)
@@ -23,7 +24,8 @@ const WhoWeAre = () => {
     <Layout>
       <SEO title="Who We Are" />
       <WhoWeAreHero content={hero.fields} />
-      <ImageInfoSection section="Our Mission" content={mission.fields} />
+      <SecondaryNav />
+      <ImageInfoSection id="mission" section="Our Mission" content={mission.fields} />
     </Layout>
   )
 }

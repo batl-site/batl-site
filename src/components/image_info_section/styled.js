@@ -3,6 +3,8 @@ import styled from 'styled-components'
 export const Container = styled.div.attrs((props) => ({
   className: "d-flex flex-wrap align-items-center"
 }))`
+  padding: 5em 0;
+
   @media (min-width: 992px) {
     max-width: 960px;
     margin: 0 auto;
