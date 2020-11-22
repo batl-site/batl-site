@@ -10,16 +10,17 @@ import {
 const MissionStatement = ({ content }) => {
   return (
     <>
+    <div className="d-flex flex-column">
       <div className="container">
         <H2>Our Vision</H2>
         <H1>{content.statement}</H1>
-        <Description className="d-block d-md-none col-12 col-md-6 col-lg-4">
+        <Description className="d-block d-md-none">
           <P1>{content.description}</P1>
         </Description>
       </div>
       <BleedBreakPoint>
-        <Content className="d-none d-md-inline-flex">
-          <Description className="col-12 col-md-6 col-lg-4 col-xl-5 mr-4">
+        <Content>
+          <Description className="col-xl-5 mr-4">
             <P1>{content.description}</P1>
           </Description>
           <ImageWrapper className="col-xl-7">
@@ -27,9 +28,10 @@ const MissionStatement = ({ content }) => {
           </ImageWrapper>
         </Content>
       </BleedBreakPoint>
-      <ImageWrapper className="d-block d-md-none">
+      <ImageWrapper className="d-block d-md-none  mb-5 align-self-end">
         <img alt={content.imageSrc.fileName} src={content.imageSrc.url} />
       </ImageWrapper>
+      </div>
     </>
   );
 };
