@@ -12,7 +12,7 @@ import {
   OffsetBody
 } from "./styled";
 import * as logo from "../../images/batl-logo.svg";
-import { H1, P1, PRIMARY_YELLOW } from "../styles/styles";
+import { P1 } from "../styles/styles";
 import Hamburger from "./hamburger/hamburger"
 
 const Nav = () => (

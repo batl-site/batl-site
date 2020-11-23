@@ -34,8 +34,6 @@ export const NavPages = styled.div`
   align-items: baseline;
 `;
 
-// border-bottom: ${props => props.button ? 'none' : "4px solid rgba(56, 206, 194, 0)"};
-
 export const NavItem = styled.div`
   color: black;
   text-decoration: none;
