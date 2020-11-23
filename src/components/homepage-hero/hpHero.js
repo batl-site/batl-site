@@ -1,21 +1,32 @@
+import { Link } from "gatsby";
 import React from "react";
-import { H1, P1 } from "../styles/styles";
-import { HeroBlockOverlay, HeroImage, HeroImageContainer } from "./styled";
+import { H1, P1, P2, SecondaryLink } from "../styles/styles";
+import {
+  HeroBlockOverlay,
+  HeroImage,
+  HeroImageContainer,
+  HeroBlockPosition,
+  HpHeroContainer,
+  Container
+} from "./styled";
 
 const HpHero = ({ content }) => {
-    
+    const buttonContent = content.ctaButton
   return (
-    <div>
-      <HeroImageContainer className="container-fluid">
+    <HpHeroContainer>
+      <HeroImageContainer>
         <HeroImage image={content.imageSrc}></HeroImage>
       </HeroImageContainer>
-      <div className="container">
-        <HeroBlockOverlay className="col-12 col-md-8">
-          <H1>{content.heading}</H1>
-          <P1>{content.description}</P1>
-        </HeroBlockOverlay>
-      </div>
-    </div>
+      <Container>
+        <HeroBlockPosition>
+          <HeroBlockOverlay>
+            <H1>{content.heading}</H1>
+            <P1>{content.description}</P1>
+            {buttonContent && <Link to={buttonContent.buttonLink}><SecondaryLink>{buttonContent.label} &#62;</SecondaryLink></Link>}
+          </HeroBlockOverlay>
+        </HeroBlockPosition>
+      </Container>
+    </HpHeroContainer>
   );
 };
 

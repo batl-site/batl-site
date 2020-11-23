@@ -30,7 +30,8 @@ const HomePage = () => {
   const heroContent = pageContent.heroImage ? {
     heading: pageContent.heroHeading,
     description: pageContent.description,
-    imageSrc: pageContent.heroImage.fields.file.url
+    imageSrc: pageContent.heroImage.fields.file.url,
+    ctaButton: pageContent.homepageHeroCta.fields
   } : null
   const ColorBlockContent = pageContent.more ? pageContent.more.fields : null
   const testimonialContent = pageContent.testimonial ? pageContent.testimonial.fields : null
