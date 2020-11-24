@@ -20,7 +20,7 @@ export const Logo = styled.img`
   margin-bottom: 0;
 `;
 
-export const NavContainer = styled.div.attrs({ className: "container align-items-center align-items-md-baseline" })`
+export const NavContainer = styled.div.attrs({ className: "container align-items-center align-items-md-baseline pb-2 pb-md-0" })`
   display: flex;
   justify-content: space-between;
   padding: 15px 0 0 0;

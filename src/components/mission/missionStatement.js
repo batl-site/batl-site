@@ -10,7 +10,7 @@ import {
 const MissionStatement = ({ content }) => {
   return (
     <>
-    <div className="d-flex flex-column">
+    <div className="d-flex flex-column my-5">
       <div className="container">
         <H2>Our Vision</H2>
         <H1>{content.statement}</H1>
