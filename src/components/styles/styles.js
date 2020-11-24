@@ -40,12 +40,14 @@ export const P1 = styled.p`
   font-size: 14px;
   font-weight: normal;
   line-height: 32px;
+  margin-bottom: 0;
 
-  @media (min-width: 576px) {
+  @media (min-width:  576px) {
     font-size: 16px;
     line-height: 30px;
   }
-`;
+  
+`
 
 export const P2 = styled.p`
   font-family: "IBM Plex Sans", sans-serif;
@@ -87,4 +89,7 @@ export const Button = styled.button`
   }
 `;
 
-
+// background-color
+export const BackgroundColor = styled.div`
+  background-color: ${BG_WHITE}
+`
