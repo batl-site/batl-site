@@ -20,7 +20,7 @@ export const Logo = styled.img`
   margin-bottom: 0;
 `;
 
-export const NavContainer = styled.div.attrs({ className: "container" })`
+export const NavContainer = styled.div.attrs({ className: "container align-items-center align-items-md-baseline" })`
   display: flex;
   justify-content: space-between;
   padding: 15px 0 0 0;
@@ -65,3 +65,7 @@ export const FixedContainer = styled.div.attrs({
 export const OffsetBody = styled.div`
   height: 100px;
 `;
+
+export const StyledHeader = styled.header`
+  margin-bottom: -18px;
+`

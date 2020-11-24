@@ -10,6 +10,7 @@ import {
   NavLink,
   FixedContainer,
   OffsetBody,
+  StyledHeader
 } from "./styled";
 import * as logo from "../../images/batl-logo.svg";
 import { P1 } from "../styles/styles";
@@ -22,7 +23,7 @@ import {
 } from "../../constants/constants";
 
 const Nav = () => (
-  <header>
+  <StyledHeader>
     <FixedContainer>
       <NavContainer>
         <LogoContainer>
@@ -66,7 +67,7 @@ const Nav = () => (
       </NavContainer>
     </FixedContainer>
     <OffsetBody />
-  </header>
+    </StyledHeader>
 );
 
 export default Nav;
