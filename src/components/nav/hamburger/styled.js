@@ -1,9 +1,9 @@
 import { Link } from "gatsby";
 import styled from "styled-components";
+import { MAX_ZINDEX } from "../../../constants/constants";
 import {
   BG_WHITE,
   H1,
-  H2,
   PRIMARY_NAVY,
   TEXT_BLACK,
 } from "../../styles/styles";
@@ -11,7 +11,7 @@ import {
 export const HamburgerContainer = styled.div`
   display: inline-block;
   cursor: pointer;
-  z-index: 10000;
+  z-index: ${MAX_ZINDEX};
 `;
 
 export const Bar = styled.div`
@@ -21,29 +21,21 @@ export const Bar = styled.div`
   margin: 8px 0;
   border-radius: 50px;
 `;
-export const Bar1 = styled.div`
+
+export const XBar = styled.div`
   width: 35px;
   height: 3px;
   background-color: white;
   margin: 8px 0;
   border-radius: 50px;
-  -webkit-transform: rotate(-45deg) translate(-6px, 8.5px);
-  transform: rotate(-45deg) translate(-6px, 8.5px);
-`;
-export const Bar2 = styled.div`
-  width: 35px;
-  height: 3px;
-  background-color: white;
-  margin: 8px 0;
-  border-radius: 50px;
-  -webkit-transform: rotate(45deg) translate(1px, -2px);
-  transform: rotate(45deg) translate(1px, -2px);
+
+  transform: ${props => props.leftBar ? 'rotate(-45deg) translate(-6px, 8.5px)' : 'rotate(45deg) translate(1px, -2px)'};
 `;
 
 export const HamburgerMenu = styled.div`
   display: inline-block;
   cursor: pointer;
-  z-index: 10000;
+  z-index: ${MAX_ZINDEX};
   padding-top: 0;
   padding-bottom: 0;
 `;
@@ -66,12 +58,9 @@ export const MenuContainer = styled.div`
 `;
 
 export const MenuContentContainer = styled.div`
-  display: flex;
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   position: absolute;
-  height: 10000%;
-  z-index: 9999;
   background-color: ${PRIMARY_NAVY};
   top: 0;
   left: 0;
@@ -93,7 +82,6 @@ export const HambLinkContainer = styled.div`
 `;
 
 export const HambHeaderLink = styled(Link)`
-  text-decoration: none;
   color: ${BG_WHITE};
   :hover {
     text-decoration: none;
@@ -102,5 +90,4 @@ export const HambHeaderLink = styled(Link)`
 
 export const HambHeaderPage = styled(H1)`
   color: ${BG_WHITE};
-  text-decoration: none;
 `;

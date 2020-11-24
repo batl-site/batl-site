@@ -9,25 +9,31 @@ import {
   NavButton,
   NavLink,
   FixedContainer,
-  OffsetBody
+  OffsetBody,
 } from "./styled";
 import * as logo from "../../images/batl-logo.svg";
 import { P1 } from "../styles/styles";
-import Hamburger from "./hamburger/hamburger"
+import Hamburger from "./hamburger/hamburger";
+import {
+  HOMEPAGE_LINK,
+  WHOWEARE_LINK,
+  WHATWEDO_LINK,
+  CONTACT_LINK,
+} from "../../constants/constants";
 
 const Nav = () => (
   <header>
     <FixedContainer>
       <NavContainer>
         <LogoContainer>
-          <Link to="/">
+          <Link to={HOMEPAGE_LINK}>
             <Logo src={logo} />
           </Link>
         </LogoContainer>
-        <Hamburger className="col-2"/> 
+        <Hamburger className="col-2" />
         <NavPages className="col-8 col-lg-6 d-none d-md-flex align-middle">
           <NavLink
-            to="/"
+            to={HOMEPAGE_LINK}
             activeStyle={{ borderBottom: "4px solid #FFD43D" }}
             className="text-decoration-none"
           >
@@ -36,7 +42,7 @@ const Nav = () => (
             </NavItem>
           </NavLink>
           <NavLink
-            to="/whoWeAre"
+            to={WHOWEARE_LINK}
             activeStyle={{ borderBottom: "4px solid #FFD43D" }}
             className="text-decoration-none"
           >
@@ -45,7 +51,7 @@ const Nav = () => (
             </NavItem>
           </NavLink>
           <NavLink
-            to="/whatWeDo"
+            to={WHATWEDO_LINK}
             activeStyle={{ borderBottom: "4px solid #FFD43D" }}
             className="text-decoration-none"
           >
@@ -53,7 +59,7 @@ const Nav = () => (
               <P1>What We Do</P1>
             </NavItem>
           </NavLink>
-          <NavButton onClick={() => navigate("/contact")}>
+          <NavButton onClick={() => navigate(CONTACT_LINK)}>
             <P1>Contact</P1>
           </NavButton>
         </NavPages>

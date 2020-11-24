@@ -1,5 +1,6 @@
 import { Link } from "gatsby";
 import styled from "styled-components";
+import { MAX_ZINDEX } from "../../constants/constants";
 
 import { TEXT_BLACK, PRIMARY_YELLOW, BG_WHITE } from "../styles/styles";
 
@@ -57,7 +58,7 @@ export const FixedContainer = styled.div.attrs({
   className: "container-fluid",
 })`
   position: fixed;
-  z-index: 1000000000000;
+  z-index: ${MAX_ZINDEX};
   background-color: ${BG_WHITE};
 `;
 
