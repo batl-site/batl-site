@@ -17,7 +17,7 @@ export const H1 = styled.h1`
   font-size: 36px;
   margin-bottom: 35px;
 
-  @media (min-width: 576px) {
+  @media (min-width: 768px) {
     font-size: 55px;
     margin-bottom: 55px;
   }
@@ -30,7 +30,7 @@ export const H2 = styled.h2`
   font-weight: 300;
   line-height: 31px;
 
-  @media (min-width: 576px) {
+  @media (min-width: 768px) {
     font-size: 22px;
   }
 `;
@@ -42,7 +42,7 @@ export const P1 = styled.p`
   line-height: 32px;
   margin-bottom: 0;
 
-  @media (min-width:  576px) {
+  @media (min-width:  768px) {
     font-size: 16px;
     line-height: 30px;
   }
@@ -55,7 +55,7 @@ export const P2 = styled.p`
   font-weight: 600;
   margin: 0;
 
-  @media (min-width: 576px) {
+  @media (min-width: 768px) {
     font-size: 16px;
   }
 `;

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ColorSection = styled.div.attrs({className: 'container-fluid'})`
+export const ColorSection = styled.div.attrs({className: 'container-fluid my-5'})`
     background-color: ${props => props.color};
     padding-bottom: 5rem !important;
 `
