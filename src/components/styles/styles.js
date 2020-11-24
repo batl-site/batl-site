@@ -1,3 +1,4 @@
+import { Link } from "gatsby";
 import styled from "styled-components";
 
 // Colors
@@ -56,6 +57,17 @@ export const P2 = styled.p`
     font-size: 16px;
   }
 `;
+
+// Links
+export const SecondaryLink = styled(P2)`
+  text-decoration: none;
+  color: ${TEXT_BLACK};
+
+  :hover{ 
+    text-decoration: none;
+  }
+
+` 
 
 // Images
 export const RoundImage = styled.img`
