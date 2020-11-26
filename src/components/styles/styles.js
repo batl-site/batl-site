@@ -19,7 +19,7 @@ export const H1 = styled.h1`
 
   @media (min-width: 768px) {
     font-size: 55px;
-    margin-bottom: 55px;
+    margin-bottom: 30px;
   }
 `;
 

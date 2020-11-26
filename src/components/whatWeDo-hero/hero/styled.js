@@ -28,18 +28,6 @@ export const ContentContainer = styled.div.attrs({ className: "col-md-6 col-lg-5
   float: right;
   top: -220px;
 
-  @media (min-width: 576px) {
-    padding: px 0;
-  }
-
-  @media (min-width: 992px) {
-    max-width: 960px;
-    margin: 0 auto;
-  }
-
-  @media (min-width: 1200px) {
-    max-width: 1140px;
-  }
   
 `
 
