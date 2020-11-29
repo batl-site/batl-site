@@ -7,7 +7,9 @@ import ColorBlock from "../components/colorblock/colorblock";
 import Testimonial from "../components/testimonial/testimonial";
 import { HOMEPAGE_ID } from "../constants/constants";
 import apiService from "../service/apiService";
-import HpHero from "../components/homepage-hero/hpHero";
+import News from "../components/news/news";
+import HpHero from "../components/hero/homepage-hero/hpHero";
+import ImageInfoSection from "../components/image_info_section/imageInfoSection";
 
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
@@ -22,27 +24,55 @@ const HomePage = () => {
       .then((response) => setPageContent(response[0].fields));
   }, []);
 
-  const missionContent = pageContent.missionStatementImage ? {
-    statement: pageContent.missionStatement,
-    description: pageContent.missionStatementDescription,
-    imageSrc: pageContent.missionStatementImage.fields.file
-  } : null
-  const heroContent = pageContent.heroImage ? {
-    heading: pageContent.heroHeading,
-    description: pageContent.description,
-    imageSrc: pageContent.heroImage.fields.file.url,
-    ctaButton: pageContent.homepageHeroCta.fields
-  } : null
-  const ColorBlockContent = pageContent.more ? pageContent.more.fields : null
-  const testimonialContent = pageContent.testimonial ? pageContent.testimonial.fields : null
-  console.log(pageContent)
+  const missionContent = pageContent.missionStatementImage
+    ? {
+        statement: pageContent.missionStatement,
+        description: pageContent.missionStatementDescription,
+        imageSrc: pageContent.missionStatementImage.fields.file,
+      }
+    : null;
+  const heroContent = pageContent.heroImage
+    ? {
+        heading: pageContent.heroHeading,
+        description: pageContent.description,
+        imageSrc: pageContent.heroImage.fields.file.url,
+        ctaButton: pageContent.homepageHeroCta.fields,
+      }
+    : null;
+  const colorBlockContent = pageContent.more ? pageContent.more.fields : null;
+  const newsContent =
+    pageContent.articles && pageContent.articles.length !== 0
+      ? {
+          heading: pageContent.newsHeading,
+          articles: pageContent.articles,
+        }
+      : null;
+  const testimonialContent = pageContent.testimonial
+    ? pageContent.testimonial.fields
+    : null;
+  const researchContent =
+    pageContent.research && pageContent.research.fields.images.length > 0
+      ? pageContent.research.fields
+      : null;
+  console.log(pageContent);
   return (
     <Layout>
       <SEO title="Home" />
-      {heroContent && (<HpHero content={heroContent}/>)}
-      {missionContent && (<MissionStatement content={missionContent} />)}
-      {ColorBlockContent && <ColorBlock content={ColorBlockContent} color={PRIMARY_YELLOW}/>}
+      {heroContent && <HpHero content={heroContent} />}
+      {missionContent && <MissionStatement content={missionContent} />}
+      {colorBlockContent && (
+        <ColorBlock content={colorBlockContent} color={PRIMARY_YELLOW} />
+      )}
+      {researchContent && (
+        <ImageInfoSection
+          id={pageContent.research.sys.id}
+          section="Research"
+          content={researchContent}
+          variant={false}
+        />
+      )}
       {testimonialContent && <Testimonial content={testimonialContent} />}
+      {newsContent && <News content={newsContent} />}
     </Layout>
   );
 };

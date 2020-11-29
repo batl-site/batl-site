@@ -1,17 +1,17 @@
-import { Link } from "gatsby";
 import React from "react";
-import { H1, P1, P2, SecondaryLink } from "../styles/styles";
+import SecondaryLink from "../../secondary_link/secondaryLink";
+import { H1, P1 } from "../../styles/styles";
 import {
   HeroBlockOverlay,
   HeroImage,
   HeroImageContainer,
   HeroBlockPosition,
   HpHeroContainer,
-  Container
+  Container,
 } from "./styled";
 
 const HpHero = ({ content }) => {
-    const buttonContent = content.ctaButton
+  const buttonContent = content.ctaButton;
   return (
     <HpHeroContainer>
       <HeroImageContainer>
@@ -22,7 +22,14 @@ const HpHero = ({ content }) => {
           <HeroBlockOverlay>
             <H1>{content.heading}</H1>
             <P1>{content.description}</P1>
-            {buttonContent && <Link to={buttonContent.buttonLink}><SecondaryLink>{buttonContent.label} &#62;</SecondaryLink></Link>}
+            {buttonContent && (
+              <SecondaryLink
+                content={{
+                  url: buttonContent.buttonLink,
+                  label: buttonContent.label,
+                }}
+              />
+            )}
           </HeroBlockOverlay>
         </HeroBlockPosition>
       </Container>

@@ -1,5 +1,5 @@
-import { Link } from "gatsby";
 import styled from "styled-components";
+import { MIN_SM_DESKTOP_SIZE } from "../../constants/constants";
 
 // Colors
 export const PRIMARY_YELLOW = "#FFD43D";
@@ -17,7 +17,7 @@ export const H1 = styled.h1`
   font-size: 36px;
   margin-bottom: 35px;
 
-  @media (min-width: 768px) {
+  @media (min-width: ${MIN_SM_DESKTOP_SIZE}) {
     font-size: 55px;
     margin-bottom: 55px;
   }
@@ -30,8 +30,17 @@ export const H2 = styled.h2`
   font-weight: 300;
   line-height: 31px;
 
-  @media (min-width: 768px) {
+  @media (min-width: ${MIN_SM_DESKTOP_SIZE}) {
     font-size: 22px;
+  }
+`;
+
+export const H3 = styled.h3`
+  font-family: "Work Sans", sans-serif;
+  font-size: 15px;
+
+  @media (min-width: ${MIN_SM_DESKTOP_SIZE}) {
+    font-size: 24px;
   }
 `;
 
@@ -42,12 +51,11 @@ export const P1 = styled.p`
   line-height: 32px;
   margin-bottom: 0;
 
-  @media (min-width:  768px) {
+  @media (min-width: ${MIN_SM_DESKTOP_SIZE}) {
     font-size: 16px;
     line-height: 30px;
   }
-  
-`
+`;
 
 export const P2 = styled.p`
   font-family: "IBM Plex Sans", sans-serif;
@@ -55,21 +63,10 @@ export const P2 = styled.p`
   font-weight: 600;
   margin: 0;
 
-  @media (min-width: 768px) {
+  @media (min-width: ${MIN_SM_DESKTOP_SIZE}) {
     font-size: 16px;
   }
 `;
-
-// Links
-export const SecondaryLink = styled(P2)`
-  text-decoration: none;
-  color: ${TEXT_BLACK};
-
-  :hover{ 
-    text-decoration: none;
-  }
-
-` 
 
 // Images
 export const RoundImage = styled.img`
@@ -81,15 +78,14 @@ export const Button = styled.button`
   border: 2px solid ${TEXT_BLACK};
   background-color: transparent;
   background-repeat: no-repeat;
-  color: ${props => console.log('this is color', props.color)};
 
   &:hover {
     background-color: ${TEXT_BLACK};
-    color: ${props => props.color ? PRIMARY_YELLOW : BG_WHITE};
+    color: ${(props) => (props.color ? PRIMARY_YELLOW : BG_WHITE)};
   }
 `;
 
 // background-color
 export const BackgroundColor = styled.div`
-  background-color: ${BG_WHITE}
-`
+  background-color: ${BG_WHITE};
+`;
