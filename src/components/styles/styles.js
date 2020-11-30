@@ -7,7 +7,7 @@ export const PRIMARY_GREEN = "#74D395";
 export const PRIMARY_NAVY = "#023047";
 export const PRIMARY_RED = "#FF6752";
 export const PRIMARY_ORANGE = "#FF9D42";
-export const PRIMARY_GREY = "#F5F5F5"
+export const PRIMARY_GREY = "#F4F4F4"
 
 export const TEXT_BLACK = "#1A1A1A";
 export const BG_WHITE = "#F8F8F8";
