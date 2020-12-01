@@ -79,8 +79,3 @@ export const Header2 = styled.div.attrs({className: "col-10 col-md-8 col-lg-6 co
 export const Content = styled.div.attrs({className: 'container'})`
     margin-top: -20px;
 `
-
-export const ButtonText = styled.div`
-    margin: 0;
-    padding: 15px 25px;
-`
