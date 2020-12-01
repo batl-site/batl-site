@@ -30,6 +30,7 @@ export const Container = styled.div`
   @media (min-width: 1200px) {
     max-width: 1180px;
     top: -200px;
+
   }
 
   @media (min-width: 1390px) {
@@ -39,7 +40,7 @@ export const Container = styled.div`
 
 `
 
-export const ContentContainer = styled.div.attrs({ className: "col-md-6 col-lg-5 " , })`
+export const ContentContainer = styled.div.attrs({ className: "col-md-6 col-lg-5 "})`
   float: right;
   
 `
