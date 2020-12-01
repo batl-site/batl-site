@@ -1,6 +1,9 @@
 import styled from "styled-components";
-import { PRIMARY_YELLOW } from "../styles/styles";
-import { OVERLAY_ZINDEX } from "../../constants/constants";
+import {
+  MIN_LG_DESKTOP_SIZE,
+  OVERLAY_ZINDEX,
+} from "../../../constants/constants";
+import { PRIMARY_YELLOW } from "../../styles/styles";
 
 export const HpHeroContainer = styled.div.attrs({
   classname: "d-flex flex-column",
@@ -21,7 +24,7 @@ export const HeroImageContainer = styled.div.attrs({
 })`
   height: 70vh;
 
-  @media (min-width: 1550px) {
+  @media (min-width: ${MIN_LG_DESKTOP_SIZE}) {
     height: 60vh;
   }
 `;
@@ -36,7 +39,7 @@ export const HeroBlockOverlay = styled.div.attrs({
   overflow: hidden;
   bottom: 40vh;
 
-  @media (min-width: 1550px) {
+  @media (min-width: ${MIN_LG_DESKTOP_SIZE}) {
     top: -35vh;
   }
 `;

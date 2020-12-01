@@ -1,6 +1,6 @@
 import { Link } from "gatsby";
 import styled from "styled-components";
-import { MAX_ZINDEX } from "../../../constants/constants";
+import { MAX_ZINDEX, MIN_SM_DESKTOP_SIZE, MIN_TABLET_SIZE } from "../../../constants/constants";
 import {
   BG_WHITE,
   H1,
@@ -49,10 +49,10 @@ export const MenuContainer = styled.div`
   @media (min-width: 0px) {
     padding-left: 0;
   }
-  @media (min-width: 768px) {
+  @media (min-width: ${MIN_TABLET_SIZE}) {
     padding-left: 0;
   }
-  @media (min-width: 992px) {
+  @media (min-width: ${MIN_SM_DESKTOP_SIZE}) {
     padding-left: 0;
   }
 `;
@@ -70,10 +70,10 @@ export const HambLinkContainer = styled.div`
   @media (min-width: 0px) {
     padding-left: 30px;
   }
-  @media (min-width: 768px) {
+  @media (min-width: ${MIN_TABLET_SIZE}) {
     padding-left: 50px;
   }
-  @media (min-width: 992px) {
+  @media (min-width: ${MIN_SM_DESKTOP_SIZE}) {
     padding-left: 100px;
   }
   @media (min-width: 1200px) {

@@ -8,18 +8,21 @@ import {
   OneColumn,
   Content,
   ButtonText,
-  RelativeContainer,
+  AbsoluteContainer,
+  Container,
 } from "./styled";
 
 const ColorBlock = ({ content, color }) => {
   const buttonContent = content.callToAction.fields;
   return (
     <ColorSection color={color}>
-      <RelativeContainer>
-        <Header>
-          <H1>{content.heading}</H1>
-        </Header>
-      </RelativeContainer>
+      <Container>
+        <AbsoluteContainer>
+          <Header>
+            <H1>{content.heading}</H1>
+          </Header>
+        </AbsoluteContainer>
+      </Container>
       <Content>
         <OneColumn>
           <P1>{content.description}</P1>

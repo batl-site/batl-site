@@ -1,9 +1,10 @@
 import styled from 'styled-components'
 import { TEXT_BLACK, PRIMARY_YELLOW } from '../styles/styles'
 import { AnchorLink } from 'gatsby-plugin-anchor-links'
+import { MIN_SM_DESKTOP_SIZE } from '../../constants/constants'
 
 export const Container = styled.div`
-  @media (min-width: 992px) {
+  @media (min-width: ${MIN_SM_DESKTOP_SIZE}) {
     max-width: 960px;
     margin: 0 auto;
   }
