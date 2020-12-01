@@ -7,27 +7,40 @@ export const ColorBlock = styled.div`
 `
 
 export const Container = styled.div`
-  padding: 375px 0px ;
+  padding: 325px 0px ;
   position: relative;
 
+  @media (min-width: 320px) {
+    top: -220px;
+  }
+
   @media (min-width: 576px) {
-    padding: px 0;
+    top: -220px;
+  }
+
+  @media (min-width: 768px) {
+    top: -290px;
   }
 
   @media (min-width: 992px) {
     max-width: 960px;
-    margin: 0 auto;
+    top: -290px; 
   }
 
   @media (min-width: 1200px) {
-    max-width: 1140px;
+    max-width: 1180px;
+    top: -200px;
   }
+
+  @media (min-width: 1390px) {
+    top: -200px;
+    right: -120px;
+  }
+
 `
 
 export const ContentContainer = styled.div.attrs({ className: "col-md-6 col-lg-5 " , })`
   float: right;
-  top: -220px;
-
   
 `
 
@@ -43,7 +56,7 @@ export const SideImage = styled.img`
   height: 100%;
   object-fit: cover;
   position: absolute;
-  bottom: -75px;
+  bottom: -60px;
   left: 0;
   
 
