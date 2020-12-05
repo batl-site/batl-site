@@ -10,7 +10,7 @@ export const PRIMARY_ORANGE = "#FF9D42";
 export const PRIMARY_GREY = "#F4F4F4"
 
 export const TEXT_BLACK = "#1A1A1A";
-export const BG_WHITE = "#F8F8F8";
+export const BG_WHITE = "#FFFFFF";
 
 // Fonts
 export const H1 = styled.h1`
@@ -84,9 +84,4 @@ export const Button = styled.button`
     background-color: ${TEXT_BLACK};
     color: ${(props) => (props.color ? PRIMARY_YELLOW : BG_WHITE)};
   }
-`;
-
-// background-color
-export const BackgroundColor = styled.div`
-  background-color: ${BG_WHITE};
 `;
