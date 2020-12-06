@@ -82,11 +82,11 @@ export const Button = styled.button`
 
   &:hover {
     background-color: ${TEXT_BLACK};
-    color: ${(props) => (props.color ? PRIMARY_YELLOW : BG_WHITE)};
+    color: ${props => props.color ? PRIMARY_YELLOW : 'white'};
   }
 `;
 
 // background-color
 export const BackgroundColor = styled.div`
-  background-color: ${BG_WHITE};
+  background-color: white;
 `;

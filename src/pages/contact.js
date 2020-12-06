@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react"
+import ContactHero from "../components/hero/contact/contactHero"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { CONTACT_ID } from "../constants/constants"
@@ -12,14 +13,28 @@ const Contact = () => {
       .then(response => setPageContent(response[0].fields));
   }, [])
 
-  const headingContent = pageContent.contactOpener ? pageContent.contactOpener.fields : null
+  console.log(pageContent)
+
+  const heroContent = pageContent.pageHeading ? {
+    heading: pageContent.pageHeading,
+    description: pageContent.description
+  } : null
+
+  const formContent = pageContent.emailSubjects ? {
+    subjectOptions: pageContent.emailSubjects
+  } : null
+
+  const locationContent = pageContent.directionsHeader ? {
+    header: pageContent.directionsHeader,
+    car: pageContent.byCar,
+    shuttle: pageContent.byShuttle,
+    location: pageContent.location
+  } : null
 
   return (
     <Layout>
       <SEO title="Contact" />
-      <h1>This is the contact page</h1>
-      <h2>{headingContent && headingContent.header}</h2>
-      <p>{headingContent && headingContent.description}</p>
+      {heroContent && <ContactHero content={heroContent} />}
     </Layout>
   )
 }
