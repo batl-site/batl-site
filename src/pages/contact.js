@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react"
+import ContactForm from "../components/contact-form/contactForm"
 import ContactHero from "../components/hero/contact/contactHero"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -35,6 +36,7 @@ const Contact = () => {
     <Layout>
       <SEO title="Contact" />
       {heroContent && <ContactHero content={heroContent} />}
+      {formContent && <ContactForm content={formContent} />}
     </Layout>
   )
 }

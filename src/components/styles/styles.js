@@ -36,6 +36,18 @@ export const H2 = styled.h2`
   }
 `;
 
+export const H2Body = styled.h2`
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 31px;
+
+  @media (min-width: ${MIN_SM_DESKTOP_SIZE}) {
+    font-size: 16px;
+  }
+`;
+
 export const H3 = styled.h3`
   font-family: "Work Sans", sans-serif;
   font-size: 15px;
