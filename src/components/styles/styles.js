@@ -19,7 +19,7 @@ export const H1 = styled.h1`
   margin-bottom: 35px;
 
   @media (min-width: ${MIN_SM_DESKTOP_SIZE}) {
-    font-size: 55px;
+    font-size: 52px;
     margin-bottom: 30px;
   }
 `;

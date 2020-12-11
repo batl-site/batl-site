@@ -13,15 +13,10 @@ export const Container = styled.div`
 
 export const Country = styled(Geography)`
   fill: ${PRIMARY_GREY};
+  pointer-events: none;
 `;
 
-export const Dot = styled.circle.attrs((props) => ({
-  r: 7,
-  fill: props.type == 'attendees'
-    ? PRIMARY_NAVY
-    : props.type == 'future'
-      ? PRIMARY_YELLOW
-      : props.type == 'visited'
-        ? PRIMARY_GREEN
-        : 'none',
-}))``
+export const Dot = styled.circle.attrs({
+  r: 5,
+  fill: PRIMARY_NAVY
+})``

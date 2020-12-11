@@ -12,6 +12,7 @@ import HpHero from "../components/hero/homepage-hero/hpHero";
 import ImageInfoSection from "../components/image_info_section/imageInfoSection";
 import MapChart from "../components/map/mapChart";
 import ReactTooltip from 'react-tooltip';
+import ColorBanner from '../components/color_banner/colorBanner'
 
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
@@ -59,6 +60,9 @@ const HomePage = () => {
   const mapContent = pageContent.svgMap
     ? pageContent.svgMap
     : null;
+  const networkContent = pageContent.network
+    ? pageContent.network.fields
+    : null;
 
   return (
     <Layout>
@@ -78,7 +82,8 @@ const HomePage = () => {
       )}
       {testimonialContent && <Testimonial content={testimonialContent} />}
       {newsContent && <News content={newsContent} />}
-      <ReactTooltip />
+      {networkContent && <ColorBanner section='Network' content={networkContent} />}
+      {mapContent && <ReactTooltip />}
       {mapContent && <MapChart markers={mapContent} />}
     </Layout>
   );

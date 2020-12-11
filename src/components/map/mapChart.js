@@ -23,7 +23,7 @@ const MapChart = ({ markers }) => {
           const { label, coordinates, type } = marker.fields;
           return (
             <Marker key={i} coordinates={[coordinates.lon, coordinates.lat]}>
-              <Dot type={type} data-tip={label} />
+              <Dot data-tip={label} />
             </Marker>
           )
         })}
