@@ -82,7 +82,9 @@ const HomePage = () => {
       )}
       {testimonialContent && <Testimonial content={testimonialContent} />}
       {newsContent && <News content={newsContent} />}
-      {networkContent && <ColorBanner section='Network' content={networkContent} />}
+      {networkContent && (
+        <ColorBanner section='Network' content={networkContent} splitColumns />
+      )}
       {mapContent && <ReactTooltip />}
       {mapContent && <MapChart markers={mapContent} />}
     </Layout>
