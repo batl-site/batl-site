@@ -52,10 +52,8 @@ export const Heading = styled(H1)`
     top: -36px;
   }
 `
-export const Columns = styled(P1)`
+export const Paragraph1 = styled(P1).attrs({className: 'col-lg-8'})`
   @media (min-width: ${MIN_SM_DESKTOP_SIZE}) {
-    column-count: 2;
+    right: 10px;
   }
-`
-export const Paragraph1 = styled.div.attrs({className: ' col-lg-8'})`
 `

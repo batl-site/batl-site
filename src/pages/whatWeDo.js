@@ -4,7 +4,7 @@ import SEO from "../components/seo"
 import { PRIMARY_GREY } from "../components/styles/styles";
 import { WHATWEDO_ID } from "../constants/constants"
 import apiService from "../service/apiService"
-import WhatWeDoHero from "../components/whatWeDo-hero/hero/WhatWeDoHero"
+import WhatWeDoHero from "../components/hero/whatWeDo/whatWeDoHero"
 import Education from "../components/education/education"
 import ColorBannerWhatWeDo from "../components/color_Banner_WhatWeDo/colorBannerWhatWeDo"
 import Research from "../components/research/research"
@@ -26,7 +26,7 @@ const WhatWeDo = () => {
   return (
     <Layout>
       <SEO title="What We Do" />
-      
+      <WhatWeDoHero content={hero.fields} />
       <ColorBannerWhatWeDo content={industryPartnersBanner.fields} section={'Network'} />
       <Research id="research" section="Use-Inspired Research" content={research.fields} />
     </Layout>

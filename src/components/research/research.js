@@ -20,11 +20,10 @@ const Research = ({ id, section, content, variant }) => {
         onClick={() => navigate(`${buttonContent.buttonLink}`)}
       >
         <ButtonText>
-            <P2>{buttonContent.label}</P2>
+          <P2>{buttonContent.label}</P2>
         </ButtonText>
       </Button>
     </ContentContainer>
-   
   </Container>
  )
 }

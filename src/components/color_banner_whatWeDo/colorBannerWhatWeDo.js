@@ -10,7 +10,9 @@ const ColorBannerWhatWeDo = ({ section, content, left }) => (
       <Banner left={left}>
         <Heading>{content.heading}</Heading>
       </Banner>
-        <P1>{content.description}</P1>
+        <Paragraph1>
+          <P1>{content.description}</P1>
+        </Paragraph1>
     </Content>
   </Container>
 </HideOverflow>
