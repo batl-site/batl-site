@@ -4,7 +4,6 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import "./layout.css"
 import Nav from "./nav/nav"
-import { BackgroundColor } from "./styles/styles"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -20,14 +19,12 @@ const Layout = ({ children }) => {
   return (
     <>
       <Nav/>
-      <BackgroundColor>
-        <main>{children}</main>
-        <footer>
-          {/* © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a> */}
-        </footer>
-      </BackgroundColor>
+      <main>{children}</main>
+      <footer>
+        {/* © {new Date().getFullYear()}, Built with
+        {` `}
+        <a href="https://www.gatsbyjs.com">Gatsby</a> */}
+      </footer>
     </>
   )
 }
