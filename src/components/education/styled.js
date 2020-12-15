@@ -23,7 +23,7 @@ export const Paragraph1 = styled.div.attrs({className: 'd-none d-sm-block col-11
 `
 
 export const Paragraph2 = styled.div.attrs({className: 'd-none d-sm-block col-11 col-md-10 col-lg-5 col-xl-5'})`
-    top: -20px;
+    top: -0px;
     float: none;
 
 
@@ -76,6 +76,6 @@ export const Header2 = styled.div.attrs({className: "col-10 col-md-8 col-lg-6 co
     }
 `
 
-export const Content = styled.div.attrs({className: 'container'})`
+export const Content = styled.div.attrs({className: 'container-fluid'})`
     margin-top: -20px;
 `

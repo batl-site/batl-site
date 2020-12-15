@@ -6,7 +6,8 @@ import { WHATWEDO_ID } from "../constants/constants"
 import apiService from "../service/apiService"
 import WhatWeDoHero from "../components/whatWeDo-hero/hero/WhatWeDoHero"
 import Education from "../components/education/education"
-
+import ColorBannerWhatWeDo from "../components/color_Banner_WhatWeDo/colorBannerWhatWeDo"
+import Research from "../components/research/research"
 
 const WhatWeDo = () => {
   const [pageContent, setPageContent] = useState(null)
@@ -19,13 +20,15 @@ const WhatWeDo = () => {
 
   if (!pageContent) return null;
 
-  const { hero, education } = pageContent;
+  const { hero, education, industryPartnersBanner, research } = pageContent;
+
 
   return (
     <Layout>
       <SEO title="What We Do" />
-      <WhatWeDoHero content={hero.fields} />
-      <Education content={education.fields} color={PRIMARY_GREY}/>
+      
+      <ColorBannerWhatWeDo content={industryPartnersBanner.fields} section={'Network'} />
+      <Research id="research" section="Use-Inspired Research" content={research.fields} />
     </Layout>
   )
 }
