@@ -1,16 +1,13 @@
 import styled from "styled-components";
 import { TEXT_BLACK, H3, RoundImage } from "../../styles/styles";
-import {
-  MIN_TABLET_SIZE,
-  MIN_SM_DESKTOP_SIZE,
-} from "../../../constants/constants";
+import { MIN_SM_DESKTOP_SIZE } from "../../../constants/constants";
 
 export const ContentWrapper = styled.div`
   display: flex;
   position: relative;
   margin-bottom: 5em;
 
-  @media (min-width: ${MIN_TABLET_SIZE}) {
+  @media (min-width: ${MIN_SM_DESKTOP_SIZE}) {
     margin-bottom: 15em;
   }
 `;
