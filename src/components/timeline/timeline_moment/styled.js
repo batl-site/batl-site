@@ -2,12 +2,10 @@ import styled from "styled-components";
 import { TEXT_BLACK, H3, RoundImage } from "../../styles/styles";
 import { MIN_SM_DESKTOP_SIZE } from "../../../constants/constants";
 
-export const Container = styled.div`
-  margin: 10em 0em;
-`;
-
 export const ContentWrapper = styled.div`
   display: flex;
+  margin-top: 10em;
+  margin-bottom: 20em;
 `;
 
 export const Indent = styled.div.attrs((props) => ({
@@ -37,14 +35,10 @@ export const Title = styled(H3)`
   margin-bottom: 1.5em;
 `;
 
-export const RightImage = styled(RoundImage).attrs({
-  className: "d-none d-md-block col-4",
-})``;
-
-export const LeftImage = styled(RoundImage).attrs({
+export const Image = styled(RoundImage).attrs({
   className: "d-none d-md-block col-4 position-absolute",
 })`
-  left: 5%;
+  ${(props) => (props.indent === 1 ? "right" : "left")}: 5%;
 `;
 
 export const MobileImage = styled(RoundImage).attrs({ className: "d-md-none" })`

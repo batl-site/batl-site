@@ -1,39 +1,34 @@
 import React from "react";
 import { H2, P1 } from "../../styles/styles";
 import {
-  Container,
   ContentWrapper,
   Indent,
   Dot,
   Content,
   Title,
-  RightImage,
-  LeftImage,
+  Image,
   MobileImage,
 } from "./styled";
 
 const TimelineMoment = ({ indent, content }) => (
-  <Container>
+  <div>
     {content.image && (
       <MobileImage indent={indent} src={content.image.fields.file.url} />
     )}
     <ContentWrapper>
-      <Indent dateExists={content.date} size={indent}>
+      <Indent dateExists={content.year} size={indent}>
         <Dot />
       </Indent>
       <Content>
-        {content.date && <H2>{content.date}</H2>}
+        {content.year && <H2>{content.year}</H2>}
         <Title>{content.title}</Title>
         <P1>{content.description}</P1>
       </Content>
-      {content.image &&
-        (indent === 1 ? (
-          <RightImage src={content.image.fields.file.url} />
-        ) : (
-          <LeftImage src={content.image.fields.file.url} />
-        ))}
+      {content.image && (
+        <Image indent={indent} src={content.image.fields.file.url} />
+      )}
     </ContentWrapper>
-  </Container>
+  </div>
 );
 
 export default TimelineMoment;

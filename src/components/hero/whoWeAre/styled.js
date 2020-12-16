@@ -5,11 +5,13 @@ import {
   MIN_SM_DESKTOP_SIZE,
   MIN_TABLET_SIZE,
 } from "../../../constants/constants";
-import { PRIMARY_YELLOW } from "../../styles/styles";
+import { PRIMARY_NAVY, BG_WHITE } from "../../styles/styles";
 
 export const ColorBlock = styled.div`
-  background-color: ${PRIMARY_YELLOW};
+  color: ${BG_WHITE};
+  background-color: ${PRIMARY_NAVY};
   position: relative;
+  margin-bottom: 10em;
 `;
 
 export const Container = styled.div`
