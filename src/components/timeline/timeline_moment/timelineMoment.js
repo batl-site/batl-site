@@ -7,13 +7,16 @@ import {
   Content,
   Title,
   Image,
+  MobileImageContainer,
   MobileImage,
 } from "./styled";
 
 const TimelineMoment = ({ indent, content }) => (
   <div>
     {content.image && (
-      <MobileImage indent={indent} src={content.image.fields.file.url} />
+      <MobileImageContainer indent={indent}>
+        <MobileImage src={content.image.fields.file.url} />
+      </MobileImageContainer>
     )}
     <ContentWrapper>
       <Indent dateExists={content.year} size={indent}>
