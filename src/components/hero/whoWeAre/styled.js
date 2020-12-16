@@ -12,7 +12,7 @@ export const ColorBlock = styled.div`
   position: relative;
 `;
 
-export const Container = styled.div`
+export const Container = styled.div.attrs({ className: "container" })`
   padding: 15px 0;
   position: relative;
 
@@ -24,14 +24,10 @@ export const Container = styled.div`
     max-width: 960px;
     margin: 0 auto;
   }
-
-  @media (min-width: 1200px) {
-    max-width: 1140px;
-  }
 `;
 
 export const ContentContainer = styled.div.attrs({
-  className: "col-md-6 col-lg-5",
+  className: "col-md-6 col-lg-5 px-0",
 })``;
 
 export const SideImage = styled.img`
