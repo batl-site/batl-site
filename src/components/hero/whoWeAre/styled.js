@@ -11,6 +11,7 @@ export const ColorBlock = styled.div`
   color: ${BG_WHITE};
   background-color: ${PRIMARY_NAVY};
   position: relative;
+  margin-bottom: 10em;
 `;
 
 export const Container = styled.div.attrs({ className: "container" })`

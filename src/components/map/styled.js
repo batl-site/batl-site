@@ -1,7 +1,7 @@
-import styled from 'styled-components'
-import { PRIMARY_NAVY, PRIMARY_GREY, PRIMARY_YELLOW, PRIMARY_GREEN } from '../styles/styles'
-import { MIN_LG_DESKTOP_SIZE } from '../../constants/constants'
-import { Geography } from 'react-simple-maps'
+import styled from "styled-components";
+import { PRIMARY_NAVY, PRIMARY_GREY } from "../styles/styles";
+import { MIN_LG_DESKTOP_SIZE } from "../../constants/constants";
+import { Geography } from "react-simple-maps";
 
 export const Container = styled.div`
   margin: auto;
@@ -18,5 +18,5 @@ export const Country = styled(Geography)`
 
 export const Dot = styled.circle.attrs({
   r: 5,
-  fill: PRIMARY_NAVY
-})``
+  fill: PRIMARY_NAVY,
+})``;
