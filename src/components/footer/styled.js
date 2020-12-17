@@ -1,12 +1,6 @@
 import styled from "styled-components";
 import { Link } from "gatsby";
-import {
-  PRIMARY_NAVY,
-  BG_WHITE,
-  TEXT_BLACK,
-  H1,
-  Button,
-} from "../styles/styles";
+import { PRIMARY_NAVY, BG_WHITE, H1, Button } from "../styles/styles";
 import {
   MIN_SM_DESKTOP_SIZE,
   MIN_TABLET_SIZE,
@@ -67,15 +61,14 @@ export const CTA = styled(Button).attrs({
   className: "col-8 col-md-12 col-lg-9",
 })`
   background-color: ${BG_WHITE};
-  color: ${TEXT_BLACK};
-  border: 1px solid ${TEXT_BLACK};
+  color: ${PRIMARY_NAVY};
+  border: 1px solid ${BG_WHITE};
   padding: 1em 0;
   margin-top: 1em;
 
   :hover {
     background-color: ${PRIMARY_NAVY};
     color: ${BG_WHITE};
-    border: 1px solid ${BG_WHITE};
   }
 `;
 
