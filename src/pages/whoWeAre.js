@@ -6,6 +6,7 @@ import apiService from "../service/apiService";
 import WhoWeAreHero from "../components/hero/whoWeAre/WhoWeAreHero";
 import ColorBanner from "../components/color_banner/colorBanner";
 import Team from "../components/team/team";
+import Timeline from "../components/timeline/timeline";
 
 const WhoWeAre = () => {
   const [pageContent, setPageContent] = useState(null);
@@ -37,6 +38,7 @@ const WhoWeAre = () => {
         content={timelineDescription.fields}
         left
       />
+      <Timeline moments={timeline} image={timelineImage.fields.file.url} />
     </Layout>
   );
 };
