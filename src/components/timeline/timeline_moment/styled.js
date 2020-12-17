@@ -13,7 +13,7 @@ export const ContentWrapper = styled.div`
 `;
 
 export const Indent = styled.div.attrs((props) => ({
-  className: `col-1 ${props.size == 1 ? "col-md-3" : "col-md-6"}`,
+  className: `col-1 ${props.size === 1 ? "col-md-3" : "col-md-6"}`,
 }))`
   border-top: 1px dashed ${TEXT_BLACK};
   margin-top: ${(props) => (props.dateExists ? "48px" : "9px")};

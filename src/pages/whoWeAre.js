@@ -5,6 +5,7 @@ import { WHOWEARE_ID } from "../constants/constants";
 import apiService from "../service/apiService";
 import WhoWeAreHero from "../components/hero/whoWeAre/WhoWeAreHero";
 import ColorBanner from "../components/color_banner/colorBanner";
+import Team from "../components/team/team";
 import Timeline from "../components/timeline/timeline";
 
 const WhoWeAre = () => {
@@ -18,12 +19,20 @@ const WhoWeAre = () => {
 
   if (!pageContent) return null;
 
-  const { hero, timelineDescription, timeline, timelineImage } = pageContent;
+  const {
+    hero,
+    timelineDescription,
+    timeline,
+    timelineImage,
+    teamSectionHeading,
+    staff,
+  } = pageContent;
 
   return (
     <Layout>
       <SEO title="Who We Are" />
       <WhoWeAreHero content={hero.fields} />
+      <Team heading={teamSectionHeading} members={staff} />
       <ColorBanner
         section="Timeline"
         content={timelineDescription.fields}

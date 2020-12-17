@@ -12,7 +12,7 @@ export const HideOverflow = styled.div`
 export const Container = styled.div.attrs({
   className: "container",
 })`
-  margin: 10em 0;
+  // margin: 10em 0;
 `;
 
 export const Content = styled.div.attrs((props) => ({
