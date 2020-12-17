@@ -2,6 +2,7 @@ export const HOMEPAGE_ID = "homePage";
 export const WHOWEARE_ID = "whoWeArePage";
 export const WHATWEDO_ID = "whatWeDoPage";
 export const CONTACT_ID = "contactPage";
+export const FOOTER_ID = "footer";
 
 export const HOMEPAGE_LINK = "/";
 export const WHOWEARE_LINK = "/whoWeAre";
