@@ -4,8 +4,9 @@ import SEO from "../components/seo";
 import { WHOWEARE_ID } from "../constants/constants";
 import apiService from "../service/apiService";
 import WhoWeAreHero from "../components/hero/whoWeAre/WhoWeAreHero";
-import SecondaryNav from "../components/secondary_nav/SecondaryNav";
-import ImageInfoSection from "../components/image_info_section/imageInfoSection";
+import ColorBanner from "../components/color_banner/colorBanner";
+import Team from "../components/team/team";
+import Timeline from "../components/timeline/timeline";
 
 const WhoWeAre = () => {
   const [pageContent, setPageContent] = useState(null);
@@ -18,14 +19,26 @@ const WhoWeAre = () => {
 
   if (!pageContent) return null;
 
-  const { hero, mission } = pageContent;
+  const {
+    hero,
+    timelineDescription,
+    timeline,
+    timelineImage,
+    teamSectionHeading,
+    staff,
+  } = pageContent;
 
   return (
     <Layout>
       <SEO title="Who We Are" />
       <WhoWeAreHero content={hero.fields} />
-      {/* <SecondaryNav />
-      <ImageInfoSection id="mission" section="Our Mission" content={mission.fields} /> */}
+      <Team heading={teamSectionHeading} members={staff} />
+      <ColorBanner
+        section="Timeline"
+        content={timelineDescription.fields}
+        left
+      />
+      <Timeline moments={timeline} image={timelineImage.fields.file.url} />
     </Layout>
   );
 };
