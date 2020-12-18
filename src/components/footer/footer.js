@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { navigate } from "gatsby";
-import apiService from "../../Service/apiService";
+import apiService from "../../service/apiService";
 import {
   FOOTER_ID,
   HOMEPAGE_LINK,
@@ -25,7 +25,7 @@ import {
 import { P1, P2 } from "../styles/styles";
 import Facebook from "../../images/facebook.png";
 import Instagram from "../../images/instagram.png";
-import LinkedIn from "../../images/LinkedIn.png";
+import LinkedIn from "../../images/linkedin.png";
 import BATL from "../../images/batl-white.png";
 import COS from "../../images/cos.png";
 
