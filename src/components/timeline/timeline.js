@@ -1,7 +1,8 @@
 import React from "react";
 import TimelineMoment from "./timeline_moment/timelineMoment";
-import { Container, Line, ImageContainer } from "./styled";
+import { Container, Line, ImageContainer, Sprinkle } from "./styled";
 import { MediumImage } from "../image_info_section/images/styled";
+import BigYellow from "../../images/sprinkles/filled-small-yellow.svg";
 
 const Timeline = ({ moments, image }) => (
   <Container>
@@ -11,6 +12,7 @@ const Timeline = ({ moments, image }) => (
       ))}
     </Line>
     <ImageContainer>
+      <Sprinkle src={BigYellow} />
       <MediumImage src={image} />
     </ImageContainer>
   </Container>
