@@ -1,17 +1,23 @@
 import React from "react";
 import { H1, P1 } from "../../styles/styles";
-import { BottomAligner, HeroContainer, Content, Container } from "./styled";
+import Images from "./images/images";
+import { BottomAligner, HeroContainer, Content, Container, ImagesContainer } from "./styled";
 
 const ContactHero = ({ content }) => {
   return (
     <HeroContainer className="container-fluid">
       <BottomAligner></BottomAligner>
       <Container>
-        <Content className="col-12 col-lg-7">
+        <Content>
           <H1>{content.heading}</H1>
           <P1>{content.description}</P1>
         </Content>
-      </Container>
+      {content.images && (
+        <ImagesContainer>
+          <Images images={content.images} />
+        </ImagesContainer>
+      )}
+       </Container>
     </HeroContainer>
   );
 };

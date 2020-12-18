@@ -3,6 +3,7 @@ import ContactForm from "../components/contact-form/contactForm"
 import ContactHero from "../components/hero/contact/contactHero"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Sock from "../components/sock/sock"
 import { CONTACT_ID } from "../constants/constants"
 import apiService from "../service/apiService"
 
@@ -18,18 +19,21 @@ const Contact = () => {
 
   const heroContent = pageContent.pageHeading ? {
     heading: pageContent.pageHeading,
-    description: pageContent.description
+    description: pageContent.description,
+    images: pageContent.images ? pageContent.images : null
   } : null
 
   const formContent = pageContent.emailSubjects ? {
-    subjectOptions: pageContent.emailSubjects
+    subjectOptions: pageContent.emailSubjects,
+    email: pageContent.email
   } : null
 
   const locationContent = pageContent.directionsHeader ? {
     header: pageContent.directionsHeader,
     car: pageContent.byCar,
     shuttle: pageContent.byShuttle,
-    location: pageContent.location
+    location: pageContent.location,
+    imageSrc: pageContent.footerImage ? pageContent.footerImage.fields.file.url : null
   } : null
 
   return (
@@ -37,6 +41,7 @@ const Contact = () => {
       <SEO title="Contact" />
       {heroContent && <ContactHero content={heroContent} />}
       {formContent && <ContactForm content={formContent} />}
+      {locationContent && <Sock content={locationContent} />}
     </Layout>
   )
 }

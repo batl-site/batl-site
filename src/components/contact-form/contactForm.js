@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { NavButton } from "../nav/styled";
 import { H2Body, P2 } from "../styles/styles";
-import { StyledInput, StyledTextarea } from "./styled";
+import { StyledInput, StyledTextarea, FormContainer, Form, InlineInputWrapper, InputWrapper, InlineInput} from "./styled";
 
 const ContactForm = ({ content }) => {
   const [message, setMessage] = useState("");
@@ -26,42 +26,39 @@ const ContactForm = ({ content }) => {
   };
 
   return (
-    <div className="container my-5">
-      <form className="col-12 col-lg-7">
-        <div className="mb-5 d-flex">
-          <div className="form-group col-6 p-0 pr-2">
+    <FormContainer>
+      <Form>
+        <InlineInputWrapper>
+          <InlineInput left='true'>
             <label htmlFor="firstName">First name</label>
             <StyledInput
               id="firstName"
               type="text"
-              className="form-control"
               value={firstName}
               onChange={(event) => setFirstName(event.target.value)}
             />
-          </div>
-          <div className="form-group col-6 p-0 pl-2">
+          </InlineInput>
+          <InlineInput left='false'>
             <label htmlFor="lastName">Last name</label>
             <StyledInput
               id="lastName"
               type="text"
-              className="form-control"
               value={lastName}
               onChange={(event) => setLastName(event.target.value)}
             />
-          </div>
-        </div>
-        <div className="form-group mb-5">
+          </InlineInput>
+        </InlineInputWrapper>
+        <InputWrapper className="form-group mb-5">
           <label htmlFor="email">Your email</label>
           <StyledInput
             id="email"
             type="text"
-            className="form-control"
             value={email}
             onChange={(event) => setEmail(event.target.value)}
           />
-        </div>
+        </InputWrapper>
         <label>Inquiry subject</label>
-        <div className="form-group mb-5">
+        <InputWrapper className="form-group mb-5">
           {content.subjectOptions &&
             content.subjectOptions.map((subject, i) => {
               return (
@@ -87,28 +84,27 @@ const ContactForm = ({ content }) => {
                 </div>
               );
             })}
-        </div>
-        <div className="form-group mb-5">
+        </InputWrapper>
+        <InputWrapper>
           <label htmlFor="message">Your message</label>
           <StyledTextarea
-            className="form-control"
             id="message"
             rows="6"
             value={message}
             onChange={(event) => setMessage(event.target.value)}
           ></StyledTextarea>
           <small className="float-right mt-2">terms</small>
-        </div>
+        </InputWrapper>
         <NavButton
           className="col-6 py-3"
           onClick={() =>
-            (window.location.href = `mailto:mckennapoulos@gmail.com?subject=Inquiring About ${selectedSubjects.join(', ')} &body=${message} %0D%0A %0D%0A From, %0D%0A %0D%0A ${firstName} ${lastName} %0D%0A %0D%0A email: ${email}`)
+            (window.location.href = `mailto:${content.email}?subject=Inquiring About ${selectedSubjects.join(', ')} &body=${message} %0D%0A %0D%0A From, %0D%0A %0D%0A ${firstName} ${lastName} %0D%0A %0D%0A email: ${email}`)
           }
         >
           <P2>SEND MESSAGE</P2>
         </NavButton>
-      </form>
-    </div>
+      </Form>
+    </FormContainer>
   );
 };
 
