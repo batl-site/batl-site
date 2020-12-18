@@ -10,6 +10,9 @@ import apiService from "../service/apiService";
 import News from "../components/news/news";
 import HpHero from "../components/hero/homepage-hero/hpHero";
 import ImageInfoSection from "../components/image_info_section/imageInfoSection";
+import MapChart from "../components/map/mapChart";
+import ReactTooltip from 'react-tooltip';
+import ColorBanner from '../components/color_banner/colorBanner'
 
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
@@ -54,7 +57,13 @@ const HomePage = () => {
     pageContent.research && pageContent.research.fields.images.length > 0
       ? pageContent.research.fields
       : null;
-  console.log(pageContent);
+  const mapContent = pageContent.svgMap
+    ? pageContent.svgMap
+    : null;
+  const networkContent = pageContent.network
+    ? pageContent.network.fields
+    : null;
+
   return (
     <Layout>
       <SEO title="Home" />
@@ -73,6 +82,11 @@ const HomePage = () => {
       )}
       {testimonialContent && <Testimonial content={testimonialContent} />}
       {newsContent && <News content={newsContent} />}
+      {networkContent && (
+        <ColorBanner section='Network' content={networkContent} splitColumns />
+      )}
+      {mapContent && <ReactTooltip />}
+      {mapContent && <MapChart markers={mapContent} />}
     </Layout>
   );
 };
