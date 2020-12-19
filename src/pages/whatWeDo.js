@@ -30,14 +30,15 @@ const WhatWeDo = () => {
     research, 
     regulatoryPartners,
     industryPartners, 
-    bottomImage } = pageContent;
+    bottomImage 
+  } = pageContent;
     
   return (
     <Layout>
       <SEO title="What We Do" />
       <WhatWeDoHero content={hero.fields} />
       <RegulatoryPartners content={regulatoryPartners} />
-      <ColorBannerWhatWeDo content={industryPartnersBanner.fields} section={'Industry Parnterships'} splitColumns/>
+      <ColorBannerWhatWeDo content={industryPartnersBanner.fields} section={'Industry Parnterships'}/>
       <IndustryPartners content={industryPartners} color={PRIMARY_GREY} />
       <Research id="research" section="Use-Inspired Research" content={research.fields} />
       <BottomImage content={bottomImage} />

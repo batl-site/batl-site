@@ -1,6 +1,7 @@
 import React from "react";
-import { Images, ImageWrapper, ColorSection } from "./styled";
+import { Images, ImageWrapper, ColorSection, Sprinkle } from "./styled";
 import Image from "./images/image";
+import Circles from "../../images/sprinkles/vertical-navy.svg";
 
 const IndustryPartners = ({ content, color }) => {
   return (
@@ -11,6 +12,7 @@ const IndustryPartners = ({ content, color }) => {
           <Image key={i} content={image.fields.file.url} />
         ))}
       </Images>
+    <Sprinkle src={Circles}/>
     </ImageWrapper>
     </ColorSection>
   );

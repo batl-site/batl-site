@@ -6,7 +6,7 @@ import {
 export const Container = styled.div.attrs({
   classname: "d-flex flex-column",
 })`
-  margin-bottom: 25vh;
+  margin-bottom: -10px;
 `;
 
 export const Image = styled.div`
