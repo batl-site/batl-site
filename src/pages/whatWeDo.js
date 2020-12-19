@@ -31,8 +31,7 @@ const WhatWeDo = () => {
     regulatoryPartners,
     industryPartners, 
     bottomImage } = pageContent;
-
-    console.log(pageContent)
+    
   return (
     <Layout>
       <SEO title="What We Do" />
