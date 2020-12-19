@@ -1,6 +1,14 @@
 import React from 'react'
 import { H1, H2, P1 } from '../../styles/styles'
-import { ColorBlock, Container, ContentContainer, SideImage, FullBleedImage, XLImage } from './styled'
+import { 
+  ColorBlock, 
+  Container, 
+  ContentContainer, 
+  SideImage, 
+  FullBleedImage, 
+  XLImage, 
+  Sprinkle } from './styled'
+import Circles from "../../../images/sprinkles/green-horizontal.svg";
 
 const WhatWeDoHero = ({ content }) => (
   <ColorBlock>
@@ -12,6 +20,7 @@ const WhatWeDoHero = ({ content }) => (
         <P1>{content.description}</P1>
       </ContentContainer>
       <XLImage src={content.image.fields.file.url} />
+      <Sprinkle src={Circles} />
     </Container>
     <SideImage src={content.image.fields.file.url} />
   </ColorBlock>

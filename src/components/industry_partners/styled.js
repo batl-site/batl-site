@@ -1,7 +1,9 @@
 import styled from "styled-components";
 import { MIN_SM_DESKTOP_SIZE, 
   MIN_MD_DESKTOP_SIZE, 
+  MIN_LG_DESKTOP_SIZE, 
   MIN_TABLET_SIZE,
+  MIN_MOBILE_SIZE,
   OVERLAY_ZINDEX } from '../../constants/constants'
 
 export const Images = styled.div.attrs({
@@ -20,6 +22,10 @@ export const ColorSection = styled.div.attrs({
 })`
     background-color: ${(props) => props.color};
 `;
+
+export const SprinkleContainer = styled.div`
+  position: relative;
+`;
   
 export const Sprinkle = styled.img`
   position: absolute;
@@ -27,12 +33,33 @@ export const Sprinkle = styled.img`
   width: 40px;
   z-index: ${OVERLAY_ZINDEX};
 
+  @media (max-width: ${MIN_MOBILE_SIZE}) {
+    width: 35px;
+    right: 0px;
+    bottom: 1075px;
+  }
+
+  @media (min-width: ${MIN_TABLET_SIZE}) {
+    width: 50px;
+    right: 10px;
+    bottom: -70px;
+  }
+
   @media (min-width: ${MIN_SM_DESKTOP_SIZE}) {
     width: 68px;
+    right: 0px;
+    bottom: -105px;
   }
 
   @media (min-width: ${MIN_MD_DESKTOP_SIZE}) {
     width: 68px;
-    right: 107px;
+    right: 112px;
+    bottom: -35px;
+  }
+
+  @media (min-width: ${MIN_LG_DESKTOP_SIZE}) {
+    width: 68px;
+    right: 680px;
+    bottom: -35px;
   }
 `;

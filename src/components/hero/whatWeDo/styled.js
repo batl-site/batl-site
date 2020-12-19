@@ -5,6 +5,7 @@ import {
     MIN_SM_DESKTOP_SIZE,
     MIN_MD_DESKTOP_SIZE,
     MIN_TABLET_SIZE,
+    OVERLAY_ZINDEX
 } from "../../../constants/constants";
 import { PRIMARY_NAVY } from "../../styles/styles";
 
@@ -98,4 +99,36 @@ export const XLImage = styled.img`
 
 export const FullBleedImage = styled.img.attrs({ className: "d-md-none" })`
   margin-bottom: 0;
+`;
+
+
+export const Sprinkle = styled.img`
+  position: absolute;
+  right: 0;
+  width: 70px;
+  z-index: ${OVERLAY_ZINDEX};
+
+  @media (max-width: ${MIN_MOBILE_SIZE}) {
+    width: 100px;
+    right: 0px;
+    bottom: -35px;
+  }
+
+  @media (min-width: ${MIN_TABLET_SIZE}) {
+    width: 150px;
+    right: 0px;
+    bottom: -50px;
+  }
+
+  @media (min-width: ${MIN_SM_DESKTOP_SIZE}) {
+    width: 200px;
+    right: -30px;
+    bottom: -60px;
+  }
+
+  @media (min-width: ${MIN_MD_DESKTOP_SIZE}) {
+    width: 200px;
+    right: -140px;
+    bottom: -60px;
+  }
 `;

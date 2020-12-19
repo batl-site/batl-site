@@ -113,3 +113,81 @@ export const ButtonText = styled.div`
 
 export const Container = styled.div.attrs({ className: "container p-0" })``;
 
+export const SprinkleContainer = styled.div`
+  position: relative;
+`;
+
+export const SprinkleYellow = styled.img.attrs({className: 'd-md-block'})`
+  position: absolute;
+  width: 117px;
+  right: 12px;
+  bottom: 445px;
+
+  @media (max-width: ${MIN_MOBILE_SIZE}) {
+    width: 80px;
+    bottom: 50px;
+    right: -10px;
+  }
+
+  @media (min-width: ${MIN_TABLET_SIZE}) {
+    width: 80px;
+    right: 0px;
+    bottom: 100px;
+  }
+
+  @media (min-width: ${MIN_SM_DESKTOP_SIZE}) {
+    width: 117px;
+    right: 40px;
+    bottom: 290px;
+  }
+
+  @media (min-width: ${MIN_MD_DESKTOP_SIZE}) {
+    width: 117px;
+    right: 68px;
+    bottom: 445px;
+  }
+
+  @media (min-width: ${MIN_LG_DESKTOP_SIZE}) {
+    width: 117px;
+    right: 180px;
+    bottom: 445px;
+  }
+`
+
+export const Sprinkle = styled.img.attrs({ className: "" })`
+  position: absolute;
+  width: 80%;
+  right: 9px;
+  bottom: -1px;
+  z-index: -1;
+
+
+  @media (max-width: ${MIN_MOBILE_SIZE}) {
+    right: 20px;
+    bottom: 0px; 
+  }
+
+  @media (min-width: ${MIN_TABLET_SIZE}) {
+    width: 60%;
+    right: 20px;
+    bottom: 35px;
+  }
+
+  @media (min-width: ${MIN_SM_DESKTOP_SIZE}) {
+    width: 50%;
+    right: 35px;
+    bottom: 50px;
+  }
+
+  @media (min-width: ${MIN_MD_DESKTOP_SIZE}) {
+    width: 50%;
+    right: 60px;
+    bottom: 90px;
+  }
+
+  @media (min-width: ${MIN_LG_DESKTOP_SIZE}) {
+    width: 500px;
+    right: 170px;
+    bottom: 210px;
+  }
+`;

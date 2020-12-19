@@ -9,9 +9,16 @@ import {
   Content,
   Container,
   ColorBlockWrapper,
+  Sprinkle,
+  SprinkleYellow,
+  SprinkleContainer
 } from "./styled";
+import DotGrid from "../../images/sprinkles/dot-grid.svg"
+import FilledYellow from "../../images/sprinkles/filled-yellow.svg";
+
 const Education = ({ content, color }) => {
     return (
+      <>
       <ColorBlockWrapper className="container-fluid p-0">
       <ColorSection color={color}>
         <Container>
@@ -32,6 +39,11 @@ const Education = ({ content, color }) => {
         </Content>
       </ColorSection>
       </ColorBlockWrapper>
+      <SprinkleContainer>
+        <SprinkleYellow src={FilledYellow} />
+        <Sprinkle src={DotGrid} />
+      </SprinkleContainer>
+      </>
     );
 };
 
