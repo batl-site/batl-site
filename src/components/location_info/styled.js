@@ -60,28 +60,3 @@ export const SectionTitle = styled(H2)`
   }
 `;
 
-export const HeroImage = styled.div`
-  background-image: ${(props) => (props.image ? `url(${props.image})` : null)};
-  height: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-`;
-
-export const HeroImageContainer = styled.div.attrs({
-  className: "container-fluid p-0",
-})`
-  height: 300px;
-
-  @media (min-width: ${MIN_LG_DESKTOP_SIZE}) {
-    height: 400px;
-  }
-`;
-
-export const Line = styled.div`
-  border-top: 1px solid #000;
-`
-
-export const ContainerLine = styled.div`
-  border-left: 1px solid #000;
-`

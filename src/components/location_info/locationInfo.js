@@ -1,22 +1,22 @@
 import React from "react";
+import GoogleMap from "../google_map/map";
 import { H1, H2, P1 } from "../styles/styles";
 import {
   AbsoluteContainer,
   ColorWrapper,
   Container,
-  ContainerLine,
   Content,
   ContentSection,
   ContentSectionSmall,
   Header,
-  HeroImage,
-  HeroImageContainer,
-  Line,
   SectionTitle,
 } from "./styled";
 
-const Sock = ({ content }) => {
-  console.log("this is sock content", content);
+const LocationInfo = ({ content }) => {
+  const location = {
+    lat: content.coordinates.lat,
+    lng: content.coordinates.lon,
+  }
   return (
     <>
       <ColorWrapper>
@@ -44,11 +44,9 @@ const Sock = ({ content }) => {
           </Content>
         </Container>
       </ColorWrapper>
-      <HeroImageContainer className="p-0">
-        <HeroImage image={content.imageSrc}></HeroImage>
-      </HeroImageContainer>
+      <GoogleMap location={location} zoomLevel={16}/>
     </>
   );
 };
 
-export default Sock;
+export default LocationInfo;

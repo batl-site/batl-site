@@ -1,7 +1,19 @@
 import React, { useState } from "react";
 import { NavButton } from "../nav/styled";
 import { H2Body, P2 } from "../styles/styles";
-import { StyledInput, StyledTextarea, FormContainer, Form, InlineInputWrapper, InputWrapper, InlineInput} from "./styled";
+import {
+  StyledInput,
+  StyledTextarea,
+  FormContainer,
+  Form,
+  InlineInputWrapper,
+  InputWrapper,
+  InlineInput,
+  CheckboxWrapper,
+  Checkbox,
+  CheckboxLabel,
+  SendButton,
+} from "./styled";
 
 const ContactForm = ({ content }) => {
   const [message, setMessage] = useState("");
@@ -29,7 +41,7 @@ const ContactForm = ({ content }) => {
     <FormContainer>
       <Form>
         <InlineInputWrapper>
-          <InlineInput left='true'>
+          <InlineInput left="true">
             <label htmlFor="firstName">First name</label>
             <StyledInput
               id="firstName"
@@ -38,7 +50,7 @@ const ContactForm = ({ content }) => {
               onChange={(event) => setFirstName(event.target.value)}
             />
           </InlineInput>
-          <InlineInput left='false'>
+          <InlineInput left="false">
             <label htmlFor="lastName">Last name</label>
             <StyledInput
               id="lastName"
@@ -48,7 +60,7 @@ const ContactForm = ({ content }) => {
             />
           </InlineInput>
         </InlineInputWrapper>
-        <InputWrapper className="form-group mb-5">
+        <InputWrapper>
           <label htmlFor="email">Your email</label>
           <StyledInput
             id="email"
@@ -58,16 +70,12 @@ const ContactForm = ({ content }) => {
           />
         </InputWrapper>
         <label>Inquiry subject</label>
-        <InputWrapper className="form-group mb-5">
+        <InputWrapper>
           {content.subjectOptions &&
             content.subjectOptions.map((subject, i) => {
               return (
-                <div
-                  className="form-check d-flex align-items-center my-3"
-                  key={i}
-                >
-                  <input
-                    className="form-check-input"
+                <CheckboxWrapper key={i}>
+                  <Checkbox
                     type="checkbox"
                     value=""
                     id={`${subject}`}
@@ -75,13 +83,10 @@ const ContactForm = ({ content }) => {
                       updateSubjects(event.target.checked, event.target.id)
                     }
                   />
-                  <label
-                    className="form-check-label"
-                    htmlFor={`${subject}-${i}`}
-                  >
+                  <CheckboxLabel htmlFor={`${subject}-${i}`}>
                     <H2Body className="m-0">{subject}</H2Body>
-                  </label>
-                </div>
+                  </CheckboxLabel>
+                </CheckboxWrapper>
               );
             })}
         </InputWrapper>
@@ -95,14 +100,17 @@ const ContactForm = ({ content }) => {
           ></StyledTextarea>
           <small className="float-right mt-2">terms</small>
         </InputWrapper>
-        <NavButton
-          className="col-6 py-3"
+        <SendButton
           onClick={() =>
-            (window.location.href = `mailto:${content.email}?subject=Inquiring About ${selectedSubjects.join(', ')} &body=${message} %0D%0A %0D%0A From, %0D%0A %0D%0A ${firstName} ${lastName} %0D%0A %0D%0A email: ${email}`)
+            (window.location.href = `mailto:${
+              content.email
+            }?subject=Inquiring About ${selectedSubjects.join(
+              ", "
+            )} &body=${message} %0D%0A %0D%0A From, %0D%0A %0D%0A ${firstName} ${lastName} %0D%0A %0D%0A email: ${email}`)
           }
         >
           <P2>SEND MESSAGE</P2>
-        </NavButton>
+        </SendButton>
       </Form>
     </FormContainer>
   );

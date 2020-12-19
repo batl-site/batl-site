@@ -24,7 +24,7 @@ cd batl-site
 
 3. Set up environment variables:
 
-In the project directory is a file called `.env.sample`. This holds all of the necessary environment variables to create this project, including the Contentful access token.
+In the project directory is a file called `.env.sample`. This holds all of the necessary environment variables to create this project, including the Contentful access token and the google map key.
 
 Copy the file and add the values to the variables.
 

@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react"
 import ContactForm from "../components/contact-form/contactForm"
+import GoogleMap from "../components/google_map/map"
 import ContactHero from "../components/hero/contact/contactHero"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Sock from "../components/sock/sock"
+import LocationInfo from "../components/location_info/locationInfo"
 import { CONTACT_ID } from "../constants/constants"
 import apiService from "../service/apiService"
 
@@ -14,8 +15,6 @@ const Contact = () => {
     apiService.getEntryByContentType(CONTACT_ID)
       .then(response => setPageContent(response[0].fields));
   }, [])
-
-  console.log(pageContent)
 
   const heroContent = pageContent.pageHeading ? {
     heading: pageContent.pageHeading,
@@ -33,7 +32,8 @@ const Contact = () => {
     car: pageContent.byCar,
     shuttle: pageContent.byShuttle,
     location: pageContent.location,
-    imageSrc: pageContent.footerImage ? pageContent.footerImage.fields.file.url : null
+    imageSrc: pageContent.footerImage ? pageContent.footerImage.fields.file.url : null,
+    coordinates: pageContent.batlCoordinates
   } : null
 
   return (
@@ -41,7 +41,7 @@ const Contact = () => {
       <SEO title="Contact" />
       {heroContent && <ContactHero content={heroContent} />}
       {formContent && <ContactForm content={formContent} />}
-      {locationContent && <Sock content={locationContent} />}
+      {locationContent && <LocationInfo content={locationContent} />}
     </Layout>
   )
 }
