@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { MIN_SM_DESKTOP_SIZE, MIN_TABLET_SIZE } from "../../constants/constants"
-import { PRIMARY_YELLOW, H1, P1 } from "../styles/styles";
+import { PRIMARY_YELLOW, H1 } from "../styles/styles";
 
 export const HideOverflow = styled.div`
   overflow-x: hidden;
@@ -9,10 +9,11 @@ export const HideOverflow = styled.div`
 export const Container = styled.div.attrs({
   className: 'container'
 })`
+
 `
 
 export const Content = styled.div.attrs((props) => ({
-  className: `${!props.left && 'col-11'} col-md-9`
+  className: `${!props.left && 'col-11'} col-md-6`
 }))`
   left: ${props => props.left ? 0 : '8.33%'};
   
@@ -50,10 +51,5 @@ export const Heading = styled(H1)`
 
   @media (min-width: ${MIN_SM_DESKTOP_SIZE}) {
     top: -36px;
-  }
-`
-export const Paragraph1 = styled(P1).attrs({className: 'col-lg-8'})`
-  @media (min-width: ${MIN_SM_DESKTOP_SIZE}) {
-    right: 10px;
   }
 `
