@@ -42,6 +42,9 @@ const Footer = () => {
     headline,
     address,
     city,
+    facebookUrl,
+    instagramUrl,
+    linkedinUrl,
     contactButtonLabel,
     contactButtonText,
   } = content;
@@ -76,13 +79,13 @@ const Footer = () => {
           <SmallColumn>
             <Row>
               <Icons>
-                <a href="https://www.facebook.com/NortheasternCOS/">
+                <a href={facebookUrl}>
                   <Icon src={Facebook} />
                 </a>
-                <a href="https://www.instagram.com/northeasterncos/?hl=en">
+                <a href={instagramUrl}>
                   <Icon src={Instagram} />
                 </a>
-                <a href="https://www.linkedin.com/school/northeastern-university-cos/">
+                <a href={linkedinUrl}>
                   <Icon src={LinkedIn} />
                 </a>
               </Icons>
@@ -105,7 +108,7 @@ const Footer = () => {
             </Row>
           </BigColumn>
           <SmallColumn>
-            <P1>Made with love by Scout</P1>
+            <P1>Made with &hearts; by Scout</P1>
           </SmallColumn>
         </Row>
       </Container>

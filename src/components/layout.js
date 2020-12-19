@@ -22,9 +22,6 @@ const Layout = ({ children }) => {
       <Nav />
       <main>{children}</main>
       <footer>
-        {/* © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.com">Gatsby</a> */}
         <Footer />
       </footer>
     </>
