@@ -10,7 +10,6 @@ export const ColorWrapper = styled.div.attrs({
   className: "container-fluid col-11 my-5",
 })`
   background-color: ${PRIMARY_GREY};
-  margin: 10% 0;
 `;
 
 export const Container = styled.div.attrs({ className: "container py-5" })`
