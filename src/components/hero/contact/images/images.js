@@ -1,16 +1,16 @@
 import React from 'react'
-import { LargeImage, ImageContainer, SmallImage, MediumImage, RowOne, RowTwo, RowThree } from './styled'
+import { ImageContainer, MediumImage, RowOne, RowTwo, RowThree } from './styled'
 
-const Images = ({ images, variant }) => {
+const Images = ({ images }) => {
     return (
     <ImageContainer>
-      <RowOne variant={variant}>
+      <RowOne>
         <MediumImage src={images[0].fields.file.url} />
       </RowOne>
-      <RowTwo variant={variant}>
+      <RowTwo>
         <MediumImage src={images[1].fields.file.url} />
       </RowTwo>
-      <RowThree variant={variant}>
+      <RowThree>
         <MediumImage src={images[2].fields.file.url} />
       </RowThree>
     </ImageContainer>

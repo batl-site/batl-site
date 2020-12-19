@@ -17,9 +17,7 @@ export const BottomAligner = styled.div`
 
 export const Container = styled.div.attrs({ className: "container" })``;
 
-export const ImagesContainer = styled.div.attrs({
-  className: "",
-})`
+export const ImagesContainer = styled.div`
 position: relative;
 bottom: 205px;
 display: none;

@@ -14,24 +14,24 @@ export const ImageContainer = styled.div.attrs({
   float: right;
 `;
 
-export const RowOne = styled.div.attrs((props) => ({
-  className: `row ${!props.variant && "justify-content-end"}`,
-}))`
+export const RowOne = styled.div.attrs({
+  className: "row justify-content-end",
+})`
   position: relative;
   right: -100px;
 `;
 
-export const RowTwo = styled.div.attrs((props) => ({
-  className: `row ${props.variant && "justify-content-end"}`,
-}))`
+export const RowTwo = styled.div.attrs({
+  className: "row",
+})`
   position: relative;
   right: 10px;
   bottom: 50px;
 `;
 
-export const RowThree = styled.div.attrs((props) => ({
-  className: `row ${!props.variant && "justify-content-end"}`,
-}))`
+export const RowThree = styled.div.attrs({
+  className: "row justify-content-end",
+})`
   position: relative;
   bottom: 50px;
   right: -34px;
