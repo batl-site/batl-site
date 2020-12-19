@@ -2,9 +2,14 @@ import styled from "styled-components";
 import {
   MIN_LG_DESKTOP_SIZE,
   MIN_MOBILE_SIZE,
-  MIN_SM_DESKTOP_SIZE,
   MIN_TABLET_SIZE,
 } from "../../constants/constants";
+
+export const ColorBlockWrapper = styled.div.attrs({
+  className:"container-fluid p-0"
+})`
+margin: 10% 0;
+`
 
 export const ColorSection = styled.div.attrs({
   className: "col-11 my-5 py-5",

@@ -67,4 +67,6 @@ export const Container = styled.div.attrs({ className: "container" })``;
 
 export const FlexWrapper = styled.div.attrs({
   className: "d-flex flex-column my-5",
-})``;
+})`
+margin: 5% 0;
+`;

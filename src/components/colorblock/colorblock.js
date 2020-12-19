@@ -9,12 +9,13 @@ import {
   Content,
   ButtonText,
   Container,
+  ColorBlockWrapper,
 } from "./styled";
 
 const ColorBlock = ({ content, color }) => {
   const buttonContent = content.callToAction.fields;
   return (
-    <div className="container-fluid p-0">
+    <ColorBlockWrapper className="container-fluid p-0">
     <ColorSection color={color}>
       <Container>
           <Header>
@@ -48,7 +49,7 @@ const ColorBlock = ({ content, color }) => {
         </TwoColumn>
       </Content>
     </ColorSection>
-    </div>
+    </ColorBlockWrapper>
   );
 };
 
