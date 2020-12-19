@@ -1,9 +1,10 @@
-import React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import React from "react";
+import PropTypes from "prop-types";
+import { useStaticQuery, graphql } from "gatsby";
+import Footer from "./footer/footer";
 
-import "./layout.css"
-import Nav from "./nav/nav"
+import "./layout.css";
+import Nav from "./nav/nav";
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -14,23 +15,21 @@ const Layout = ({ children }) => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <>
-      <Nav/>
+      <Nav />
       <main>{children}</main>
       <footer>
-        {/* © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.com">Gatsby</a> */}
+        <Footer />
       </footer>
     </>
-  )
-}
+  );
+};
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
-export default Layout
+export default Layout;

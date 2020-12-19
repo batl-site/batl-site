@@ -15,5 +15,13 @@ export const Line = styled.div`
 `;
 
 export const ImageContainer = styled.div`
+  position: relative;
   text-align: center;
+`;
+
+export const Sprinkle = styled.img.attrs({
+  className: "col-4 position-absolute",
+})`
+  left: 50%;
+  top: -10%;
 `;
