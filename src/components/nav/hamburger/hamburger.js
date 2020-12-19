@@ -1,5 +1,10 @@
 import React, { useState } from "react";
-import { CONTACT_LINK, HOMEPAGE_LINK, WHATWEDO_LINK, WHOWEARE_LINK } from "../../../constants/constants";
+import {
+  CONTACT_LINK,
+  HOMEPAGE_LINK,
+  WHATWEDO_LINK,
+  WHOWEARE_LINK,
+} from "../../../constants/constants";
 import {
   HamburgerContainer,
   Bar,
@@ -10,7 +15,10 @@ import {
   HambHeaderLink,
   HambHeaderPage,
   HambLinkContainer,
+  SprinkleWrapper,
+  Sprinkle,
 } from "./styled";
+import DotGridWhite from "../../../images/sprinkles/dot-grid-white.svg";
 
 const Hamburger = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -52,6 +60,9 @@ function renderStep(isOpen) {
             <HambHeaderLink to={CONTACT_LINK}>
               <HambHeaderPage>Contact</HambHeaderPage>
             </HambHeaderLink>
+            <SprinkleWrapper>
+              <Sprinkle src={DotGridWhite} />
+            </SprinkleWrapper>
           </HambLinkContainer>
         </MenuContentContainer>
       </MenuContainer>
