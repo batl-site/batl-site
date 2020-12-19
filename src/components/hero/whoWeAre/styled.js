@@ -4,6 +4,7 @@ import {
   MIN_MOBILE_SIZE,
   MIN_SM_DESKTOP_SIZE,
   MIN_TABLET_SIZE,
+  OVERLAY_ZINDEX,
 } from "../../../constants/constants";
 import { PRIMARY_NAVY, BG_WHITE } from "../../styles/styles";
 
@@ -68,4 +69,15 @@ export const XLImage = styled.img`
 
 export const FullBleedImage = styled.img.attrs({ className: "d-md-none" })`
   margin-bottom: 0;
+`;
+
+export const Sprinkle = styled.img`
+  position: absolute;
+  right: 0;
+  width: 40px;
+  z-index: ${OVERLAY_ZINDEX};
+
+  @media (min-width: ${MIN_SM_DESKTOP_SIZE}) {
+    width: 68px;
+  }
 `;
