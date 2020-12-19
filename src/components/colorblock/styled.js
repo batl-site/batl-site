@@ -1,8 +1,13 @@
 import styled from "styled-components";
-import { MIN_MOBILE_SIZE } from "../../constants/constants";
+import {
+  MIN_LG_DESKTOP_SIZE,
+  MIN_MOBILE_SIZE,
+  MIN_SM_DESKTOP_SIZE,
+  MIN_TABLET_SIZE,
+} from "../../constants/constants";
 
 export const ColorSection = styled.div.attrs({
-  className: "container-fluid my-5 py-5",
+  className: "col-11 my-5 py-5",
 })`
   background-color: ${(props) => props.color};
 `;
@@ -18,26 +23,38 @@ export const OneColumn = styled.div.attrs({
   className: "d-block d-sm-none d-col-12",
 })``;
 
-export const AbsoluteContainer = styled.div`
-  position: absolute;
-`;
-
 export const Header = styled.div`
   position: relative;
-  top: -100px;
-
-  padding: 0;
+  top: -75px;
+  padding-left: 0 !important;
 
   @media (min-width: ${MIN_MOBILE_SIZE}) {
-    padding: 0 15px;
+    top: -78px;
+    padding-left: 5.5% !important;
+  }
+
+  @media (min-width: ${MIN_TABLET_SIZE}) {
+    top: -91px;
+  }
+
+  @media (min-width: ${MIN_LG_DESKTOP_SIZE}) {
+    padding-left: 6.5% !important;
   }
 `;
 
-export const Content = styled.div.attrs({ className: "container mt-5" })``;
+export const Content = styled.div.attrs({ className: "container" })`
+  padding-left: 0 !important;
+  margin-top: -10% !important;
+
+  @media (min-width: ${MIN_MOBILE_SIZE}) {
+    padding-left: 4.5% !important;
+    margin-top: inherit !important;
+  }
+`;
 
 export const ButtonText = styled.div`
   margin: 0;
   padding: 15px 25px;
 `;
 
-export const Container = styled.div.attrs({ className: "container" })``;
+export const Container = styled.div.attrs({ className: "container p-0" })``;

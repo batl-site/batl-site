@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Layout from "../components/layout";
 import MissionStatement from "../components/mission/missionStatement";
 import SEO from "../components/seo";
-import { PRIMARY_YELLOW } from "../components/styles/styles";
+import { PRIMARY_GREY, PRIMARY_YELLOW } from "../components/styles/styles";
 import ColorBlock from "../components/colorblock/colorblock";
 import Testimonial from "../components/testimonial/testimonial";
 import { HOMEPAGE_ID } from "../constants/constants";
@@ -70,7 +70,7 @@ const HomePage = () => {
       {heroContent && <HpHero content={heroContent} />}
       {missionContent && <MissionStatement content={missionContent} />}
       {colorBlockContent && (
-        <ColorBlock content={colorBlockContent} color={PRIMARY_YELLOW} />
+        <ColorBlock content={colorBlockContent} color={PRIMARY_GREY} />
       )}
       {researchContent && (
         <ImageInfoSection
