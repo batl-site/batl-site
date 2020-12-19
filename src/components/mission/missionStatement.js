@@ -8,7 +8,10 @@ import {
   ContentDescription,
   Container,
   FlexWrapper,
+  SprinkleWrapper,
+  Sprinkle,
 } from "./styled";
+import DotGrid from "../../images/sprinkles/dot-grid.svg";
 
 const MissionStatement = ({ content }) => {
   return (
@@ -23,7 +26,7 @@ const MissionStatement = ({ content }) => {
         </Container>
         <BleedBreakPoint>
           <Content>
-            <Description className="col-xl-5">
+            <Description className="col-xl-4">
               <ContentDescription>{content.description}</ContentDescription>
             </Description>
             <ImageWrapper className="col-xl-7">
@@ -34,6 +37,9 @@ const MissionStatement = ({ content }) => {
         <ImageWrapper className="d-block d-md-none mb-5 align-self-end">
           <img alt={content.imageSrc.fileName} src={content.imageSrc.url} />
         </ImageWrapper>
+        <SprinkleWrapper>
+            <Sprinkle src={DotGrid} />
+          </SprinkleWrapper>
       </FlexWrapper>
     </>
   );

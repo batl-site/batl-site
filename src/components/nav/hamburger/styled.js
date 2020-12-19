@@ -90,3 +90,15 @@ export const HambHeaderLink = styled(Link)`
 export const HambHeaderPage = styled(H1)`
   color: white;
 `;
+
+export const SprinkleWrapper = styled.div`
+  position: relative;
+`;
+
+export const Sprinkle = styled.img`
+position: absolute;
+width: 100%;
+bottom: -388px;
+right: 14px;
+
+`;

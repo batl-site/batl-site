@@ -3,8 +3,11 @@ import { H1, H2, P1 } from "../styles/styles";
 import {
   ColorWrapper,
   Container,
-  QuotationMark
+  QuotationMark,
+  SprinkleContainer,
+  Sprinkle
 } from "./styled";
+import DotGrid from "../../images/sprinkles/dot-grid.svg"
 
 const Testimonial = ({ content, color }) => {
   return (
@@ -18,6 +21,9 @@ const Testimonial = ({ content, color }) => {
           </Container>
 
       </ColorWrapper>
+      <SprinkleContainer>
+        <Sprinkle src={DotGrid} />
+      </SprinkleContainer>
     </>
   );
 };
