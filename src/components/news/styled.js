@@ -6,4 +6,7 @@ export const Articles = styled.div.attrs({
   justify-content: space-between;
 `;
 
-export const NewsWrapper = styled.div.attrs({ className: "container my-5" })``;
+export const NewsWrapper = styled.div.attrs({ className: "container" })`
+  margin-top: 12%;
+  margin-bottom: 8%;
+`;

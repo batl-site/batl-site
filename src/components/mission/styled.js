@@ -20,9 +20,15 @@ export const ImageWrapper = styled.div.attrs({ className: "mb-5" })`
 `;
 
 export const Description = styled.div.attrs({
-  className: "col-12 col-md-6 col-lg-4 mb-3",
+  className: "col-12 col-md-6 col-lg-4 mb-4 pr-4",
 })`
+  padding: 0 !important;
+
   @media (min-width: ${MIN_TABLET_SIZE}) {
+    padding-left: 8vw !important;
+  }
+
+  @media (min-width: 1440px) {
     padding-left: 11.5vw !important;
   }
 
@@ -61,4 +67,6 @@ export const Container = styled.div.attrs({ className: "container" })``;
 
 export const FlexWrapper = styled.div.attrs({
   className: "d-flex flex-column my-5",
-})``;
+})`
+margin: 5% 0;
+`;

@@ -2,7 +2,6 @@ import { Link } from "gatsby";
 import styled from "styled-components";
 import { MAX_ZINDEX, MIN_SM_DESKTOP_SIZE, MIN_TABLET_SIZE } from "../../../constants/constants";
 import {
-  BG_WHITE,
   H1,
   PRIMARY_NAVY,
   TEXT_BLACK,
@@ -82,12 +81,12 @@ export const HambLinkContainer = styled.div`
 `;
 
 export const HambHeaderLink = styled(Link)`
-  color: ${BG_WHITE};
+  color: white;
   :hover {
     text-decoration: none;
   }
 `;
 
 export const HambHeaderPage = styled(H1)`
-  color: ${BG_WHITE};
+  color: white;
 `;

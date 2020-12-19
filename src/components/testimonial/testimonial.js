@@ -3,17 +3,18 @@ import { H1, H2, P1 } from "../styles/styles";
 import {
   ColorWrapper,
   Container,
-  Name
+  QuotationMark
 } from "./styled";
 
-const Testimonial = ({ content }) => {
+const Testimonial = ({ content, color }) => {
   return (
     <>
-      <ColorWrapper>
+      <ColorWrapper color={color}>
           <Container>
+            <QuotationMark>&ldquo;</QuotationMark>
               <H1>{content.testimonial}</H1>
+              <P1>{content.name}</P1>
               {content.position && <H2>{content.position}</H2>}
-              <Name><P1>{content.name}</P1></Name>
           </Container>
 
       </ColorWrapper>

@@ -1,14 +1,15 @@
 import styled from "styled-components";
 import {
   MIN_LG_DESKTOP_SIZE,
-  OVERLAY_ZINDEX,
+  MIN_MD_DESKTOP_SIZE,
+  MIN_SM_DESKTOP_SIZE,
 } from "../../../constants/constants";
-import { PRIMARY_YELLOW } from "../../styles/styles";
+import { PRIMARY_NAVY } from "../../styles/styles";
 
 export const HpHeroContainer = styled.div.attrs({
   classname: "d-flex flex-column",
 })`
-  margin-bottom: 25vh;
+  margin-bottom: 150px;
 `;
 
 export const HeroImage = styled.div`
@@ -22,32 +23,41 @@ export const HeroImage = styled.div`
 export const HeroImageContainer = styled.div.attrs({
   className: "container-fluid p-0",
 })`
-  height: 70vh;
+  height: 80vh;
 
   @media (min-width: ${MIN_LG_DESKTOP_SIZE}) {
-    height: 60vh;
+    height: 70vh;
   }
 `;
 
-export const HeroBlockOverlay = styled.div.attrs({
-  className: "col-11 col-md-7 position-relative",
-})`
-  background-color: ${PRIMARY_YELLOW};
+export const Container = styled.div.attrs({ className: "container p-0" })``;
 
-  z-index: ${OVERLAY_ZINDEX};
-  padding: 60px !important;
-  overflow: hidden;
-  bottom: 40vh;
+export const ColorBlock = styled.div.attrs({
+  className: "col-10 col-md-6 col-lg-5 py-5",
+})`
+  background-color: ${PRIMARY_NAVY};
+  color: white;
+  padding-left: 0;
+
+  @media (min-width: ${MIN_MD_DESKTOP_SIZE}) {
+    padding-left: 10% !important;
+  }
 
   @media (min-width: ${MIN_LG_DESKTOP_SIZE}) {
-    top: -35vh;
+    padding-left: 17% !important;
   }
 `;
 
-export const HeroBlockPosition = styled.div.attrs({
-  className: "position-absolute",
+export const ColorOverlay = styled.div.attrs({
+  className: "container-fluid position-absolute p-0",
 })`
-  margin-left: -60px;
-`;
+  bottom: 25vh;
 
-export const Container = styled.div.attrs({ className: "container" })``;
+  @media (min-width: ${MIN_SM_DESKTOP_SIZE}) {
+    bottom: 25vh;
+  }
+
+  @media (min-width: ${MIN_LG_DESKTOP_SIZE}) {
+    bottom: 35vh;
+  }
+`;
