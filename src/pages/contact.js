@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react"
+import ContactForm from "../components/contact-form/contactForm"
+import GoogleMap from "../components/google_map/map"
+import ContactHero from "../components/hero/contact/contactHero"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import LocationInfo from "../components/location_info/locationInfo"
 import { CONTACT_ID } from "../constants/constants"
 import apiService from "../service/apiService"
 
@@ -12,14 +16,36 @@ const Contact = () => {
       .then(response => setPageContent(response[0].fields));
   }, [])
 
-  const headingContent = pageContent.contactOpener ? pageContent.contactOpener.fields : null
+  const heroContent = pageContent.pageHeading ? {
+    heading: pageContent.pageHeading,
+    description: pageContent.description,
+    images: pageContent.images ? pageContent.images : null
+  } : null
+
+  const formContent = pageContent.emailSubjects ? {
+    subjectOptions: pageContent.emailSubjects,
+    email: pageContent.email,
+    terms: pageContent.formTerms
+  } : null
+
+  const locationContent = pageContent.directionsHeader ? {
+    header: pageContent.directionsHeader,
+    car: pageContent.byCar,
+    shuttle: pageContent.byShuttle,
+    location: pageContent.location,
+    imageSrc: pageContent.footerImage ? pageContent.footerImage.fields.file.url : null,
+    coordinates: pageContent.batlCoordinates,
+    seeMoreLink: pageContent.seeMoreLink
+  } : null
+
+  console.log(pageContent)
 
   return (
     <Layout>
       <SEO title="Contact" />
-      <h1>This is the contact page</h1>
-      <h2>{headingContent && headingContent.header}</h2>
-      <p>{headingContent && headingContent.description}</p>
+      {heroContent && <ContactHero content={heroContent} />}
+      {formContent && <ContactForm content={formContent} />}
+      {locationContent && <LocationInfo content={locationContent} />}
     </Layout>
   )
 }

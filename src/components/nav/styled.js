@@ -59,7 +59,7 @@ export const FixedContainer = styled.div.attrs({
 })`
   position: fixed;
   z-index: ${MAX_ZINDEX};
-  background-color: ${BG_WHITE};
+  background-color: white;
 `;
 
 export const OffsetBody = styled.div`
