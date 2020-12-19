@@ -1,20 +1,24 @@
 import React from "react";
-import { H2, P1 } from "../../styles/styles";
+import { H2, P1, RoundImage } from "../../styles/styles";
 import {
   ContentWrapper,
   Indent,
   Dot,
   Content,
   Title,
+  Graphic,
+  Sprinkle,
   Image,
   MobileImageContainer,
   MobileImage,
+  MobileSprinkle,
 } from "./styled";
 
-const TimelineMoment = ({ indent, content }) => (
+const TimelineMoment = ({ indent, content, sprinkle }) => (
   <div>
     {content.image && (
       <MobileImageContainer indent={indent}>
+        <MobileSprinkle indent={indent} src={sprinkle} />
         <MobileImage src={content.image.fields.file.url} />
       </MobileImageContainer>
     )}
@@ -28,7 +32,10 @@ const TimelineMoment = ({ indent, content }) => (
         <P1>{content.description}</P1>
       </Content>
       {content.image && (
-        <Image indent={indent} src={content.image.fields.file.url} />
+        <Graphic indent={indent}>
+          <Sprinkle indent={indent} src={sprinkle} />
+          <Image src={content.image.fields.file.url} />
+        </Graphic>
       )}
     </ContentWrapper>
   </div>
