@@ -3,6 +3,7 @@ import {
     MIN_LG_DESKTOP_SIZE,
     MIN_MOBILE_SIZE,
     MIN_SM_DESKTOP_SIZE,
+    MIN_MD_DESKTOP_SIZE,
     MIN_TABLET_SIZE,
 } from "../../../constants/constants";
 import { PRIMARY_NAVY } from "../../styles/styles";
@@ -11,7 +12,23 @@ export const ColorBlock = styled.div`
   color: white;
   background-color: ${PRIMARY_NAVY};
   position: relative;
-  margin-bottom: 10%;
+  margin-bottom: 15%;
+
+  @media (max-width: ${MIN_MOBILE_SIZE}) {
+    margin-bottom: 43%;
+  }
+
+  @media (min-width: ${MIN_TABLET_SIZE}) {
+    margin-bottom: 25%;
+  }
+
+  @media (min-width: ${MIN_SM_DESKTOP_SIZE}) {
+    margin-bottom: 28%;
+  }
+
+  @media (min-width: ${MIN_MD_DESKTOP_SIZE}) {
+    margin-bottom: 20%;
+  }
 `;
 
 export const Container = styled.div`
@@ -27,7 +44,7 @@ export const Container = styled.div`
     margin: 0 auto;
   }
 
-  @media (min-width: 1200px) {
+  @media (min-width: ${MIN_MD_DESKTOP_SIZE}) {
     max-width: 1140px;
   }
 `;

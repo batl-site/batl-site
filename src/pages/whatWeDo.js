@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { PRIMARY_GREY } from "../components/styles/styles";
+import { PRIMARY_GREY, PRIMARY_NAVY } from "../components/styles/styles";
 import { WHATWEDO_ID } from "../constants/constants"
 import apiService from "../service/apiService"
 import WhatWeDoHero from "../components/hero/whatWeDo/whatWeDoHero"
@@ -37,6 +37,7 @@ const WhatWeDo = () => {
     <Layout>
       <SEO title="What We Do" />
       <WhatWeDoHero content={hero.fields} />
+      <Education content={education.fields} color={PRIMARY_GREY} />
       <RegulatoryPartners content={regulatoryPartners} />
       <ColorBannerWhatWeDo content={industryPartnersBanner.fields} section={'Industry Parnterships'}/>
       <IndustryPartners content={industryPartners} color={PRIMARY_GREY} />

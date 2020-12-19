@@ -1,38 +1,38 @@
 import React from "react";
-import { navigate } from "gatsby";
-import { Button, H1, P1, H2, P2, PRIMARY_YELLOW } from "../styles/styles";
+import { H1, P1, H2 } from "../styles/styles";
 import {
   ColorSection,
+  TwoColumn,
   Header,
-  Paragraph1,
-  Paragraph2,
+  Header2,
+  OneColumn,
   Content,
-  RelativeContainer,
-  Header2
+  Container,
+  ColorBlockWrapper,
 } from "./styled";
-
 const Education = ({ content, color }) => {
-
-  return (
-    <ColorSection color={color}>
-      <RelativeContainer>
+    return (
+      <ColorBlockWrapper className="container-fluid p-0">
+      <ColorSection color={color}>
+        <Container>
         <Header2>
-        <H2>Education</H2>
+          <H2>Education</H2>
         </Header2>
-        <Header>
-          <H1>{content.heading}</H1>
-        </Header>
-      </RelativeContainer>
-      <Content>
-        <Paragraph1>
-          <P1>{content.description}</P1>
-        </Paragraph1>
-        <Paragraph2>
-          <P1>{content.description2}</P1>
-        </Paragraph2>
-      </Content>
-    </ColorSection>
-  );
+            <Header>
+              <H1>{content.heading}</H1>
+            </Header>
+        </Container>
+        <Content>
+          <OneColumn>
+            <P1>{content.description}</P1>
+          </OneColumn>
+          <TwoColumn>
+            <P1>{content.description}</P1>
+          </TwoColumn>
+        </Content>
+      </ColorSection>
+      </ColorBlockWrapper>
+    );
 };
 
 export default Education;
