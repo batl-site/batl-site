@@ -5,14 +5,16 @@ import {
   MIN_SM_DESKTOP_SIZE,
   MIN_TABLET_SIZE,
 } from "../../../constants/constants";
-import { PRIMARY_YELLOW } from "../../styles/styles";
+import { PRIMARY_NAVY, BG_WHITE } from "../../styles/styles";
 
 export const ColorBlock = styled.div`
-  background-color: ${PRIMARY_YELLOW};
+  color: ${BG_WHITE};
+  background-color: ${PRIMARY_NAVY};
   position: relative;
+  margin-bottom: 10em;
 `;
 
-export const Container = styled.div`
+export const Container = styled.div.attrs({ className: "container" })`
   padding: 15px 0;
   position: relative;
 
@@ -24,14 +26,10 @@ export const Container = styled.div`
     max-width: 960px;
     margin: 0 auto;
   }
-
-  @media (min-width: 1200px) {
-    max-width: 1140px;
-  }
 `;
 
 export const ContentContainer = styled.div.attrs({
-  className: "col-md-6 col-lg-5",
+  className: "col-md-6 col-lg-5 px-0",
 })``;
 
 export const SideImage = styled.img`
