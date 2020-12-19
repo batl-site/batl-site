@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { NavButton } from "../nav/styled";
-import { PRIMARY_GREY } from "../styles/styles";
+import { PRIMARY_GREY, SmallText } from "../styles/styles";
 
 export const StyledInput = styled.input.attrs({ className: "form-control" })`
   border-radius: 0 !important;
@@ -45,3 +45,10 @@ export const CheckboxLabel = styled.label.attrs({
 })``;
 
 export const SendButton = styled(NavButton).attrs({className: 'col-6 py-3'})``
+
+export const Terms = styled(SmallText).attrs({className: 'float-right mt-2'})`
+  :hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+`

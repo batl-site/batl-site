@@ -24,7 +24,8 @@ const Contact = () => {
 
   const formContent = pageContent.emailSubjects ? {
     subjectOptions: pageContent.emailSubjects,
-    email: pageContent.email
+    email: pageContent.email,
+    terms: pageContent.formTerms
   } : null
 
   const locationContent = pageContent.directionsHeader ? {
@@ -33,8 +34,11 @@ const Contact = () => {
     shuttle: pageContent.byShuttle,
     location: pageContent.location,
     imageSrc: pageContent.footerImage ? pageContent.footerImage.fields.file.url : null,
-    coordinates: pageContent.batlCoordinates
+    coordinates: pageContent.batlCoordinates,
+    seeMoreLink: pageContent.seeMoreLink
   } : null
+
+  console.log(pageContent)
 
   return (
     <Layout>

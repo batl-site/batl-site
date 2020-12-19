@@ -7,7 +7,7 @@ export const PRIMARY_GREEN = "#74D395";
 export const PRIMARY_NAVY = "#023047";
 export const PRIMARY_RED = "#FF6752";
 export const PRIMARY_ORANGE = "#FF9D42";
-export const PRIMARY_GREY = "#F4F4F4"
+export const PRIMARY_GREY = "#F4F4F4";
 
 export const TEXT_BLACK = "#1A1A1A";
 export const BG_WHITE = "#FFFFFF";
@@ -81,6 +81,10 @@ export const P2 = styled.p`
   }
 `;
 
+export const SmallText = styled.small`
+  font-family: "Open Sans", sans-serif;
+`;
+
 // Images
 export const RoundImage = styled.img`
   border-radius: 50%;
@@ -94,6 +98,6 @@ export const Button = styled.button`
 
   &:hover {
     background-color: ${TEXT_BLACK};
-    color: ${props => props.color ? PRIMARY_YELLOW : 'white'};
+    color: ${(props) => (props.color ? PRIMARY_YELLOW : "white")};
   }
 `;

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { NavButton } from "../nav/styled";
-import { H2Body, P2 } from "../styles/styles";
+import { H2Body, P2, SmallText } from "../styles/styles";
 import {
   StyledInput,
   StyledTextarea,
@@ -13,6 +13,7 @@ import {
   Checkbox,
   CheckboxLabel,
   SendButton,
+  Terms,
 } from "./styled";
 
 const ContactForm = ({ content }) => {
@@ -21,6 +22,7 @@ const ContactForm = ({ content }) => {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [selectedSubjects, setSelectedSubjects] = useState([]);
+  const [showTerms, setShowTerms] = useState(false);
 
   const updateSubjects = (value, id) => {
     if (value) {
@@ -34,6 +36,14 @@ const ContactForm = ({ content }) => {
         );
         setSelectedSubjects(newSubjects);
       }
+    }
+  };
+
+  const toggleTerms = () => {
+    if (showTerms) {
+      setShowTerms(false)
+    } else {
+      setShowTerms(true)
     }
   };
 
@@ -98,7 +108,12 @@ const ContactForm = ({ content }) => {
             value={message}
             onChange={(event) => setMessage(event.target.value)}
           ></StyledTextarea>
-          <small className="float-right mt-2">terms</small>
+          {showTerms && (
+            <div>
+              <SmallText>{content.terms}</SmallText>
+            </div>
+          )}
+          <Terms onClick={() => toggleTerms()}>terms</Terms>
         </InputWrapper>
         <SendButton
           onClick={() =>
