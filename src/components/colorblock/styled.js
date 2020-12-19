@@ -9,7 +9,9 @@ import {
 export const ColorBlockWrapper = styled.div.attrs({
   className:"container-fluid p-0"
 })`
-margin: 10% 0;
+margin-top: 10%;
+margin-bottom: 0;
+
 `
 
 export const ColorSection = styled.div.attrs({

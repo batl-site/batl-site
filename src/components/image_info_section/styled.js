@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { MIN_SM_DESKTOP_SIZE } from '../../constants/constants'
 
-export const Container = styled.div.attrs({ className: "d-flex flex-wrap align-items-center" })`
+export const Container = styled.div.attrs({ className: "d-flex flex-wrap align-items-center justify-content-between" })`
   padding: 5em 0;
 
   @media (min-width: ${MIN_SM_DESKTOP_SIZE}) {
@@ -15,7 +15,7 @@ export const Container = styled.div.attrs({ className: "d-flex flex-wrap align-i
 `
 
 export const ImagesContainer = styled.div.attrs({
-  className: "col-l2 col-lg-5 d-flex justify-content-center"
+  className: "col-12 col-sm-9 col-md-5 d-flex justify-content-center"
 })``
 
-export const ContentContainer = styled.div.attrs({ className: "col-12 col-lg-7" })``
+export const ContentContainer = styled.div.attrs({ className: "col-12 col-md-6" })``
