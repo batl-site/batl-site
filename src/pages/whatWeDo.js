@@ -7,7 +7,7 @@ import apiService from "../service/apiService"
 import WhatWeDoHero from "../components/hero/whatWeDo/whatWeDoHero"
 import Education from "../components/education/education"
 import RegulatoryPartners from "../components/regulatory_partners/regulatoryPartners"
-import ColorBannerWhatWeDo from "../components/color_Banner_WhatWeDo/colorBannerWhatWeDo"
+import ColorBannerWhatWeDo from "../components/color_banner_whatWeDo/colorBannerWhatWeDo"
 import Research from "../components/research/research"
 import BottomImage from "../components/bottom_image/bottomImage"
 import IndustryPartners from "../components/industry_partners/industryPartners"
@@ -32,12 +32,13 @@ const WhatWeDo = () => {
     industryPartners, 
     bottomImage } = pageContent;
 
+    console.log(pageContent)
   return (
     <Layout>
       <SEO title="What We Do" />
       <WhatWeDoHero content={hero.fields} />
       <RegulatoryPartners content={regulatoryPartners} />
-      <ColorBannerWhatWeDo content={industryPartnersBanner.fields} section={'Industry Parnterships'} />
+      <ColorBannerWhatWeDo content={industryPartnersBanner.fields} section={'Industry Parnterships'} splitColumns/>
       <IndustryPartners content={industryPartners} color={PRIMARY_GREY} />
       <Research id="research" section="Use-Inspired Research" content={research.fields} />
       <BottomImage content={bottomImage} />

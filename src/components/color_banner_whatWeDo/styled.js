@@ -13,7 +13,7 @@ export const Container = styled.div.attrs({
 `
 
 export const Content = styled.div.attrs((props) => ({
-  className: `${!props.left && 'col-11'} col-md-6`
+  className: `${!props.left && 'col-11'} col-md-7 col-lg-6`
 }))`
   left: ${props => props.left ? 0 : '8.33%'};
   
@@ -22,7 +22,7 @@ export const Content = styled.div.attrs((props) => ({
   }
 
   @media (min-width: ${MIN_SM_DESKTOP_SIZE}) {
-    left: 8.33%;
+    left: 4%;
   }
 `
 

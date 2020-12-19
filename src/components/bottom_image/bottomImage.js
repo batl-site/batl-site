@@ -1,12 +1,9 @@
 import React from "react";
-
-
 import {
   Image,
   BottomImageContainer,
   Container,
 } from "./styled";
-
 const BottomImage = ({ content }) => {
 
   return (
