@@ -8,20 +8,19 @@ import {
   OneColumn,
   Content,
   ButtonText,
-  AbsoluteContainer,
   Container,
+  ColorBlockWrapper,
 } from "./styled";
 
 const ColorBlock = ({ content, color }) => {
   const buttonContent = content.callToAction.fields;
   return (
+    <ColorBlockWrapper className="container-fluid p-0">
     <ColorSection color={color}>
       <Container>
-        <AbsoluteContainer>
           <Header>
             <H1>{content.heading}</H1>
           </Header>
-        </AbsoluteContainer>
       </Container>
       <Content>
         <OneColumn>
@@ -50,6 +49,7 @@ const ColorBlock = ({ content, color }) => {
         </TwoColumn>
       </Content>
     </ColorSection>
+    </ColorBlockWrapper>
   );
 };
 
