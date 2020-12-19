@@ -2,6 +2,7 @@ import styled from "styled-components";
 import {
   MIN_LG_DESKTOP_SIZE,
   MIN_MOBILE_SIZE,
+  MIN_SM_DESKTOP_SIZE,
   MIN_TABLET_SIZE,
 } from "../../constants/constants";
 
@@ -28,7 +29,7 @@ export const OneColumn = styled.div.attrs({
   className: "d-block d-sm-none d-col-12",
 })``;
 
-export const Header = styled.div`
+export const Header = styled.div.attrs({className: 'col-12 col-md-8 col-lg-12'})`
   position: relative;
   top: -75px;
   padding-left: 0 !important;
@@ -63,3 +64,35 @@ export const ButtonText = styled.div`
 `;
 
 export const Container = styled.div.attrs({ className: "container p-0" })``;
+
+
+export const SprinkleContainer = styled.div`
+  position: relative;
+`
+
+export const SprinkleYellow = styled.img.attrs({className: 'd-none d-md-block'})`
+  position: absolute;
+  width: 197px;
+  right: 12px;
+  bottom: 445px;
+
+  @media (min-width: ${MIN_SM_DESKTOP_SIZE}) {
+    width: 197px;
+    right: -108px;
+    bottom: 273px;
+  }
+
+`  
+export const SprinkleNavy = styled.img.attrs({className: 'd-none d-md-block'})`
+position: absolute;
+width: 87px;
+right: 141px;
+bottom: 429px;
+
+@media (min-width: ${MIN_SM_DESKTOP_SIZE}) {
+  width: 87px;
+  right: 19px;
+  bottom: 250px;
+}
+
+`  

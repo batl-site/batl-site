@@ -10,7 +10,13 @@ import {
   ButtonText,
   Container,
   ColorBlockWrapper,
+  SprinkleYellow,
+  SprinkleNavy,
+  SprinkleContainer
 } from "./styled";
+import FilledYellow from "../../images/sprinkles/filled-yellow.svg"
+import OutlinedNavy from "../../images/sprinkles/outlined-navy.svg"
+
 
 const ColorBlock = ({ content, color }) => {
   const buttonContent = content.callToAction.fields;
@@ -48,6 +54,10 @@ const ColorBlock = ({ content, color }) => {
           </Button>
         </TwoColumn>
       </Content>
+      <SprinkleContainer>
+        <SprinkleYellow src={FilledYellow} />
+        <SprinkleNavy src={OutlinedNavy} />
+      </SprinkleContainer>
     </ColorSection>
     </ColorBlockWrapper>
   );
