@@ -19,4 +19,4 @@ export const Container = styled.div.attrs({
   margin-bottom: 10%;
 `;
 
-export const Heading = styled(H2).attrs({className: 'mb-5'})``
+export const Heading = styled(H2).attrs({className: 'mb-3'})``

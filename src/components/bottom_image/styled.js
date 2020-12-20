@@ -7,6 +7,7 @@ export const Container = styled.div.attrs({
   classname: "d-flex flex-column",
 })`
   margin-bottom: -10px;
+  margin-top: 50px;
 `;
 
 export const Image = styled.div`

@@ -32,8 +32,9 @@ export const Sprinkle = styled.img`
   right: -30px;
   width: 40px;
   z-index: ${OVERLAY_ZINDEX};
+  bottom: -93px;
 
-  @media (max-width: ${MIN_MOBILE_SIZE}) {
+  @media (min-width: ${MIN_MOBILE_SIZE}) {
     width: 35px;
     right: -18px;
     bottom: 970px;
