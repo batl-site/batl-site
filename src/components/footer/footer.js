@@ -30,13 +30,15 @@ import BATL from "../../images/batl-white.png";
 import COS from "../../images/cos.png";
 
 const Footer = () => {
-  const [content, setContent] = useState({});
+  const [content, setContent] = useState(null);
 
   useEffect(() => {
     apiService
       .getEntryByContentType(FOOTER_ID)
       .then((response) => setContent(response[0].fields));
   }, []);
+
+  if (!content) return null;
 
   const {
     headline,
