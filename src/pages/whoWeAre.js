@@ -8,17 +8,8 @@ import ColorBanner from "../components/color_banner/colorBanner";
 import Team from "../components/team/team";
 import Timeline from "../components/timeline/timeline";
 
-const init = {
-  hero: null,
-  teamSectionHeading: null,
-  staff: null,
-  timelineDescription: null,
-  timeline: null,
-  timelineImage: null,
-};
-
 const WhoWeAre = () => {
-  const [pageContent, setPageContent] = useState(init);
+  const [pageContent, setPageContent] = useState({});
 
   useEffect(() => {
     apiService
