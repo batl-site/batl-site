@@ -25,7 +25,7 @@ export const Bio = styled(P1).attrs({
 })``;
 
 export const Sprinkle = styled.img`
-  width: calc(100% - 30px);
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0px;
