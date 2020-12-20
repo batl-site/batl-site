@@ -29,37 +29,44 @@ export const SprinkleContainer = styled.div`
   
 export const Sprinkle = styled.img`
   position: absolute;
-  right: 0;
+  right: -30px;
   width: 40px;
   z-index: ${OVERLAY_ZINDEX};
 
   @media (max-width: ${MIN_MOBILE_SIZE}) {
     width: 35px;
-    right: 0px;
-    bottom: 1075px;
+    right: -18px;
+    bottom: 970px;
   }
 
   @media (min-width: ${MIN_TABLET_SIZE}) {
     width: 50px;
-    right: 10px;
-    bottom: -70px;
+    right: -25px;
+    bottom: -180px;
   }
 
   @media (min-width: ${MIN_SM_DESKTOP_SIZE}) {
     width: 68px;
-    right: 0px;
-    bottom: -105px;
+    right: -47px;
+    bottom: -145px;
   }
 
   @media (min-width: ${MIN_MD_DESKTOP_SIZE}) {
     width: 68px;
-    right: 112px;
-    bottom: -35px;
+    right: -50px;
+    bottom: -145px;
   }
 
   @media (min-width: ${MIN_LG_DESKTOP_SIZE}) {
     width: 68px;
-    right: 680px;
-    bottom: -35px;
+    right: -45px;
+    bottom: -145px;
   }
+`;
+
+export const Container = styled.div.attrs({
+  className: "container",
+})`
+  margin-bottom: 10%;
+  margin-top: 10%;
 `;

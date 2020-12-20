@@ -13,14 +13,14 @@ export const ColorBlock = styled.div`
   color: white;
   background-color: ${PRIMARY_NAVY};
   position: relative;
-  margin-bottom: 15%;
+  margin-bottom: 20%;
 
   @media (max-width: ${MIN_MOBILE_SIZE}) {
-    margin-bottom: 43%;
+    margin-bottom: 20%;
   }
 
   @media (min-width: ${MIN_TABLET_SIZE}) {
-    margin-bottom: 25%;
+    margin-bottom: 30%;
   }
 
   @media (min-width: ${MIN_SM_DESKTOP_SIZE}) {
@@ -28,7 +28,7 @@ export const ColorBlock = styled.div`
   }
 
   @media (min-width: ${MIN_MD_DESKTOP_SIZE}) {
-    margin-bottom: 20%;
+    margin-bottom: 25%;
   }
 `;
 
@@ -105,7 +105,8 @@ export const FullBleedImage = styled.img.attrs({ className: "d-md-none" })`
 export const Sprinkle = styled.img`
   position: absolute;
   right: 0;
-  width: 70px;
+  bottom: -53px;
+  width: 150px;
   z-index: ${OVERLAY_ZINDEX};
 
   @media (max-width: ${MIN_MOBILE_SIZE}) {
@@ -122,13 +123,13 @@ export const Sprinkle = styled.img`
 
   @media (min-width: ${MIN_SM_DESKTOP_SIZE}) {
     width: 200px;
-    right: -30px;
+    right: -10px;
     bottom: -60px;
   }
 
   @media (min-width: ${MIN_MD_DESKTOP_SIZE}) {
     width: 200px;
-    right: -140px;
+    right: -20px;
     bottom: -60px;
   }
 `;

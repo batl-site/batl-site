@@ -10,7 +10,7 @@ import {
 export const ColorBlockWrapper = styled.div.attrs({
   className:"container-fluid p-0"
 })`
-margin: 10% 0;
+margin-bottom: 15%;
 `
 
 export const ColorSection = styled.div.attrs({
@@ -38,7 +38,7 @@ export const Header = styled.div.attrs({
   padding-left: 0 !important;
 
   @media (max-width: ${MIN_MOBILE_SIZE}) {
-    top: -200px;
+    top: -80px;
     padding-left: 5.5% !important;
   }
 
@@ -71,7 +71,7 @@ export const Header2 = styled.div.attrs({
     padding-left: 0 !important;
   
     @media (max-width: ${MIN_MOBILE_SIZE}) {
-      top: -190px;
+      top: -80px;
       left: 20px;
     }
   
@@ -119,9 +119,9 @@ export const SprinkleContainer = styled.div`
 
 export const SprinkleYellow = styled.img.attrs({className: 'd-md-block'})`
   position: absolute;
-  width: 117px;
+  width: 80px;
   right: 12px;
-  bottom: 445px;
+  bottom: 50px;
 
   @media (max-width: ${MIN_MOBILE_SIZE}) {
     width: 80px;
@@ -136,21 +136,21 @@ export const SprinkleYellow = styled.img.attrs({className: 'd-md-block'})`
   }
 
   @media (min-width: ${MIN_SM_DESKTOP_SIZE}) {
-    width: 117px;
+    width: 108px;
     right: 40px;
-    bottom: 290px;
+    bottom: 260px;
   }
 
   @media (min-width: ${MIN_MD_DESKTOP_SIZE}) {
     width: 117px;
     right: 68px;
-    bottom: 445px;
+    bottom: 350px;
   }
 
   @media (min-width: ${MIN_LG_DESKTOP_SIZE}) {
     width: 117px;
-    right: 180px;
-    bottom: 445px;
+    right: 175px;
+    bottom: 250px;
   }
 `
 
@@ -170,24 +170,24 @@ export const Sprinkle = styled.img.attrs({ className: "" })`
   @media (min-width: ${MIN_TABLET_SIZE}) {
     width: 60%;
     right: 20px;
-    bottom: 35px;
+    bottom: 15px;
   }
 
   @media (min-width: ${MIN_SM_DESKTOP_SIZE}) {
     width: 50%;
     right: 35px;
-    bottom: 50px;
+    bottom: 10px;
   }
 
   @media (min-width: ${MIN_MD_DESKTOP_SIZE}) {
     width: 50%;
     right: 60px;
-    bottom: 90px;
+    bottom: 0px;
   }
 
   @media (min-width: ${MIN_LG_DESKTOP_SIZE}) {
     width: 500px;
     right: 170px;
-    bottom: 210px;
+    bottom: 10px;
   }
 `;

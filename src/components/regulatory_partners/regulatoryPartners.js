@@ -1,10 +1,11 @@
 import React from "react";
 import { H2 } from "../styles/styles";
-import { Images, ImageWrapper } from "./styled";
+import { Images, ImageWrapper, Container } from "./styled";
 import Image from "./images/image";
 
 const RegulatoryPartners = ({ content }) => {
   return (
+    <Container>
     <ImageWrapper>
       <H2>Regulatory Partners</H2>
       <Images>
@@ -13,6 +14,7 @@ const RegulatoryPartners = ({ content }) => {
         ))}
       </Images>
     </ImageWrapper>
+    </Container>
   );
   
 };

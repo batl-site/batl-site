@@ -1,11 +1,11 @@
 import React from "react";
-import { Images, ImageWrapper, ColorSection, Sprinkle, SprinkleContainer } from "./styled";
+import { Images, ImageWrapper, ColorSection, Sprinkle, SprinkleContainer, Container } from "./styled";
 import Image from "./images/image";
 import Circles from "../../images/sprinkles/vertical-navy.svg";
 
 const IndustryPartners = ({ content, color }) => {
   return (
-    <>
+    <Container>
     <ColorSection color={color}> 
     <ImageWrapper>
       <Images>
@@ -14,11 +14,11 @@ const IndustryPartners = ({ content, color }) => {
         ))}
       </Images>
     </ImageWrapper>
-    </ColorSection>
     <SprinkleContainer>
     <Sprinkle src={Circles}/>
     </SprinkleContainer>
-    </>
+    </ColorSection>
+    </Container>
   );
   
 };

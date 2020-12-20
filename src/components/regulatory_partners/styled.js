@@ -11,3 +11,9 @@ export const Images = styled.div.attrs({
 
 export const ImageWrapper = styled.div.attrs({ className: "container my-5" })`
 `;
+
+export const Container = styled.div.attrs({
+  className: "container",
+})`
+  margin-bottom: 10%;
+`;

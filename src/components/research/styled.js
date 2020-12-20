@@ -3,6 +3,7 @@ import { MIN_SM_DESKTOP_SIZE } from '../../constants/constants'
 
 export const Container = styled.div.attrs({ className: "d-flex flex-wrap align-items-center" })`
   padding: 5em 0;
+  margin-bottom: 5%;
 
   @media (min-width: ${MIN_SM_DESKTOP_SIZE}) {
     max-width: 960px;
@@ -34,3 +35,4 @@ export const ButtonText = styled.div`
   margin: 0;
   padding: 15px 25px;
 `;
+

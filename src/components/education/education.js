@@ -38,11 +38,11 @@ const Education = ({ content, color }) => {
           </TwoColumn>
         </Content>
       </ColorSection>
-      </ColorBlockWrapper>
       <SprinkleContainer>
         <SprinkleYellow src={FilledYellow} />
         <Sprinkle src={DotGrid} />
       </SprinkleContainer>
+      </ColorBlockWrapper>
       </>
     );
 };
