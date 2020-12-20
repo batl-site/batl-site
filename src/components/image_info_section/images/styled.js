@@ -24,3 +24,17 @@ export const RowOne = styled.div.attrs((props) => ({
 export const RowTwo = styled.div.attrs((props) => ({
   className: `row ${props.variant && 'justify-content-end'}`
 }))``
+
+export const SprinkleMedium = styled.img`
+  position: absolute;
+  width: 50%;
+  transform: ${(props) => props.variant ? "translate(9px, -12px);" : "translate(-12px,-9px) scaleX(-1);"}
+  z-index: -1
+`;
+
+export const SprinkleSmall = styled.img`
+  position: absolute;
+  width: 22%;
+  transform: translate(-10px, -12px);
+  z-index: -1;
+`;
