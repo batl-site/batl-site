@@ -98,6 +98,6 @@ export const Button = styled.button`
 
   &:hover {
     background-color: ${TEXT_BLACK};
-    color: ${(props) => (props.color ? PRIMARY_YELLOW : "white")};
+    color: ${(props) => (props.color ? props.color : "white")};
   }
 `;
