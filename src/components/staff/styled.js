@@ -24,10 +24,7 @@ export const Bio = styled(P1).attrs({
   className: "d-none d-md-block col-12 col-lg-8 pl-lg-4",
 })``;
 
-export const Sprinkle = styled.div`
-  border-radius: 50%;
-  border: 1px solid ${(props) => props.color};
-  height: 100%;
+export const Sprinkle = styled.img`
   width: calc(100% - 30px);
   position: absolute;
   top: 0;
