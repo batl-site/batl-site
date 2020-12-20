@@ -7,10 +7,10 @@ import { MIN_SM_DESKTOP_SIZE,
   OVERLAY_ZINDEX } from '../../constants/constants'
 
 export const Images = styled.div.attrs({
-  className: "col-12 p-0 d-flex row",
+  className: "col-12 p-0 d-flex",
 })`
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: flex-start;
 
 `;
 

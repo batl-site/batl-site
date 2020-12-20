@@ -7,10 +7,10 @@ import apiService from "../service/apiService"
 import WhatWeDoHero from "../components/hero/whatWeDo/whatWeDoHero"
 import Education from "../components/education/education"
 import RegulatoryPartners from "../components/regulatory_partners/regulatoryPartners"
-import Research from "../components/research/research"
 import BottomImage from "../components/bottom_image/bottomImage"
 import IndustryPartners from "../components/industry_partners/industryPartners"
 import ColorBanner from '../components/color_banner/colorBanner'
+import ImageInfoSection from "../components/image_info_section/imageInfoSection";
 
 const WhatWeDo = () => {
   const [pageContent, setPageContent] = useState(null)
@@ -41,7 +41,7 @@ const WhatWeDo = () => {
       <RegulatoryPartners content={regulatoryPartners} />
       <ColorBanner content={industryPartnersBanner.fields} section={'Industry Parnterships'}/>
       <IndustryPartners content={industryPartners} color={PRIMARY_GREY} />
-      <Research id="research" section="Use-Inspired Research" content={research.fields} />
+      <ImageInfoSection id="research" section="Use-Inspired Research" variant='true' content={research.fields} />
       <BottomImage content={bottomImage} />
     </Layout>
   )

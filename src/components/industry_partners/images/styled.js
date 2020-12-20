@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { MIN_TABLET_SIZE } from "../../../constants/constants";
 
 
 export const PartnerImage = styled.div`
@@ -12,8 +13,13 @@ export const PartnerImage = styled.div`
 
 export const ImageContainer = styled.div`
   height: 100px;
-  width: 100%; 
   margin-bottom: 25px;
+  width: 65%;
+  margin: auto;
+
+  @media (min-widht: ${MIN_TABLET_SIZE}) {
+    width: 50%;
+  }
 `;
 
 export const SizeWrapper = styled.div.attrs({
