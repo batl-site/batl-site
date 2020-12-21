@@ -46,7 +46,7 @@ const LocationInfo = ({ content }) => {
           </Content>
         </Container>
       </ColorWrapper>
-      <GoogleMap location={location} zoomLevel={16}/>
+      {process.env.GATSBY_GOOGLE_MAP_KEY && <GoogleMap location={location} zoomLevel={16}/>}
     </>
   );
 };
