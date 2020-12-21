@@ -29,7 +29,6 @@ export const H2 = styled.h2`
   font-size: 16px;
   font-style: italic;
   font-weight: 300;
-  line-height: 31px;
 
   @media (min-width: ${MIN_SM_DESKTOP_SIZE}) {
     font-size: 22px;
