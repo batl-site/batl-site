@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Layout from "../components/layout";
 import MissionStatement from "../components/mission/missionStatement";
 import SEO from "../components/seo";
-import { PRIMARY_GREY, PRIMARY_YELLOW } from "../components/styles/styles";
+import { PRIMARY_GREY } from "../components/styles/styles";
 import ColorBlock from "../components/colorblock/colorblock";
 import Testimonial from "../components/testimonial/testimonial";
 import { HOMEPAGE_ID } from "../constants/constants";
@@ -11,8 +11,9 @@ import News from "../components/news/news";
 import HpHero from "../components/hero/homepage-hero/hpHero";
 import ImageInfoSection from "../components/image_info_section/imageInfoSection";
 import MapChart from "../components/map/mapChart";
-import ReactTooltip from 'react-tooltip';
-import ColorBanner from '../components/color_banner/colorBanner'
+import ReactTooltip from "react-tooltip";
+import ColorBanner from "../components/color_banner/colorBanner";
+import NetworkLogos from "../components/network_logos/networkLogos";
 
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
@@ -37,9 +38,7 @@ const HomePage = () => {
   const heroContent = pageContent.heroImage
     ? {
         heading: pageContent.heroHeading,
-        description: pageContent.description,
         imageSrc: pageContent.heroImage.fields.file.url,
-        ctaButton: pageContent.homepageHeroCta.fields,
       }
     : null;
   const colorBlockContent = pageContent.more ? pageContent.more.fields : null;
@@ -57,11 +56,12 @@ const HomePage = () => {
     pageContent.research && pageContent.research.fields.images.length > 0
       ? pageContent.research.fields
       : null;
-  const mapContent = pageContent.svgMap
-    ? pageContent.svgMap
-    : null;
+  const mapContent = pageContent.svgMap ? pageContent.svgMap : null;
   const networkContent = pageContent.network
     ? pageContent.network.fields
+    : null;
+  const networkLogos = pageContent.networkLogos
+    ? pageContent.networkLogos.fields.file.url
     : null;
 
   return (
@@ -83,10 +83,16 @@ const HomePage = () => {
       {testimonialContent && <Testimonial content={testimonialContent} />}
       {newsContent && <News content={newsContent} />}
       {networkContent && (
-        <ColorBanner section='Network' content={networkContent} splitColumns />
+        <ColorBanner
+          section="Network"
+          content={networkContent}
+          splitColumns
+          wide
+        />
       )}
       {mapContent && <ReactTooltip />}
       {mapContent && <MapChart markers={mapContent} />}
+      {networkLogos && <NetworkLogos src={networkLogos} />}
     </Layout>
   );
 };

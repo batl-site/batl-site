@@ -9,7 +9,8 @@
     "Mckenna Poulos <mckennapoulos@gmail.com>"
   ],
   "dependencies": {
-    "bootstrap": "^3.4.1",
+    "babel-plugin-styled-components": "^1.12.0",
+    "bootstrap": "^4.3.1",
     "contentful": "^7.14.8",
     "dotenv": "^8.2.0",
     "gatsby": "^2.24.79",
@@ -18,6 +19,7 @@
     "gatsby-plugin-offline": "^3.2.33",
     "gatsby-plugin-react-helmet": "^3.3.14",
     "gatsby-plugin-sharp": "^2.6.42",
+    "gatsby-plugin-styled-components": "^3.7.0",
     "gatsby-source-filesystem": "^2.3.34",
     "gatsby-transformer-sharp": "^2.5.17",
     "google-map-react": "^2.1.9",
