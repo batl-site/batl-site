@@ -15,7 +15,7 @@ const GoogleMap = ({ location, zoomLevel }) => {
     <div>
       <MapContainer>
         <GoogleMapReact
-          bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_MAP_KEY }}
+          bootstrapURLKeys={{ key: process.env.GATSBY_GOOGLE_MAP_KEY }}
           defaultCenter={location}
           defaultZoom={zoomLevel}
           onGoogleApiLoaded={({ map, maps }) => renderMarkers(map, maps)}
