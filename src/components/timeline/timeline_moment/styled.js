@@ -22,7 +22,7 @@ export const Indent = styled.div.attrs((props) => ({
   margin-top: ${(props) => (props.dateExists ? "48px" : "9px")};
 
   @media (min-width: ${MIN_SM_DESKTOP_SIZE}) {
-    margin-top: ${(props) => (props.dateExists ? "54px" : "13px")};
+    margin-top: ${(props) => (props.dateExists ? "61px" : "13px")};
   }
 `;
 

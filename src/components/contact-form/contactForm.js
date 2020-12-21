@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { NavButton } from "../nav/styled";
-import { H2Body, P2, SmallText } from "../styles/styles";
+import { H2Body, P1, P2, SmallText } from "../styles/styles";
 import {
+  Label,
   StyledInput,
   StyledTextarea,
   FormContainer,
@@ -41,9 +41,9 @@ const ContactForm = ({ content }) => {
 
   const toggleTerms = () => {
     if (showTerms) {
-      setShowTerms(false)
+      setShowTerms(false);
     } else {
-      setShowTerms(true)
+      setShowTerms(true);
     }
   };
 
@@ -52,7 +52,7 @@ const ContactForm = ({ content }) => {
       <Form>
         <InlineInputWrapper>
           <InlineInput left="true">
-            <label htmlFor="firstName">First name</label>
+            <Label htmlFor="firstName">First name</Label>
             <StyledInput
               id="firstName"
               type="text"
@@ -61,7 +61,7 @@ const ContactForm = ({ content }) => {
             />
           </InlineInput>
           <InlineInput left="false">
-            <label htmlFor="lastName">Last name</label>
+            <Label htmlFor="lastName">Last name</Label>
             <StyledInput
               id="lastName"
               type="text"
@@ -71,7 +71,7 @@ const ContactForm = ({ content }) => {
           </InlineInput>
         </InlineInputWrapper>
         <InputWrapper>
-          <label htmlFor="email">Your email</label>
+          <Label htmlFor="email">Your email</Label>
           <StyledInput
             id="email"
             type="text"
@@ -79,7 +79,7 @@ const ContactForm = ({ content }) => {
             onChange={(event) => setEmail(event.target.value)}
           />
         </InputWrapper>
-        <label>Inquiry subject</label>
+        <Label>Inquiry subject</Label>
         <InputWrapper>
           {content.subjectOptions &&
             content.subjectOptions.map((subject, i) => {
@@ -101,13 +101,14 @@ const ContactForm = ({ content }) => {
             })}
         </InputWrapper>
         <InputWrapper>
-          <label htmlFor="message">Your message</label>
+          <Label htmlFor="message">Your message</Label>
           <StyledTextarea
             id="message"
             rows="6"
             value={message}
-            onChange={(event) => setMessage(event.target.value)}
-          ></StyledTextarea>
+            onChange={(event) =>
+              setMessage(event.target.value)
+            }></StyledTextarea>
           {showTerms && (
             <div>
               <SmallText>{content.terms}</SmallText>
@@ -122,8 +123,7 @@ const ContactForm = ({ content }) => {
             }?subject=Inquiring About ${selectedSubjects.join(
               ", "
             )} &body=${message} %0D%0A %0D%0A From, %0D%0A %0D%0A ${firstName} ${lastName} %0D%0A %0D%0A email: ${email}`)
-          }
-        >
+          }>
           <P2>SEND MESSAGE</P2>
         </SendButton>
       </Form>

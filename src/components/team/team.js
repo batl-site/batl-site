@@ -1,18 +1,14 @@
 import React from "react";
 import { navigate } from "gatsby";
 import { Container, ButtonContainer, CTA } from "./styled";
-import {
-  H1,
-  H2,
-  P2,
-  PRIMARY_NAVY,
-  PRIMARY_GREEN,
-  PRIMARY_YELLOW,
-} from "../styles/styles";
+import { H1, H2, P2 } from "../styles/styles";
 import StaffMember from "../staff/staffMember";
+import Navy from "../../images/sprinkles/outlined-navy-large.svg";
+import Green from "../../images/sprinkles/outlined-green-large.svg";
+import Yellow from "../../images/sprinkles/outlined-yellow-large.svg";
 
 const Team = ({ heading, members }) => {
-  const colors = [PRIMARY_NAVY, PRIMARY_GREEN, PRIMARY_YELLOW];
+  const colors = [Navy, Green, Yellow];
 
   return (
     <Container>

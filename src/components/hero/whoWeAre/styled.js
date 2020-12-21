@@ -22,15 +22,10 @@ export const Container = styled.div.attrs({ className: "container" })`
   @media (min-width: ${MIN_MOBILE_SIZE}) {
     padding: 55px 0;
   }
-
-  @media (min-width: ${MIN_SM_DESKTOP_SIZE}) {
-    max-width: 960px;
-    margin: 0 auto;
-  }
 `;
 
 export const ContentContainer = styled.div.attrs({
-  className: "col-md-6 col-lg-5 px-0",
+  className: "col-12 col-md-6 col-lg-5 px-md-0",
 })``;
 
 export const SideImage = styled.img`

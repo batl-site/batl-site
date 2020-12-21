@@ -8,7 +8,7 @@ const StaffMember = ({ content, color }) => {
       <Group>
         <Headshot>
           <Image src={content.headshot.fields.file.url} />
-          <Sprinkle color={color} />
+          <Sprinkle src={color} />
         </Headshot>
         <H2>{content.name}</H2>
         <H2>{content.title}</H2>

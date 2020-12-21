@@ -1,11 +1,11 @@
 import styled from "styled-components";
 import {
-    MIN_LG_DESKTOP_SIZE,
-    MIN_MOBILE_SIZE,
-    MIN_SM_DESKTOP_SIZE,
-    MIN_MD_DESKTOP_SIZE,
-    MIN_TABLET_SIZE,
-    OVERLAY_ZINDEX
+  MIN_LG_DESKTOP_SIZE,
+  MIN_MOBILE_SIZE,
+  MIN_SM_DESKTOP_SIZE,
+  MIN_MD_DESKTOP_SIZE,
+  MIN_TABLET_SIZE,
+  OVERLAY_ZINDEX,
 } from "../../../constants/constants";
 import { PRIMARY_NAVY } from "../../styles/styles";
 
@@ -32,35 +32,24 @@ export const ColorBlock = styled.div`
   }
 `;
 
-export const Container = styled.div`
+export const Container = styled.div.attrs({ className: "container" })`
   padding: 15px 0;
   position: relative;
 
   @media (min-width: ${MIN_MOBILE_SIZE}) {
     padding: 55px 0;
   }
-
-  @media (min-width: ${MIN_SM_DESKTOP_SIZE}) {  
-    max-width: 960px;
-    margin: 0 auto;
-  }
-
-  @media (min-width: ${MIN_MD_DESKTOP_SIZE}) {
-    max-width: 1140px;
-  }
 `;
 
 export const ContentContainer = styled.div.attrs({
-    className: "col-md-6 col-lg-5",
+  className: "col-md-6 col-lg-5",
 })`
   @media (min-width: ${MIN_TABLET_SIZE}) {
     left: 50%;
   }
 
-  @media (min-width: ${MIN_SM_DESKTOP_SIZE}) {  
-    max-width: 960px;
-    margin: 0 auto;
-    left: 30%;
+  @media (min-width: ${MIN_SM_DESKTOP_SIZE}) {
+    left: 55%;
   }
 `;
 
@@ -100,7 +89,6 @@ export const XLImage = styled.img`
 export const FullBleedImage = styled.img.attrs({ className: "d-md-none" })`
   margin-bottom: 0;
 `;
-
 
 export const Sprinkle = styled.img`
   position: absolute;

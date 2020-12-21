@@ -9,7 +9,7 @@ import Team from "../components/team/team";
 import Timeline from "../components/timeline/timeline";
 
 const WhoWeAre = () => {
-  const [pageContent, setPageContent] = useState(null);
+  const [pageContent, setPageContent] = useState({});
 
   useEffect(() => {
     apiService
@@ -17,28 +17,32 @@ const WhoWeAre = () => {
       .then((response) => setPageContent(response[0].fields));
   }, []);
 
-  if (!pageContent) return null;
-
   const {
     hero,
+    teamSectionHeading,
+    staff,
     timelineDescription,
     timeline,
     timelineImage,
-    teamSectionHeading,
-    staff,
   } = pageContent;
 
   return (
     <Layout>
       <SEO title="Who We Are" />
-      <WhoWeAreHero content={hero.fields} />
-      <Team heading={teamSectionHeading} members={staff} />
-      <ColorBanner
-        section="Timeline"
-        content={timelineDescription.fields}
-        left
-      />
-      <Timeline moments={timeline} image={timelineImage.fields.file.url} />
+      {hero && <WhoWeAreHero content={hero.fields} />}
+      {teamSectionHeading && staff && (
+        <Team heading={teamSectionHeading} members={staff} />
+      )}
+      {timelineDescription && (
+        <ColorBanner
+          section="Timeline"
+          content={timelineDescription.fields}
+          left
+        />
+      )}
+      {timeline && timelineImage && (
+        <Timeline moments={timeline} image={timelineImage.fields.file.url} />
+      )}
     </Layout>
   );
 };
