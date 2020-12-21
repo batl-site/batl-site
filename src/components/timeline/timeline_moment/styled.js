@@ -64,7 +64,6 @@ export const Sprinkle = styled.img`
 `;
 
 export const Image = styled(RoundImage)`
-  width: 100%;
   margin-bottom: 0;
   z-index: ${OVERLAY_ZINDEX};
   position: relative;
@@ -79,6 +78,7 @@ export const MobileImageContainer = styled.div.attrs({
 export const MobileImage = styled(RoundImage).attrs({ className: "col-8" })`
   z-index: ${OVERLAY_ZINDEX};
   position: relative;
+  max-height: 100%;
 `;
 
 export const MobileSprinkle = styled.img`
