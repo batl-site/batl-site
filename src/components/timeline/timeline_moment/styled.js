@@ -75,11 +75,11 @@ export const MobileImageContainer = styled.div.attrs({
   flex-direction: ${(props) => (props.indent === 0 ? "row-reverse" : "row")};
 `;
 
-export const MobileImage = styled(RoundImage).attrs({ className: "col-8" })`
+export const SizeContainer = styled.div.attrs({ className: "col-8" })``;
+
+export const MobileImage = styled(RoundImage)`
   z-index: ${OVERLAY_ZINDEX};
   position: relative;
-  width: 100%;
-  height: auto;
 `;
 
 export const MobileSprinkle = styled.img`

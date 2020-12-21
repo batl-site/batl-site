@@ -10,6 +10,7 @@ import {
   Sprinkle,
   Image,
   MobileImageContainer,
+  SizeContainer,
   MobileImage,
   MobileSprinkle,
 } from "./styled";
@@ -19,7 +20,9 @@ const TimelineMoment = ({ indent, content, sprinkle }) => (
     {content.image && (
       <MobileImageContainer indent={indent}>
         <MobileSprinkle indent={indent} src={sprinkle} />
-        <MobileImage src={content.image.fields.file.url} />
+        <SizeContainer>
+          <MobileImage src={content.image.fields.file.url} />
+        </SizeContainer>
       </MobileImageContainer>
     )}
     <ContentWrapper>
