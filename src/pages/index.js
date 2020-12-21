@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Layout from "../components/layout";
 import MissionStatement from "../components/mission/missionStatement";
 import SEO from "../components/seo";
-import { PRIMARY_GREY, PRIMARY_YELLOW } from "../components/styles/styles";
+import { PRIMARY_GREY } from "../components/styles/styles";
 import ColorBlock from "../components/colorblock/colorblock";
 import Testimonial from "../components/testimonial/testimonial";
 import { HOMEPAGE_ID } from "../constants/constants";
@@ -38,9 +38,7 @@ const HomePage = () => {
   const heroContent = pageContent.heroImage
     ? {
         heading: pageContent.heroHeading,
-        description: pageContent.description,
         imageSrc: pageContent.heroImage.fields.file.url,
-        ctaButton: pageContent.homepageHeroCta.fields,
       }
     : null;
   const colorBlockContent = pageContent.more ? pageContent.more.fields : null;
@@ -85,7 +83,12 @@ const HomePage = () => {
       {testimonialContent && <Testimonial content={testimonialContent} />}
       {newsContent && <News content={newsContent} />}
       {networkContent && (
-        <ColorBanner section="Network" content={networkContent} splitColumns />
+        <ColorBanner
+          section="Network"
+          content={networkContent}
+          splitColumns
+          wide
+        />
       )}
       {mapContent && <ReactTooltip />}
       {mapContent && <MapChart markers={mapContent} />}
