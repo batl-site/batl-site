@@ -64,6 +64,7 @@ export const Sprinkle = styled.img`
 `;
 
 export const Image = styled(RoundImage)`
+  width: 100%;
   margin-bottom: 0;
   z-index: ${OVERLAY_ZINDEX};
   position: relative;
