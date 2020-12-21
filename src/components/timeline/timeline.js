@@ -1,7 +1,12 @@
 import React from "react";
 import TimelineMoment from "./timeline_moment/timelineMoment";
-import { Container, Line, ImageContainer, Sprinkle } from "./styled";
-import { MediumImage } from "../image_info_section/images/styled";
+import {
+  Container,
+  Line,
+  ImageContainer,
+  MediumImage,
+  Sprinkle,
+} from "./styled";
 import FilledYellow from "../../images/sprinkles/filled-yellow.svg";
 import FilledNavy from "../../images/sprinkles/filled-navy.svg";
 import OutlinedNavy from "../../images/sprinkles/outlined-navy-large.svg";

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { TEXT_BLACK } from "../../components/styles/styles";
+import { RoundImage, TEXT_BLACK } from "../../components/styles/styles";
 import { MIN_SM_DESKTOP_SIZE } from "../../constants/constants";
 
 export const Container = styled.div.attrs({ className: "container" })`
@@ -18,6 +18,8 @@ export const ImageContainer = styled.div`
   position: relative;
   text-align: center;
 `;
+
+export const MediumImage = styled(RoundImage).attrs({ className: "col-8" })``;
 
 export const Sprinkle = styled.img.attrs({
   className: "col-4 position-absolute",
