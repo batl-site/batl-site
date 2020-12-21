@@ -30,7 +30,7 @@ export const HeroImageContainer = styled.div.attrs({
   }
 `;
 
-export const Container = styled.div.attrs({ className: "container p-0" })``;
+export const Container = styled.div.attrs({ className: "container" })``;
 
 export const ColorBlock = styled.div.attrs({
   className: "col-10 col-md-6 col-lg-5 py-5",
