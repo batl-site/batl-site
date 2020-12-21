@@ -1,5 +1,5 @@
 import React from "react";
-import { H2, P1, RoundImage } from "../../styles/styles";
+import { H2, P1 } from "../../styles/styles";
 import {
   ContentWrapper,
   Indent,

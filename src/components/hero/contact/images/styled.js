@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { MIN_LG_DESKTOP_SIZE } from "../../../../constants/constants";
 import { PRIMARY_GREY, RoundImage } from "../../../styles/styles";
 
 export const MediumImage = styled(RoundImage).attrs({

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { H2Body, P1, P2, SmallText } from "../styles/styles";
+import { H2Body, P2, SmallText } from "../styles/styles";
 import {
   Label,
   StyledInput,

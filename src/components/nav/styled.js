@@ -2,7 +2,7 @@ import { Link } from "gatsby";
 import styled from "styled-components";
 import { MAX_ZINDEX } from "../../constants/constants";
 
-import { TEXT_BLACK, PRIMARY_YELLOW, BG_WHITE } from "../styles/styles";
+import { TEXT_BLACK, PRIMARY_YELLOW } from "../styles/styles";
 
 export const NavButton = styled.button`
   background-color: transparent;

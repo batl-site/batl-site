@@ -1,7 +1,7 @@
 import React from "react";
 import GoogleMap from "../google_map/map";
 import SecondaryLink from "../secondary_link/secondaryLink";
-import { H1, H2, P1 } from "../styles/styles";
+import { H1, P1 } from "../styles/styles";
 import {
   AbsoluteContainer,
   ColorWrapper,
