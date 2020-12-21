@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react"
 import ContactForm from "../components/contact-form/contactForm"
-import GoogleMap from "../components/google_map/map"
 import ContactHero from "../components/hero/contact/contactHero"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -37,8 +36,6 @@ const Contact = () => {
     coordinates: pageContent.batlCoordinates,
     seeMoreLink: pageContent.seeMoreLink
   } : null
-
-  console.log(pageContent)
 
   return (
     <Layout>

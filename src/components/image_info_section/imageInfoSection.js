@@ -13,8 +13,6 @@ const ImageInfoSection = ({ id, section, content, variant }) => {
   const buttonContent = content.callToAction
     ? content.callToAction.fields
     : null;
-
-    console.log(buttonContent)
   return (
     <Container id={id}>
       <ImagesContainer>

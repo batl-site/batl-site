@@ -1,9 +1,7 @@
 import styled from "styled-components";
 import {
-    MIN_LG_DESKTOP_SIZE,
   MIN_MOBILE_SIZE,
-  MIN_SM_DESKTOP_SIZE,
-  MIN_TABLET_SIZE,
+  MIN_SM_DESKTOP_SIZE
 } from "../../constants/constants";
 
 import { H2, PRIMARY_GREY, TEXT_BLACK } from "../styles/styles";

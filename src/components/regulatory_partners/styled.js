@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { MIN_MOBILE_SIZE } from '../../constants/constants'
 import { H2 } from "../styles/styles";
 
 export const Images = styled.div.attrs({
