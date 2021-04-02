@@ -1,17 +1,18 @@
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import React from "react";
+import DotGrid from "../../images/sprinkles/dot-grid.svg";
 import { H1, H2, P1 } from "../styles/styles";
 import {
   BleedBreakPoint,
-  Content,
-  Description,
-  ImageWrapper,
-  ContentDescription,
   Container,
+  Content,
+  ContentDescription,
+  Description,
   FlexWrapper,
-  SprinkleWrapper,
+  ImageWrapper,
   Sprinkle,
+  SprinkleWrapper,
 } from "./styled";
-import DotGrid from "../../images/sprinkles/dot-grid.svg";
 
 const MissionStatement = ({ content }) => {
   return (
@@ -21,13 +22,15 @@ const MissionStatement = ({ content }) => {
           <H2>Our Vision</H2>
           <H1>{content.statement}</H1>
           <Description className="d-block d-md-none">
-            <P1>{content.description}</P1>
+            <P1>{documentToReactComponents(content.richDescription)}</P1>
           </Description>
         </Container>
         <BleedBreakPoint>
           <Content>
             <Description className="col-xl-4">
-              <ContentDescription>{content.description}</ContentDescription>
+              <ContentDescription>
+                {documentToReactComponents(content.richDescription)}
+              </ContentDescription>
             </Description>
             <ImageWrapper className="col-xl-7">
               <img alt={content.imageSrc.fileName} src={content.imageSrc.url} />
@@ -38,8 +41,8 @@ const MissionStatement = ({ content }) => {
           <img alt={content.imageSrc.fileName} src={content.imageSrc.url} />
         </ImageWrapper>
         <SprinkleWrapper>
-            <Sprinkle src={DotGrid} />
-          </SprinkleWrapper>
+          <Sprinkle src={DotGrid} />
+        </SprinkleWrapper>
       </FlexWrapper>
     </>
   );

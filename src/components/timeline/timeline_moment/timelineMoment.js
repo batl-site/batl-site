@@ -1,18 +1,19 @@
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import React from "react";
 import { H2, P1 } from "../../styles/styles";
 import {
-  ContentWrapper,
-  Indent,
-  Dot,
   Content,
-  Title,
+  ContentWrapper,
+  Dot,
   Graphic,
-  Sprinkle,
   Image,
-  MobileImageContainer,
-  SizeContainer,
+  Indent,
   MobileImage,
+  MobileImageContainer,
   MobileSprinkle,
+  SizeContainer,
+  Sprinkle,
+  Title,
 } from "./styled";
 
 const TimelineMoment = ({ indent, content, sprinkle }) => (
@@ -32,7 +33,7 @@ const TimelineMoment = ({ indent, content, sprinkle }) => (
       <Content>
         {content.year && <H2>{content.year}</H2>}
         <Title>{content.title}</Title>
-        <P1>{content.description}</P1>
+        <P1>{documentToReactComponents(content.richDescription)}</P1>
       </Content>
       {content.image && (
         <Graphic indent={indent}>

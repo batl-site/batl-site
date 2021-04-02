@@ -1,7 +1,14 @@
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import React from "react";
 import { H1, P1 } from "../../styles/styles";
 import Images from "./images/images";
-import { BottomAligner, HeroContainer, Content, Container, ImagesContainer } from "./styled";
+import {
+  BottomAligner,
+  Container,
+  Content,
+  HeroContainer,
+  ImagesContainer,
+} from "./styled";
 
 const ContactHero = ({ content }) => {
   return (
@@ -10,14 +17,14 @@ const ContactHero = ({ content }) => {
       <Container>
         <Content>
           <H1>{content.heading}</H1>
-          <P1>{content.description}</P1>
+          <P1>{documentToReactComponents(content.richDescription)}</P1>
         </Content>
-      {content.images && (
-        <ImagesContainer>
-          <Images images={content.images} />
-        </ImagesContainer>
-      )}
-       </Container>
+        {content.images && (
+          <ImagesContainer>
+            <Images images={content.images} />
+          </ImagesContainer>
+        )}
+      </Container>
     </HeroContainer>
   );
 };
