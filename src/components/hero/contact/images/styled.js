@@ -5,6 +5,7 @@ export const MediumImage = styled(RoundImage).attrs({
   className: "col-8",
 })`
   position: relative;
+  height: 100%;
 `;
 
 export const ImageContainer = styled.div.attrs({

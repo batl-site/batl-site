@@ -10,7 +10,6 @@ import { ButtonContainer, Container, CTA } from "./styled";
 
 const Team = ({ heading, members, affiliatedFaculty }) => {
   const colors = [Navy, Green, Yellow];
-
   return (
     <Container>
       <H2>Our Team</H2>

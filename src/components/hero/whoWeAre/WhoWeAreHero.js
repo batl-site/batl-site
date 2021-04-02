@@ -1,15 +1,16 @@
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import React from "react";
+import Circles from "../../../images/sprinkles/vertical-navy.svg";
 import { H1, H2, P1 } from "../../styles/styles";
 import {
   ColorBlock,
   Container,
   ContentContainer,
-  SideImage,
   FullBleedImage,
-  XLImage,
+  SideImage,
   Sprinkle,
+  XLImage,
 } from "./styled";
-import Circles from "../../../images/sprinkles/vertical-navy.svg";
 
 const WhoWeAreHero = ({ content }) => (
   <ColorBlock>
@@ -18,7 +19,7 @@ const WhoWeAreHero = ({ content }) => (
       <ContentContainer>
         <H2>Who We Are</H2>
         <H1>{content.heading}</H1>
-        <P1>{content.description}</P1>
+        <P1>{documentToReactComponents(content.richDescription)}</P1>
       </ContentContainer>
       <XLImage src={content.image.fields.file.url} />
       <Sprinkle src={Circles} />

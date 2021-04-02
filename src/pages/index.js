@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from "react";
+import ReactTooltip from "react-tooltip";
+import ColorBlock from "../components/colorblock/colorblock";
+import ColorBanner from "../components/color_banner/colorBanner";
+import HpHero from "../components/hero/homepage-hero/hpHero";
+import ImageInfoSection from "../components/image_info_section/imageInfoSection";
 import Layout from "../components/layout";
+import MapChart from "../components/map/mapChart";
 import MissionStatement from "../components/mission/missionStatement";
+import NetworkLogos from "../components/network_logos/networkLogos";
+import News from "../components/news/news";
 import SEO from "../components/seo";
 import { PRIMARY_GREY } from "../components/styles/styles";
-import ColorBlock from "../components/colorblock/colorblock";
 import Testimonial from "../components/testimonial/testimonial";
 import { HOMEPAGE_ID } from "../constants/constants";
 import apiService from "../service/apiService";
-import News from "../components/news/news";
-import HpHero from "../components/hero/homepage-hero/hpHero";
-import ImageInfoSection from "../components/image_info_section/imageInfoSection";
-import MapChart from "../components/map/mapChart";
-import ReactTooltip from "react-tooltip";
-import ColorBanner from "../components/color_banner/colorBanner";
-import NetworkLogos from "../components/network_logos/networkLogos";
 
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
@@ -31,7 +31,7 @@ const HomePage = () => {
   const missionContent = pageContent.missionStatementImage
     ? {
         statement: pageContent.missionStatement,
-        description: pageContent.missionStatementDescription,
+        richDescription: pageContent.richMissionStatement,
         imageSrc: pageContent.missionStatementImage.fields.file,
       }
     : null;
@@ -49,6 +49,7 @@ const HomePage = () => {
           articles: pageContent.articles,
         }
       : null;
+
   const testimonialContent = pageContent.testimonial
     ? pageContent.testimonial.fields
     : null;
