@@ -7,11 +7,14 @@ const StaffMember = ({ content, color }) => {
     <Container>
       <Group>
         <Headshot>
-          <Image src={content.headshot.fields.file.url} />
+          <Image
+            src={content.headshot.fields.file.url}
+            alt={content.headshot.fields.description}
+          />
           <Sprinkle src={color} />
         </Headshot>
         <H2>{content.name}</H2>
-        <H2>{content.title}</H2>
+        {content.title && content.title !== "" && <H2>{content.title}</H2>}
       </Group>
       <Bio>
         <RichText document={content.richBiography} />

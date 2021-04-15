@@ -14,24 +14,32 @@ import {
 } from "./styled";
 
 const Images = ({ images, variant }) => {
-  console.log(images[0]);
   return images.length < 2 ? (
     <LargeImageContainer>
-      <RoundImage src={images[0].fields.file.url} />
+      <RoundImage
+        src={images[0].fields.file.url}
+        alt={images[0].fields.description}
+      />
     </LargeImageContainer>
   ) : (
     <DoubleImageContainer>
       <RowOne variant={variant}>
         <SmallImageContainer>
-          <RoundImage src={images[0].fields.file.url} />
+          <RoundImage
+            src={images[0].fields.file.url}
+            alt={images[0].fields.description}
+          />
         </SmallImageContainer>
-        <SprinkleSmall variant={variant} src={GreenCirle} />
+        <SprinkleSmall variant={variant} src={GreenCirle} alt="" />
       </RowOne>
       <RowTwo variant={variant}>
         <MediumImageContainer>
-          <RoundImage src={images[1].fields.file.url} />
+          <RoundImage
+            src={images[1].fields.file.url}
+            alt={images[1].fields.description}
+          />
         </MediumImageContainer>
-        <SprinkleMedium variant={variant} src={YellowWedge} />
+        <SprinkleMedium variant={variant} src={YellowWedge} alt="" />
       </RowTwo>
     </DoubleImageContainer>
   );

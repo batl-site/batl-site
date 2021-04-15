@@ -22,7 +22,7 @@ const Testimonial = ({ content, color }) => {
         </Container>
       </ColorWrapper>
       <SprinkleContainer>
-        <Sprinkle src={DotGrid} />
+        <Sprinkle src={DotGrid} alt="" />
       </SprinkleContainer>
     </>
   );

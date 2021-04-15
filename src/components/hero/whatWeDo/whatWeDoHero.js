@@ -12,12 +12,11 @@ import {
 } from "./styled";
 
 const WhatWeDoHero = ({ content }) => {
-  console.log(content);
   return (
     <ColorBlock>
       <FullBleedImage
         src={content.image.fields.file.url}
-        alt="Image of scientists sitting together around a white desk."
+        alt={content.image.fields.file.description}
       />
       <Container>
         <ContentContainer>
@@ -27,13 +26,13 @@ const WhatWeDoHero = ({ content }) => {
         </ContentContainer>
         <XLImage
           src={content.image.fields.file.url}
-          alt="Image of scientists sitting together around a white desk."
+          alt={content.image.fields.file.description}
         />
         <Sprinkle src={Circles} />
       </Container>
       <SideImage
         src={content.image.fields.file.url}
-        alt="Image of scientists sitting together around a white desk."
+        alt={content.image.fields.file.description}
       />
     </ColorBlock>
   );

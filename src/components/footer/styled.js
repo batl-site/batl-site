@@ -72,9 +72,7 @@ export const CTA = styled(Button).attrs({
   }
 `;
 
-export const Logo = styled.img.attrs({
-  alt: "The BATL logo, which is a beaker inside of a yellow circle.",
-})`
+export const Logo = styled.img`
   margin-top: 1.45rem;
   height: 28px;
 

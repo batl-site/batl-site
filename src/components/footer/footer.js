@@ -82,12 +82,26 @@ const Footer = () => {
             <Row>
               <Icons>
                 <a href={facebookUrl}>
-                  <Icon src={Facebook} alt="A facebook social media icon." />
+                  <Icon
+                    role="a"
+                    aria-label="Facebook Social Media Link"
+                    src={Facebook}
+                    alt="A facebook social media icon."
+                  />
                 </a>
                 <a href={instagramUrl}>
-                  <Icon src={Instagram} alt="An Instagram social media icon." />
+                  <Icon
+                    role="a"
+                    aria-label="Instagram Social Media Link"
+                    src={Instagram}
+                    alt="An Instagram social media icon."
+                  />
                 </a>
-                <a href={linkedinUrl}>
+                <a
+                  role="a"
+                  aria-label="LinkedIn Social Media Link"
+                  href={linkedinUrl}
+                >
                   <Icon src={LinkedIn} alt="A LinkedIn social media icon." />
                 </a>
               </Icons>
@@ -102,10 +116,16 @@ const Footer = () => {
           <BigColumn>
             <Row>
               <HalfRow>
-                <Logo src={BATL} />
+                <Logo
+                  src={BATL}
+                  alt="The BATL logo, which is a beaker inside of a yellow circle."
+                />
               </HalfRow>
               <HalfRow>
-                <Logo src={COS} />
+                <Logo
+                  src={COS}
+                  alt="The Northeastern University College of Science logo"
+                />
               </HalfRow>
             </Row>
           </BigColumn>

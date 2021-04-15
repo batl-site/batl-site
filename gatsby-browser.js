@@ -39,8 +39,8 @@ export const onClientEntry = () => {
 
 export const wrapPageElement = ({ element, props }) => (
   <>
-    <div x-data="NUGlobalElements.header()" x-init="init()" />
+    {/* <div x-data="NUGlobalElements.header()" x-init="init()" /> */}
     {element}
-    <div x-data="NUGlobalElements.footer()" x-init="init()" />
+    {/* <div x-data="NUGlobalElements.footer()" x-init="init()" /> */}
   </>
 );

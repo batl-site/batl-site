@@ -24,7 +24,7 @@ export const Bio = styled.span.attrs({
   className: "d-none d-md-block col-12 col-lg-8 pl-lg-4",
 })``;
 
-export const Sprinkle = styled.img`
+export const Sprinkle = styled.img.attrs({ alt: "" })`
   height: 100%;
   position: absolute;
   top: 0;

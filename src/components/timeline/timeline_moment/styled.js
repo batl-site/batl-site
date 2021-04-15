@@ -48,7 +48,7 @@ export const Graphic = styled.div.attrs({
   ${(props) => (props.indent === 0 ? "right" : "left")}: 0;
 `;
 
-export const Sprinkle = styled.img.attrs({ alt: "A decorative element." })`
+export const Sprinkle = styled.img.attrs({ alt: "" })`
   position: absolute;
   ${(props) =>
     props.indent === 0
@@ -83,7 +83,7 @@ export const MobileImage = styled(RoundImage)`
 `;
 
 export const MobileSprinkle = styled.img.attrs({
-  alt: "A decorative elemnt of ",
+  alt: "",
 })`
   position: absolute;
   ${(props) =>

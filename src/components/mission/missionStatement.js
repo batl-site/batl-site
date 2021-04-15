@@ -32,15 +32,21 @@ const MissionStatement = ({ content }) => {
               </ContentDescription>
             </Description>
             <ImageWrapper className="col-xl-7">
-              <img alt={content.imageSrc.fileName} src={content.imageSrc.url} />
+              <img
+                alt={content.imageSrc.description}
+                src={content.imageSrc.file.url}
+              />
             </ImageWrapper>
           </Content>
         </BleedBreakPoint>
         <ImageWrapper className="d-block d-md-none mb-5 align-self-end">
-          <img alt={content.imageSrc.fileName} src={content.imageSrc.url} />
+          <img
+            alt={content.imageSrc.description}
+            src={content.imageSrc.file.url}
+          />
         </ImageWrapper>
         <SprinkleWrapper>
-          <Sprinkle src={DotGrid} />
+          <Sprinkle src={DotGrid} alt="" />
         </SprinkleWrapper>
       </FlexWrapper>
     </>
