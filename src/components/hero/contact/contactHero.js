@@ -1,6 +1,5 @@
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import React from "react";
-import { H1, P1 } from "../../styles/styles";
+import { H1, RichText } from "../../styles/styles";
 import Images from "./images/images";
 import {
   BottomAligner,
@@ -17,7 +16,7 @@ const ContactHero = ({ content }) => {
       <Container>
         <Content>
           <H1>{content.heading}</H1>
-          <P1>{documentToReactComponents(content.richDescription)}</P1>
+          <RichText document={content.richDescription} />
         </Content>
         {content.images && (
           <ImagesContainer>

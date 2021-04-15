@@ -1,6 +1,5 @@
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import React from "react";
-import { H2 } from "../styles/styles";
+import { H2, RichText } from "../styles/styles";
 import { Bio, Container, Group, Headshot, Image, Sprinkle } from "./styled";
 
 const StaffMember = ({ content, color }) => {
@@ -14,7 +13,9 @@ const StaffMember = ({ content, color }) => {
         <H2>{content.name}</H2>
         <H2>{content.title}</H2>
       </Group>
-      <Bio>{documentToReactComponents(content.richBiography)}</Bio>
+      <Bio>
+        <RichText document={content.richBiography} />
+      </Bio>
     </Container>
   );
 };

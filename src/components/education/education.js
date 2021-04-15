@@ -1,8 +1,7 @@
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import React from "react";
 import DotGrid from "../../images/sprinkles/dot-grid.svg";
 import FilledYellow from "../../images/sprinkles/filled-yellow.svg";
-import { H1, H2, P1 } from "../styles/styles";
+import { H1, H2, RichText } from "../styles/styles";
 import {
   ColorBlockWrapper,
   ColorSection,
@@ -32,10 +31,10 @@ const Education = ({ content, color }) => {
           </Container>
           <Content>
             <OneColumn>
-              <P1>{documentToReactComponents(content.richDescription)}</P1>
+              <RichText document={content.richDescription} />
             </OneColumn>
             <TwoColumn>
-              <P1>{documentToReactComponents(content.richDescription)}</P1>
+              <RichText document={content.richDescription} />
             </TwoColumn>
           </Content>
         </ColorSection>

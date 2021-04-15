@@ -1,7 +1,6 @@
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import React from "react";
 import Circles from "../../../images/sprinkles/vertical-navy.svg";
-import { H1, H2, P1 } from "../../styles/styles";
+import { H1, H2, RichText } from "../../styles/styles";
 import {
   ColorBlock,
   Container,
@@ -19,7 +18,7 @@ const WhoWeAreHero = ({ content }) => (
       <ContentContainer>
         <H2>Who We Are</H2>
         <H1>{content.heading}</H1>
-        <P1>{documentToReactComponents(content.richDescription)}</P1>
+        <RichText document={content.richDescription} />
       </ContentContainer>
       <XLImage src={content.image.fields.file.url} />
       <Sprinkle src={Circles} />
