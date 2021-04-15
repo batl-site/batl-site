@@ -1,19 +1,20 @@
 import React from "react";
+import GreenCirle from "../../../images/sprinkles/green-circle.svg";
+import YellowWedge from "../../../images/sprinkles/right-wedge-yellow.svg";
+import { RoundImage } from "../../styles/styles";
 import {
-  LargeImageContainer,
   DoubleImageContainer,
-  SmallImageContainer,
+  LargeImageContainer,
   MediumImageContainer,
   RowOne,
   RowTwo,
-  SprinkleSmall,
+  SmallImageContainer,
   SprinkleMedium,
+  SprinkleSmall,
 } from "./styled";
-import YellowWedge from "../../../images/sprinkles/right-wedge-yellow.svg";
-import GreenCirle from "../../../images/sprinkles/green-circle.svg";
-import { RoundImage } from "../../styles/styles";
 
 const Images = ({ images, variant }) => {
+  console.log(images[0]);
   return images.length < 2 ? (
     <LargeImageContainer>
       <RoundImage src={images[0].fields.file.url} />
