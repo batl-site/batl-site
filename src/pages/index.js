@@ -32,13 +32,13 @@ const HomePage = () => {
     ? {
         statement: pageContent.missionStatement,
         richDescription: pageContent.richMissionStatement,
-        imageSrc: pageContent.missionStatementImage.fields.file,
+        imageSrc: pageContent.missionStatementImage.fields,
       }
     : null;
   const heroContent = pageContent.heroImage
     ? {
         heading: pageContent.heroHeading,
-        imageSrc: pageContent.heroImage.fields.file.url,
+        imageSrc: pageContent.heroImage.fields,
       }
     : null;
   const colorBlockContent = pageContent.more ? pageContent.more.fields : null;

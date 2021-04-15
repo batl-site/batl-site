@@ -47,7 +47,9 @@ export const Sprinkle = styled.div`
   left: 159px;
 `;
 
-export const SprinkleCircle = styled.img`
+export const SprinkleCircle = styled.img.attrs({
+  alt: "",
+})`
   position: absolute;
   width: 167px;
   z-index: -1;

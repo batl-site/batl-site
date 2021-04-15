@@ -1,6 +1,5 @@
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import React from "react";
-import { H2, P1 } from "../styles/styles";
+import { H2, RichText } from "../styles/styles";
 import {
   Banner,
   Columns,
@@ -20,10 +19,10 @@ const ColorBanner = ({ section, content, splitColumns, left, wide }) => (
         </Banner>
         {splitColumns ? (
           <Columns>
-            {documentToReactComponents(content.richDescription)}
+            <RichText document={content.richDescription} />
           </Columns>
         ) : (
-          <P1>{documentToReactComponents(content.richDescription)}</P1>
+          <RichText document={content.richDescription} />
         )}
       </Content>
     </Container>

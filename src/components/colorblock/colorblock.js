@@ -1,9 +1,8 @@
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { navigate } from "gatsby";
 import React from "react";
 import FilledYellow from "../../images/sprinkles/filled-yellow.svg";
 import OutlinedNavy from "../../images/sprinkles/outlined-navy.svg";
-import { Button, H1, P1, P2, PRIMARY_GREY } from "../styles/styles";
+import { Button, H1, P2, PRIMARY_GREY, RichText } from "../styles/styles";
 import {
   ButtonText,
   ColorBlockWrapper,
@@ -31,7 +30,7 @@ const ColorBlock = ({ content, color }) => {
         </Container>
         <Content>
           <OneColumn>
-            <P1>{documentToReactComponents(content.richDescription)}</P1>
+            <RichText document={content.richDescription} />
             <Button
               className="mt-4"
               onClick={() => navigate(`${buttonContent.buttonLink}`)}
@@ -43,7 +42,7 @@ const ColorBlock = ({ content, color }) => {
             </Button>
           </OneColumn>
           <TwoColumn>
-            <P1>{documentToReactComponents(content.richDescription)}</P1>
+            <RichText document={content.richDescription} />
             <Button
               className="mt-4"
               onClick={() => navigate(`${buttonContent.buttonLink}`)}
