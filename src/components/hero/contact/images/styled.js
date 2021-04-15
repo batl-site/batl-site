@@ -48,7 +48,7 @@ export const Sprinkle = styled.div`
 `;
 
 export const SprinkleCircle = styled.img.attrs({
-  alt: "A decorative element in the shape of a circle.",
+  alt: "",
 })`
   position: absolute;
   width: 167px;

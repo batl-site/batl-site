@@ -83,7 +83,7 @@ const Footer = () => {
               <Icons>
                 <a href={facebookUrl}>
                   <Icon
-                    role="a"
+                    role="link"
                     aria-label="Facebook Social Media Link"
                     src={Facebook}
                     alt="A facebook social media icon."
@@ -91,18 +91,19 @@ const Footer = () => {
                 </a>
                 <a href={instagramUrl}>
                   <Icon
-                    role="a"
+                    role="link"
                     aria-label="Instagram Social Media Link"
                     src={Instagram}
                     alt="An Instagram social media icon."
                   />
                 </a>
-                <a
-                  role="a"
-                  aria-label="LinkedIn Social Media Link"
-                  href={linkedinUrl}
-                >
-                  <Icon src={LinkedIn} alt="A LinkedIn social media icon." />
+                <a href={linkedinUrl}>
+                  <Icon
+                    role="link"
+                    aria-label="LinkedIn Social Media Link"
+                    src={LinkedIn}
+                    alt="A LinkedIn social media icon."
+                  />
                 </a>
               </Icons>
             </Row>

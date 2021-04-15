@@ -119,7 +119,7 @@ export const SprinkleContainer = styled.div`
 
 export const SprinkleYellow = styled.img.attrs({
   className: "d-md-block",
-  alt: "A yellow decorative element in the shape of a circle.",
+  alt: "",
 })`
   position: absolute;
   width: 80px;
@@ -159,7 +159,7 @@ export const SprinkleYellow = styled.img.attrs({
 
 export const Sprinkle = styled.img.attrs({
   className: "",
-  alt: "A yellow decorative element in the shape of a circle.",
+  alt: "",
 })`
   position: absolute;
   width: 80%;

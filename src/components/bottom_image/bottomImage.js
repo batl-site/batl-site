@@ -6,7 +6,7 @@ const BottomImage = ({ content }) => {
       <BottomImageContainer>
         <Image
           role="img"
-          aria-label={`Image of ${content.fields.title}`}
+          aria-label={content.fields.description}
           image={content.fields.file.url}
         ></Image>
       </BottomImageContainer>

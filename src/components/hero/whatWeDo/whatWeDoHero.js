@@ -16,7 +16,7 @@ const WhatWeDoHero = ({ content }) => {
     <ColorBlock>
       <FullBleedImage
         src={content.image.fields.file.url}
-        alt={content.image.fields.file.description}
+        alt={content.image.fields.description}
       />
       <Container>
         <ContentContainer>
@@ -26,13 +26,13 @@ const WhatWeDoHero = ({ content }) => {
         </ContentContainer>
         <XLImage
           src={content.image.fields.file.url}
-          alt={content.image.fields.file.description}
+          alt={content.image.fields.description}
         />
         <Sprinkle src={Circles} />
       </Container>
       <SideImage
         src={content.image.fields.file.url}
-        alt={content.image.fields.file.description}
+        alt={content.image.fields.description}
       />
     </ColorBlock>
   );
